@@ -6,24 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>day05_课堂笔记(分支语句) | czzz</title>
+  <title>day20面向对象的总结&amp;匿名内部类 | czzz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="生活又不是热血动漫，你也没有主角光环。">
+  <meta name="description" content="人生不过是以梦为马，且行且珍惜——">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day05_课堂笔记(分支语句)">
-<meta property="og:url" content="http://yoursite.com/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/index.html">
+<meta property="og:title" content="day20面向对象的总结&amp;匿名内部类">
+<meta property="og:url" content="http://yoursite.com/2020/04/12/day20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB/index.html">
 <meta property="og:site_name" content="czzz">
-<meta property="og:description" content="生活又不是热血动漫，你也没有主角光环。">
+<meta property="og:description" content="人生不过是以梦为马，且行且珍惜——">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/if%E7%9A%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/ifelse%E7%9A%84%E6%B5%81%E7%A8%8B.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/%E5%A4%9A%E5%88%86%E6%94%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
-<meta property="article:published_time" content="2020-03-21T15:48:42.000Z">
-<meta property="article:modified_time" content="2020-03-23T12:37:05.765Z">
+<meta property="article:published_time" content="2020-04-12T11:15:26.000Z">
+<meta property="article:modified_time" content="2020-04-12T11:17:31.580Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/if%E7%9A%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="czzz" type="application/atom+xml">
   
@@ -170,7 +166,7 @@
           <div id="js-content" class="content-ll">
             
 <article
-  id="post-day05-课堂笔记-分支语句"
+  id="post-day20面向对象的总结-匿名内部类"
   class="article article-type-post "
   itemscope
   itemprop="blogPost"
@@ -181,7 +177,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      day05_课堂笔记(分支语句)
+      day20面向对象的总结&amp;匿名内部类
     </h1>
   
 
@@ -191,70 +187,40 @@
 <!-- # span 给的 id 是文章的 url 作为唯一的 key 值 -->
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" class="pageViews">0</span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/04/12/day20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB/" class="pageViews">0</span>次
   </a>
 
-       <a href="/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" class="archive-article-date">
-  	<time datetime="2020-03-21T15:48:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-21</time>
+       <a href="/2020/04/12/day20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2020-04-12T11:15:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
 </a> 
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <p>生活又不是热血动漫，你也没有主角光环。</p>
+       <p>人生不过是以梦为马，且行且珍惜——</p>
 <a id="more"></a>
 
-<h2 id="day05——分支语句"><a href="#day05——分支语句" class="headerlink" title="day05——分支语句"></a>day05——分支语句</h2><h5 id="2-1、程序的流程结构"><a href="#2-1、程序的流程结构" class="headerlink" title="2.1、程序的流程结构"></a>2.1、程序的流程结构</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">程序的流程结构：</span><br><span class="line">A：顺序结构：默认的，从上向下，逐行的执行。</span><br><span class="line">B：选择结构：条件满足，某些代码才会执行。</span><br><span class="line">C：循环结构：条件满足，某些代码会反复多次的执行。直到条件不满足。</span><br></pre></td></tr></table></figure>
+<h2 id="day20——面向对象的总结-amp-匿名内部类"><a href="#day20——面向对象的总结-amp-匿名内部类" class="headerlink" title="day20——面向对象的总结&amp;匿名内部类"></a>day20——面向对象的总结&amp;匿名内部类</h2><h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、面向对象的总结"><a href="#1-1、面向对象的总结" class="headerlink" title="1.1、面向对象的总结"></a>1.1、面向对象的总结</h4><p>。。。</p>
+<h4 id="1-2、匿名内部类"><a href="#1-2、匿名内部类" class="headerlink" title="1.2、匿名内部类"></a>1.2、匿名内部类</h4><p>匿名内部类：没有名字的内部的类。</p>
+<p>前提：接口或继承父类。</p>
+<p>直接new匿名内部类的对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//A a = new 实现类对象；</span></span><br><span class="line">A a  = <span class="keyword">new</span> A()&#123;<span class="comment">//从此处开始，就是匿名的内部类</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">                </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;<span class="comment">//到此处结束</span></span><br><span class="line">a.test();</span><br></pre></td></tr></table></figure>
+
+<p><strong>对接口A进行修改，因为只用这一次，没必要写成A接口的实现类。所以用匿名内部类。</strong></p>
+<p>一般匿名内部类适合：使用一次，创建一次对象。</p>
+<p>匿名内部类：编译之后产生字节码文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">内部类的字节码文件名的规则：先写外部类名，然后$，然后是内部类的名</span><br><span class="line">外部类$1.class</span><br><span class="line">外部类$2.class</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
 
 
 
-<h5 id="2-2、if语句"><a href="#2-2、if语句" class="headerlink" title="2.2、if语句"></a>2.2、if语句</h5><p><strong>最基本的if语句</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件：<span class="keyword">boolean</span>)&#123;</span><br><span class="line">	<span class="comment">//条件成立，执行此处的代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>执行流程：</p>
-<p><img src="/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/if%E7%9A%84%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="4if的流程图"></p>
-<p><strong>2、if…else语句</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件：<span class="keyword">boolean</span>)&#123;</span><br><span class="line">	<span class="comment">//条件成立，执行此处的代码</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="comment">//条件不成立，执行此处的代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>实现二者必选其一。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//课堂练习2：给定一个性别，如果是男，就去男厕所，否则去女厕所。。</span></span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		思路：</span></span><br><span class="line"><span class="comment">		step1：有个性别这个变量</span></span><br><span class="line"><span class="comment">			boolean true false</span></span><br><span class="line"><span class="comment">			int 1 0 </span></span><br><span class="line"><span class="comment">			char 男 女</span></span><br><span class="line"><span class="comment">			String 男生 女生</span></span><br><span class="line"><span class="comment">		step2：if else语句来实现</span></span><br><span class="line"><span class="comment">			判断条件：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">		在比较数值上：</span></span><br><span class="line"><span class="comment">			基本类型：使用==这个运算符进行比较数值，是否相等</span></span><br><span class="line"><span class="comment">				byte，short，int，long，float，double，char，boolean</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">			引用类型：使用equals()来比较</span></span><br><span class="line"><span class="comment">				String</span></span><br><span class="line"><span class="comment">		*/</span></span><br></pre></td></tr></table></figure>
+<h4 id="1-3、Object类"><a href="#1-3、Object类" class="headerlink" title="1.3、Object类"></a>1.3、Object类</h4><p>Java中所有的类，都是以继承结构存在的。</p>
+<p>Object类是所有类的基类。所以只要是Java中的类的对象，默认都可以执行Object类中的方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">java.lang这个包下的类，在使用的时候，无需导入。其他的包下的类，需要导包。</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line">java.lang.Object</span><br><span class="line">java.lang.String</span><br></pre></td></tr></table></figure>
 
 
 
-
-
-<p><img src="/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/ifelse%E7%9A%84%E6%B5%81%E7%A8%8B.png" alt="6ifelse的流程"></p>
-<p>多个条件：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件<span class="number">1</span>)&#123;</span><br><span class="line">	条件<span class="number">1</span>满足，执行此处的代码</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(条件<span class="number">2</span>)&#123;</span><br><span class="line">	条件<span class="number">1</span>不满足，条件<span class="number">2</span>满足，执行此处的代码</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(条件<span class="number">3</span>)&#123;</span><br><span class="line">	条件<span class="number">1</span>、<span class="number">2</span>都不满足，条件<span class="number">3</span>满足，执行此处的代码。</span><br><span class="line">&#125;。。。</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/%E5%A4%9A%E5%88%86%E6%94%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="多分支流程图"></p>
-<p>if语句的嵌套</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(外层条件)&#123;</span><br><span class="line">	<span class="keyword">if</span>(内层条件)&#123;</span><br><span class="line">	</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>说明：如果说if语句里只有一行代码，那么{}可以省略不写。但是不建议。</p>
-</blockquote>
-<h5 id="2-3、switch语句"><a href="#2-3、switch语句" class="headerlink" title="2.3、switch语句"></a>2.3、switch语句</h5><p>switch也是实现分支语句</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(变量/表达式)&#123;</span><br><span class="line"><span class="keyword">case</span> 数值<span class="number">1</span>：分支<span class="number">1</span>；<span class="keyword">break</span>；</span><br><span class="line"><span class="keyword">case</span> 数值<span class="number">2</span>：分支<span class="number">2</span>；<span class="keyword">break</span>；</span><br><span class="line"><span class="keyword">case</span> 数值<span class="number">3</span>：分支<span class="number">3</span>；<span class="keyword">break</span>；</span><br><span class="line"></span><br><span class="line"><span class="keyword">default</span>：最后一个分支；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>注意点：</p>
-<p>1、case后的数值，不能重复。</p>
-<p>2、case是无序的，先写后写都可以，关键是是否能够匹配上switch作用的变量。</p>
-<p>3、switch作用的变量类型：short，byte，char，int，String。</p>
-<p>4、default语句是可选的。</p>
-<p>5、某个case匹配上后，如果该分支中没有break，那么后续的case都不再匹配，直接执行。一直到遇到break位置。</p>
-<h5 id="2-4-If-和-Switch的比较"><a href="#2-4-If-和-Switch的比较" class="headerlink" title="2.4 If 和 Switch的比较"></a>2.4 If 和 Switch的比较</h5><p><strong>if：</strong></p>
-<p>判断条件：boolean</p>
-<p>判断分支少</p>
-<p><strong>switch：</strong></p>
-<p>判断条件：byte，short，int，char，String</p>
-<p>​    不支持 float， double，boolean</p>
-<p>判断分支多    ：case</p>
+<p>1、getClass()–&gt;Class</p>
+<p>​    获取一个引用指向的对象，是哪个类型的。</p>
+<p>想判断两个对象是否是同一个类型：obj1.getClass()==obj2.getClass()</p>
    
       <div class="essayending">
         <div>
@@ -278,7 +244,7 @@
          suger 
         <br />
         <strong>本文链接：</strong>
-        <a rel="license" href="http://yoursite.com/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">http://yoursite.com/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/</a>
+        <a rel="license" href="http://yoursite.com/2020/04/12/day20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB/">http://yoursite.com/2020/04/12/day20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB/</a>
         <br />
         <strong>版权声明：</strong>
         本作品采用
@@ -386,7 +352,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/03/21/day05-%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/04/12/day20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%80%BB%E7%BB%93-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -399,18 +365,18 @@
  
 <nav id="article-nav">
   
-    <a href="/2020/03/22/%E5%88%9D%E8%AF%86%E6%AF%94%E7%89%B9%E5%B8%81/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          初识比特币
+          面向对象总结
         
       </div>
     </a>
   
   
-    <a href="/2020/03/20/Markdowm%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdowm基本语法</div>
+    <a href="/2020/04/10/day19%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">day19匿名内部类&amp;面向对象总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -435,7 +401,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day05——分支语句"><span class="toc-number">1.</span> <span class="toc-text">day05——分支语句</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1、程序的流程结构"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">2.1、程序的流程结构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2、if语句"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">2.2、if语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3、switch语句"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">2.3、switch语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4-If-和-Switch的比较"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">2.4 If 和 Switch的比较</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day20——面向对象的总结-amp-匿名内部类"><span class="toc-number">1.</span> <span class="toc-text">day20——面向对象的总结&amp;匿名内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、面向对象的总结"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、面向对象的总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、匿名内部类"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、匿名内部类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、Object类"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、Object类</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
