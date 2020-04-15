@@ -16,7 +16,7 @@
 <meta property="og:description" content="寻几处好景破星光——">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-01T13:50:01.000Z">
-<meta property="article:modified_time" content="2020-04-01T13:51:34.487Z">
+<meta property="article:modified_time" content="2020-04-15T06:59:06.621Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -69,7 +69,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 31
+			总文章数 32
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -199,7 +199,9 @@
        <p>寻几处好景破星光——</p>
 <a id="more"></a>
 
-<h2 id="day14——面向对象三大特征"><a href="#day14——面向对象三大特征" class="headerlink" title="day14——面向对象三大特征"></a>day14——面向对象三大特征</h2><h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、匿名对象"><a href="#1-1、匿名对象" class="headerlink" title="1.1、匿名对象"></a>1.1、匿名对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">创建对象的语法：</span><br><span class="line">	Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">	<span class="comment">//=左侧在做对象的声明，开辟的是栈内存</span></span><br><span class="line">	<span class="comment">//=右侧，才是真正的创建对象</span></span><br><span class="line">	<span class="comment">//结果：内存中，创建了一个对象，对象的地址，赋值给p1。</span></span><br><span class="line">匿名对象，就是只有=右侧，没有=左侧。</span><br><span class="line">	<span class="keyword">new</span> 构造方法(必要的参数);</span><br><span class="line">匿名对象的用途：</span><br><span class="line">    <span class="number">1</span>、使用匿名对象，直接调用类的方法。</span><br><span class="line">    <span class="number">2</span>、匿名对象直接作为一个方法的参数。</span><br><span class="line">    </span><br><span class="line">注意点：</span><br><span class="line">    匿名对象只能使用一次。随着它的创建而使用一次。（一次性的）</span><br><span class="line">优势：</span><br><span class="line">    <span class="number">1</span>、使用后即销毁，就是被GC回收。</span><br><span class="line">    <span class="number">2</span>、代码书写方法，提高效率。</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、匿名对象"><a href="#1-1、匿名对象" class="headerlink" title="1.1、匿名对象"></a>1.1、匿名对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">创建对象的语法：</span><br><span class="line">	Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">	<span class="comment">//=左侧在做对象的声明，开辟的是栈内存</span></span><br><span class="line">	<span class="comment">//=右侧，才是真正的创建对象</span></span><br><span class="line">	<span class="comment">//结果：内存中，创建了一个对象，对象的地址，赋值给p1。</span></span><br><span class="line">匿名对象，就是只有=右侧，没有=左侧。</span><br><span class="line">	<span class="keyword">new</span> 构造方法(必要的参数);</span><br><span class="line">匿名对象的用途：</span><br><span class="line">    <span class="number">1</span>、使用匿名对象，直接调用类的方法。</span><br><span class="line">    <span class="number">2</span>、匿名对象直接作为一个方法的参数。</span><br><span class="line">    </span><br><span class="line">注意点：</span><br><span class="line">    匿名对象只能使用一次。随着它的创建而使用一次。（一次性的）</span><br><span class="line">优势：</span><br><span class="line">    <span class="number">1</span>、使用后即销毁，就是被GC回收。</span><br><span class="line">    <span class="number">2</span>、代码书写方法，提高效率。</span><br></pre></td></tr></table></figure>
 
 
 
@@ -276,7 +278,7 @@
 <p>狗类：继承动物</p>
 <p>​    name，age，color</p>
 <p>​    eat()，sleep()</p>
-<h5 id="1-3-7-继承的注意点"><a href="#1-3-7-继承的注意点" class="headerlink" title="1.3.7 继承的注意点"></a>1.3.7 继承的注意点</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1、两个类存在了继承关系。</span><br><span class="line">	子类可以使用父类的属性和方法</span><br><span class="line">	但是父类不能使用子类的属性和方法。</span><br><span class="line">2、Java语言的继承是局限性：单继承。</span><br><span class="line">	一个子类，只能有一个父类。</span><br><span class="line">Java语言，不允许多继承，但是可以多层继承。</span><br><span class="line">	一个父类，爷爷类，太爷爷，祖爷爷。。祖宗。。</span><br><span class="line">一个父类是可以有多个子类的。</span><br></pre></td></tr></table></figure>
+<h5 id="1-3-7-继承的注意点"><a href="#1-3-7-继承的注意点" class="headerlink" title="1.3.7 继承的注意点"></a>1.3.7 继承的注意点</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、两个类存在了继承关系。</span><br><span class="line">	子类可以使用父类的属性和方法</span><br><span class="line">	但是父类不能使用子类的属性和方法。</span><br><span class="line"><span class="number">2</span>、Java语言的继承是局限性：单继承。</span><br><span class="line">	一个子类，只能有一个父类。</span><br><span class="line">	Java语言，不允许多继承，但是可以多层继承。</span><br><span class="line">	一个父类，爷爷类，太爷爷，祖爷爷。。祖宗。。</span><br><span class="line">	一个父类是可以有多个子类的。</span><br><span class="line"><span class="number">3</span>、怎么在继承的父类的基础上进行修改呢：想把父类的方法添加点新东西的话</span><br><span class="line">	在子类重写的方法中，调用父类方法 <span class="keyword">super</span>.test(),</span><br><span class="line">	在添加新的内容</span><br></pre></td></tr></table></figure>
 
 
 
@@ -473,7 +475,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day14——面向对象三大特征"><span class="toc-number">1.</span> <span class="toc-text">day14——面向对象三大特征</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、匿名对象"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、匿名对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、封装性"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、封装性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-private关键字"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">1.2.1 private关键字</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-getter和setter方法"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">1.2.2 getter和setter方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、继承性"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、继承性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-生活中的继承"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">1.3.1 生活中的继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-Java中的继承的概念"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">1.3.2 Java中的继承的概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-继承的好处"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">1.3.3 继承的好处</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-4-类的继承"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">1.3.4 类的继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-5-继承的语法"><span class="toc-number">1.1.3.5.</span> <span class="toc-text">1.3.5 继承的语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-6-什么样的两个类适合继承关系"><span class="toc-number">1.1.3.6.</span> <span class="toc-text">1.3.6 什么样的两个类适合继承关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-7-继承的注意点"><span class="toc-number">1.1.3.7.</span> <span class="toc-text">1.3.7 继承的注意点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-子类对象的创建过程"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 子类对象的创建过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-super关键字"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.5 super关键字</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、匿名对象"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、匿名对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、封装性"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、封装性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-private关键字"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.2.1 private关键字</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-getter和setter方法"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 getter和setter方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、继承性"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、继承性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-生活中的继承"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 生活中的继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-Java中的继承的概念"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 Java中的继承的概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-继承的好处"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 继承的好处</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-4-类的继承"><span class="toc-number">1.3.4.</span> <span class="toc-text">1.3.4 类的继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-5-继承的语法"><span class="toc-number">1.3.5.</span> <span class="toc-text">1.3.5 继承的语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-6-什么样的两个类适合继承关系"><span class="toc-number">1.3.6.</span> <span class="toc-text">1.3.6 什么样的两个类适合继承关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-7-继承的注意点"><span class="toc-number">1.3.7.</span> <span class="toc-text">1.3.7 继承的注意点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-子类对象的创建过程"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 子类对象的创建过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-super关键字"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 super关键字</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -703,11 +705,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
+                <a href="javascript:void(0)" class="js-tag color3">目标</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">目标</a>
+                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -715,11 +717,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BTC</a>
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color4">BTC</a>
               </li>
             
             <div class="clearfix"></div>

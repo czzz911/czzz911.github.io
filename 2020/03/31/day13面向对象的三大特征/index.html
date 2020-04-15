@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/03/31/day13%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/2%E5%8F%8D%E7%BC%96%E8%AF%91%E4%B8%80%E4%B8%AA%E7%B1%BB.png">
 <meta property="article:published_time" content="2020-03-31T15:09:44.000Z">
-<meta property="article:modified_time" content="2020-03-31T15:12:42.166Z">
+<meta property="article:modified_time" content="2020-04-15T06:59:16.017Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -71,7 +71,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 31
+			总文章数 32
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -201,7 +201,9 @@
        <p>一如彷徨一如年少时模样——</p>
 <a id="more"></a>
 
-<h2 id="day13——面向对象的三大特征"><a href="#day13——面向对象的三大特征" class="headerlink" title="day13——面向对象的三大特征"></a>day13——面向对象的三大特征</h2><h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、方法的重载：overload"><a href="#1-1、方法的重载：overload" class="headerlink" title="1.1、方法的重载：overload"></a>1.1、方法的重载：overload</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">概念：一个类中的，一个功能方法的多种体现形式（有不同的方法体）。</span><br><span class="line">举例：</span><br><span class="line">	<span class="number">1</span>、人类，有吃的功能：eat()</span><br><span class="line">			eat(食物);</span><br><span class="line">			eat(药);</span><br><span class="line">			eat(口香糖);</span><br><span class="line">		</span><br><span class="line">	<span class="number">2</span>、求和的功能：</span><br><span class="line">			getSum(<span class="keyword">int</span> i,<span class="keyword">int</span> j);</span><br><span class="line">			getSum(<span class="keyword">double</span> d1, <span class="keyword">double</span> d2);</span><br><span class="line">	<span class="number">3</span>、水：</span><br><span class="line">		常温：液态</span><br><span class="line">		<span class="number">0</span>度以下：固态</span><br><span class="line">		<span class="number">100</span>度以上：气态</span><br><span class="line">		</span><br><span class="line">就是同一个功能的方法，因为参数的不同，调用的具体的方法也不同。</span><br><span class="line">如何判定多个方法是否是重载的？衡量标准，要同时满足以下三条：</span><br><span class="line">	A：必须同一个类中。</span><br><span class="line">	B：方法名称必须一致。</span><br><span class="line">	C：参数列表必须不同。（顺序，个数，类型）</span><br><span class="line">	</span><br><span class="line">        和<span class="keyword">static</span>，<span class="keyword">public</span>，返回值，<span class="keyword">void</span>等等都没有关系。</span><br><span class="line">优点：</span><br><span class="line">	<span class="number">1</span>、简化了开发的压力</span><br><span class="line">	<span class="number">2</span>、简化了记忆的压力</span><br><span class="line">	<span class="number">3</span>、调用方法更方便，更简洁，又满足了不同的情况</span><br><span class="line">        </span><br><span class="line">基本原理：</span><br><span class="line">    当方法名称一致时，通过形式参数列表的不同来选择要执行的方法。</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、方法的重载：overload"><a href="#1-1、方法的重载：overload" class="headerlink" title="1.1、方法的重载：overload"></a>1.1、方法的重载：overload</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">概念：一个类中的，一个功能方法的多种体现形式（有不同的方法体）。</span><br><span class="line">举例：</span><br><span class="line">	<span class="number">1</span>、人类，有吃的功能：eat()</span><br><span class="line">			eat(食物);</span><br><span class="line">			eat(药);</span><br><span class="line">			eat(口香糖);</span><br><span class="line">		</span><br><span class="line">	<span class="number">2</span>、求和的功能：</span><br><span class="line">			getSum(<span class="keyword">int</span> i,<span class="keyword">int</span> j);</span><br><span class="line">			getSum(<span class="keyword">double</span> d1, <span class="keyword">double</span> d2);</span><br><span class="line">	<span class="number">3</span>、水：</span><br><span class="line">		常温：液态</span><br><span class="line">		<span class="number">0</span>度以下：固态</span><br><span class="line">		<span class="number">100</span>度以上：气态</span><br><span class="line">		</span><br><span class="line">就是同一个功能的方法，因为参数的不同，调用的具体的方法也不同。</span><br><span class="line">如何判定多个方法是否是重载的？衡量标准，要同时满足以下三条：</span><br><span class="line">	A：必须同一个类中。</span><br><span class="line">	B：方法名称必须一致。</span><br><span class="line">	C：参数列表必须不同。（顺序，个数，类型）</span><br><span class="line">	</span><br><span class="line">        和<span class="keyword">static</span>，<span class="keyword">public</span>，返回值，<span class="keyword">void</span>等等都没有关系。</span><br><span class="line">优点：</span><br><span class="line">	<span class="number">1</span>、简化了开发的压力</span><br><span class="line">	<span class="number">2</span>、简化了记忆的压力</span><br><span class="line">	<span class="number">3</span>、调用方法更方便，更简洁，又满足了不同的情况</span><br><span class="line">        </span><br><span class="line">基本原理：</span><br><span class="line">    当方法名称一致时，通过形式参数列表的不同来选择要执行的方法。</span><br></pre></td></tr></table></figure>
 
 
 
@@ -225,6 +227,7 @@
 <li>调用的方式：方法名(实参)；</li>
 <li>作用：1、避免重复的代码增强程序的可读性。2、提高程序的可维护性。</li>
 </ul>
+<p><strong>构造方法中 只能包含一个   其他构造方法</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1、编写java的源代码(给人看)：XXX.java</span><br><span class="line">2、将源文件进行编译(机器执行的就是这个字节码文件)：XXX.class</span><br><span class="line">	javac命令  javac XXX.java</span><br><span class="line">3、JVM执行字节码文件：XXX.class</span><br><span class="line">	java命令	java XXX</span><br><span class="line"></span><br><span class="line">Java反编译工具：我们现在将class文件，进行反编译，可以看见类似于底层语言</span><br><span class="line">	javap -c -l -private XXX.class</span><br></pre></td></tr></table></figure>
 
 <h5 id="12-1-Java编译器提供的默认的构造方法"><a href="#12-1-Java编译器提供的默认的构造方法" class="headerlink" title="12.1 Java编译器提供的默认的构造方法"></a>12.1 Java编译器提供的默认的构造方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">问题：创建对象的时候，代码：<span class="keyword">new</span> Person();调用的这个Person()这个方法，在程序中并没有写，哪来的？</span><br><span class="line"></span><br><span class="line">试着将Person<span class="class">.<span class="keyword">class</span>文件进行反编译：</span></span><br></pre></td></tr></table></figure>
@@ -239,15 +242,16 @@
 
 <p>如何创建一个对象？就是通过new这个关键字，调用一个类的构造方法。就创建了对象。</p>
 <p>先声明，再调用—&gt;普通方法，还适合构造方法。</p>
-<p>如果一个类中，没有手动的写一个构造方法的话，那么编译器会自动的添加一个无参的构造方法。</p>
+<p><strong>如果一个类中，没有手动的写一个构造方法的话，那么编译器会自动的添加一个无参的构造方法。</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">	String name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;<span class="comment">//无参的构造方法</span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String n,<span class="keyword">int</span> a)</span></span>&#123;<span class="comment">//有参的构造方法</span></span><br><span class="line">        name = n;</span><br><span class="line">        age = a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">        p1.name = <span class="string">"李小花"</span>;</span><br><span class="line">        p1.age = <span class="number">18</span>;</span><br><span class="line">        </span><br><span class="line">        Person p2 = <span class="keyword">new</span> Person(<span class="string">"王二狗"</span>,<span class="number">18</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<p>注意点：</p>
+<p><strong>注意点：</strong></p>
 <blockquote>
 <p>1、如果代码中，没有写构造方法。编译器会自动的添加一个无参的构造方法。</p>
 <p>2、如果代码中，写了构造方法。编译器都不会再给我们添加无参的构造方法。编码习惯：写了有参构造，再写上无参构造。</p>
+<p>3、堆内存中  构造方法创建的属性存储空间，子类的和父类是放在一起的。</p>
 </blockquote>
 <p>对比一下构造方法和普通方法：</p>
 <table>
@@ -292,7 +296,7 @@
 <tr>
 <td>6</td>
 <td>作用</td>
-<td>专门用于创建对象，并且可以初始化属性的值。</td>
+<td><strong>专门用于创建对象</strong>，并且可以初始化属性的值。</td>
 <td>实现特定的功能</td>
 </tr>
 <tr>
@@ -495,7 +499,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day13——面向对象的三大特征"><span class="toc-number">1.</span> <span class="toc-text">day13——面向对象的三大特征</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、方法的重载：overload"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、方法的重载：overload</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、构造方法"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、构造方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#12-1-Java编译器提供的默认的构造方法"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">12.1 Java编译器提供的默认的构造方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-自定义的构造方法"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">1.2.2 自定义的构造方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、this关键字"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、this关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-就近原则问题"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">1.3.1 就近原则问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-this的用法一"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">1.3.2 this的用法一</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-this的用法二"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">1.3.3 this的用法二</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、方法的重载：overload"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、方法的重载：overload</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、构造方法"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、构造方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#12-1-Java编译器提供的默认的构造方法"><span class="toc-number">1.2.1.</span> <span class="toc-text">12.1 Java编译器提供的默认的构造方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-自定义的构造方法"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 自定义的构造方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、this关键字"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、this关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-就近原则问题"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 就近原则问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-this的用法一"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 this的用法一</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-this的用法二"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 this的用法二</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -725,11 +729,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
+                <a href="javascript:void(0)" class="js-tag color3">目标</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">目标</a>
+                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -737,11 +741,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BTC</a>
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color4">BTC</a>
               </li>
             
             <div class="clearfix"></div>

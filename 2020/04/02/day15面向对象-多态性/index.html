@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/02/day15%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%A4%9A%E6%80%81%E6%80%A7/6%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/02/day15%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%A4%9A%E6%80%81%E6%80%A7/5%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84.png">
 <meta property="article:published_time" content="2020-04-02T13:23:44.000Z">
-<meta property="article:modified_time" content="2020-04-03T10:39:12.627Z">
+<meta property="article:modified_time" content="2020-04-15T06:58:56.642Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -75,7 +75,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 31
+			总文章数 32
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -205,7 +205,9 @@
        <p>一如原谅一如年少时模样</p>
 <a id="more"></a>
 
-<h2 id="day15——面向对象-多态性"><a href="#day15——面向对象-多态性" class="headerlink" title="day15——面向对象(多态性)"></a>day15——面向对象(多态性)</h2><h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、子类对象的创建过程"><a href="#1-1、子类对象的创建过程" class="headerlink" title="1.1、子类对象的创建过程"></a>1.1、子类对象的创建过程</h4><p>实例化子类对象的过程：</p>
+
+
+<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、子类对象的创建过程"><a href="#1-1、子类对象的创建过程" class="headerlink" title="1.1、子类对象的创建过程"></a>1.1、子类对象的创建过程</h4><p>实例化子类对象的过程：</p>
 <ul>
 <li>1、先调用父类的构造方法<ul>
 <li>默认调用父类的无参构造方法。</li>
@@ -240,10 +242,13 @@
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * 1.父类的方法，访问权限：public</span></span><br><span class="line"><span class="comment">		 *   子类重写，只能public</span></span><br><span class="line"><span class="comment">		 * 2.父类的方法，访问权限：protected</span></span><br><span class="line"><span class="comment">		 * 	 子类重写，protected，public</span></span><br><span class="line"><span class="comment">		 * 3.父类的方法，访问权限：default</span></span><br><span class="line"><span class="comment">		 * 	  子类重写，default，protected，public</span></span><br><span class="line"><span class="comment">		 * 4.父类的方法，访问权限：private</span></span><br><span class="line"><span class="comment">		 	 对于子类来讲，该方法根本不可见。</span></span><br><span class="line"><span class="comment">		 */</span></span><br></pre></td></tr></table></figure>
 
-
-
-
-
+<p>怎么在继承的父类的基础上进行修改呢：</p>
+<blockquote>
+<p>想把父类的方法添加点新东西的话</p>
+<p>1、在子类方法中先调用父类的方法</p>
+<p>​    super.test();</p>
+<p>2、然后再添加新的内容</p>
+</blockquote>
 <h4 id="1-4、访问权限修饰符"><a href="#1-4、访问权限修饰符" class="headerlink" title="1.4、访问权限修饰符"></a>1.4、访问权限修饰符</h4><p>访问权限：就是在哪能访问。通过访问权限修饰符来实现。</p>
 <p>​        作用：限制可见度。</p>
 <p>private：私有的。本类中。</p>
@@ -452,7 +457,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day15——面向对象-多态性"><span class="toc-number">1.</span> <span class="toc-text">day15——面向对象(多态性)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、子类对象的创建过程"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、子类对象的创建过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、super关键字"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、super关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、方法的重写"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、方法的重写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、访问权限修饰符"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4、访问权限修饰符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、对象的多态性"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.5、对象的多态性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-1-什么是多态"><span class="toc-number">1.1.5.1.</span> <span class="toc-text">1.5.1 什么是多态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-2、向上转型和向下转型"><span class="toc-number">1.1.5.2.</span> <span class="toc-text">1.5.2、向上转型和向下转型</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、子类对象的创建过程"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、子类对象的创建过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、super关键字"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、super关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、方法的重写"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、方法的重写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、访问权限修饰符"><span class="toc-number">1.4.</span> <span class="toc-text">1.4、访问权限修饰符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、对象的多态性"><span class="toc-number">1.5.</span> <span class="toc-text">1.5、对象的多态性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-1-什么是多态"><span class="toc-number">1.5.1.</span> <span class="toc-text">1.5.1 什么是多态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-5-2、向上转型和向下转型"><span class="toc-number">1.5.2.</span> <span class="toc-text">1.5.2、向上转型和向下转型</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -682,11 +687,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
+                <a href="javascript:void(0)" class="js-tag color3">目标</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">目标</a>
+                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -694,11 +699,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BTC</a>
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color4">BTC</a>
               </li>
             
             <div class="clearfix"></div>

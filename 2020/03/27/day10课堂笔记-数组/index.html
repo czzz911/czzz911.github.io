@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/4%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0.png">
 <meta property="og:image" content="http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/5%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC.png">
 <meta property="article:published_time" content="2020-03-27T14:56:55.000Z">
-<meta property="article:modified_time" content="2020-03-28T01:48:19.622Z">
+<meta property="article:modified_time" content="2020-04-15T07:00:22.080Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -73,7 +73,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 31
+			总文章数 32
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -203,7 +203,9 @@
        <p>一个一个走过，一个一个错过，一遍一遍来过，一次一次放过，一声一声笑着，一声一声吼着，一幕一幕闪着——</p>
 <a id="more"></a>
 
-<h2 id="day10——数组"><a href="#day10——数组" class="headerlink" title="day10——数组"></a>day10——数组</h2><h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、数组的遍历"><a href="#1-1、数组的遍历" class="headerlink" title="1.1、数组的遍历"></a>1.1、数组的遍历</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">遍历：依次访问，从第一个元素，访问到最后一个元素。</span><br><span class="line"><span class="number">1</span>、使用循环来遍历数组</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; arr.length; i++)&#123;</span><br><span class="line">	arr[i] = i;<span class="comment">//赋值</span></span><br><span class="line">	System.out.println(arr[i]);<span class="comment">//获取数值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、数组的遍历"><a href="#1-1、数组的遍历" class="headerlink" title="1.1、数组的遍历"></a>1.1、数组的遍历</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">遍历：依次访问，从第一个元素，访问到最后一个元素。</span><br><span class="line"><span class="number">1</span>、使用循环来遍历数组</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; arr.length; i++)&#123;</span><br><span class="line">	arr[i] = i;<span class="comment">//赋值</span></span><br><span class="line">	System.out.println(arr[i]);<span class="comment">//获取数值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h6 id="1-1-1、for-each循环"><a href="#1-1-1、for-each循环" class="headerlink" title="1.1.1、for-each循环"></a>1.1.1、for-each循环</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>-each循环：【扩展】</span><br><span class="line">增强<span class="keyword">for</span>循环：JDK1<span class="number">.5</span>的版本出现的。</span><br><span class="line">特定的用法：专门用于获取数组中的每一个元素的值。</span><br><span class="line">语法结构：</span><br><span class="line"><span class="keyword">for</span>(数据类型 变量名 : 数组名)&#123;</span><br><span class="line">    System.out.println(变量名);</span><br><span class="line">&#125;</span><br><span class="line">工作原理：</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> e :arr)&#123;</span><br><span class="line">    System.out.println(e);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> e，定义变量e，</span><br><span class="line">	依次获取数组的元素，赋值给e</span><br><span class="line">注意点：</span><br><span class="line">    A：<span class="keyword">for</span>-each只能获取数组的数据，但是不能给数组进行赋值</span><br><span class="line">    B：<span class="keyword">for</span>-each，在代码这个层面，不能操作下标。</span><br></pre></td></tr></table></figure>
 
@@ -428,7 +430,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day10——数组"><span class="toc-number">1.</span> <span class="toc-text">day10——数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、数组的遍历"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、数组的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-1-1、for-each循环"><span class="toc-number">1.1.1.0.1.</span> <span class="toc-text">1.1.1、for-each循环</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、数组中的默认值"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、数组中的默认值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、创建数组的其他语法"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、创建数组的其他语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、数组的地址转移：知道"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4、数组的地址转移：知道</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、数组作为参数"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.5、数组作为参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、数组作为返回值"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.6、数组作为返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、可变参数"><span class="toc-number">1.1.7.</span> <span class="toc-text">1.6、可变参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7、数组的排序"><span class="toc-number">1.1.8.</span> <span class="toc-text">1.7、数组的排序</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、数组的遍历"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、数组的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-1-1、for-each循环"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">1.1.1、for-each循环</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、数组中的默认值"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、数组中的默认值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、创建数组的其他语法"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、创建数组的其他语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、数组的地址转移：知道"><span class="toc-number">1.4.</span> <span class="toc-text">1.4、数组的地址转移：知道</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、数组作为参数"><span class="toc-number">1.5.</span> <span class="toc-text">1.5、数组作为参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、数组作为返回值"><span class="toc-number">1.6.</span> <span class="toc-text">1.6、数组作为返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、可变参数"><span class="toc-number">1.7.</span> <span class="toc-text">1.6、可变参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7、数组的排序"><span class="toc-number">1.8.</span> <span class="toc-text">1.7、数组的排序</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -658,11 +660,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
+                <a href="javascript:void(0)" class="js-tag color3">目标</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">目标</a>
+                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -670,11 +672,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">BTC</a>
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color4">BTC</a>
               </li>
             
             <div class="clearfix"></div>
