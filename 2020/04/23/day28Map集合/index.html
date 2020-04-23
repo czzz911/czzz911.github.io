@@ -6,20 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>day14面向对象三大特征 | czzz</title>
+  <title>day28Map集合 | czzz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="寻几处好景破星光——">
+  <meta name="description" content="关于孤独的事到此为止——">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day14面向对象三大特征">
-<meta property="og:url" content="http://yoursite.com/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/index.html">
+<meta property="og:title" content="day28Map集合">
+<meta property="og:url" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="czzz">
-<meta property="og:description" content="寻几处好景破星光——">
+<meta property="og:description" content="关于孤独的事到此为止——">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-01T13:50:01.000Z">
-<meta property="article:modified_time" content="2020-04-15T06:59:06.621Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/3comparator%E5%AF%B9%E8%B1%A1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/1Comparator%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AE%9E%E7%8E%B0.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/4map%E6%8E%A5%E5%8F%A3.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/2list%E5%B5%8C%E5%A5%97map%E9%9B%86%E5%90%88.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/%E9%9B%86%E5%90%88%E7%9A%84%E7%BB%93%E6%9E%84.png">
+<meta property="article:published_time" content="2020-04-22T17:01:47.000Z">
+<meta property="article:modified_time" content="2020-04-22T17:23:25.882Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/3comparator%E5%AF%B9%E8%B1%A1.png">
   
     <link rel="alternative" href="/atom.xml" title="czzz" type="application/atom+xml">
   
@@ -166,7 +172,7 @@
           <div id="js-content" class="content-ll">
             
 <article
-  id="post-day14面向对象三大特征"
+  id="post-day28Map集合"
   class="article article-type-post "
   itemscope
   itemprop="blogPost"
@@ -177,7 +183,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      day14面向对象三大特征
+      day28Map集合
     </h1>
   
 
@@ -187,114 +193,159 @@
 <!-- # span 给的 id 是文章的 url 作为唯一的 key 值 -->
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" class="pageViews">0</span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/04/23/day28Map%E9%9B%86%E5%90%88/" class="pageViews">0</span>次
   </a>
 
-       <a href="/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" class="archive-article-date">
-  	<time datetime="2020-04-01T13:50:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
+       <a href="/2020/04/23/day28Map%E9%9B%86%E5%90%88/" class="archive-article-date">
+  	<time datetime="2020-04-22T17:01:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
 </a> 
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <p>寻几处好景破星光——</p>
+       <p>关于孤独的事到此为止——</p>
 <a id="more"></a>
 
-
-
-<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、匿名对象"><a href="#1-1、匿名对象" class="headerlink" title="1.1、匿名对象"></a>1.1、匿名对象</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">创建对象的语法：</span><br><span class="line">	Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">	<span class="comment">//=左侧在做对象的声明，开辟的是栈内存</span></span><br><span class="line">	<span class="comment">//=右侧，才是真正的创建对象</span></span><br><span class="line">	<span class="comment">//结果：内存中，创建了一个对象，对象的地址，赋值给p1。</span></span><br><span class="line">匿名对象，就是只有=右侧，没有=左侧。</span><br><span class="line">	<span class="keyword">new</span> 构造方法(必要的参数);</span><br><span class="line">匿名对象的用途：</span><br><span class="line">    <span class="number">1</span>、使用匿名对象，直接调用类的方法。</span><br><span class="line">    <span class="number">2</span>、匿名对象直接作为一个方法的参数。</span><br><span class="line">    </span><br><span class="line">注意点：</span><br><span class="line">    匿名对象只能使用一次。随着它的创建而使用一次。（一次性的）</span><br><span class="line">优势：</span><br><span class="line">    <span class="number">1</span>、使用后即销毁，就是被GC回收。</span><br><span class="line">    <span class="number">2</span>、代码书写方法，提高效率。</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="1-2、封装性"><a href="#1-2、封装性" class="headerlink" title="1.2、封装性"></a>1.2、封装性</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">面向对象的三大特征：</span><br><span class="line">	1、封装性</span><br><span class="line">	2、继承性</span><br><span class="line">	3、多态性</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">封装的概念：尽可能的隐藏对象的内部的细节。</span><br><span class="line">	&quot;打包&quot;,包起来。为了保护数据的安全性。</span><br><span class="line">		某宝购物，电视机。。。。</span><br><span class="line">		</span><br><span class="line">面向对象中的封装性，不仅仅是对属性进行封装。</span><br><span class="line">一段代码，写了3遍---&gt;封装成一个方法</span><br><span class="line">一堆方法，用了3遍---&gt;封装成工具类：Arrays工具类</span><br><span class="line">。。。</span><br><span class="line">一个方法，一个类，都是一种封装。</span><br></pre></td></tr></table></figure>
-
-<h5 id="1-2-1-private关键字"><a href="#1-2-1-private关键字" class="headerlink" title="1.2.1 private关键字"></a>1.2.1 private关键字</h5><p>词义：”私有的”。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">是一个访问权限修饰符：</span><br><span class="line">	修饰符：public，private，static，final，abstract。。。</span><br><span class="line">	访问权限：在哪个范围内能够访问。</span><br><span class="line">	</span><br><span class="line">作用：限制在本类中才能访问。</span><br><span class="line">private，修饰属性，修饰方法，不能修饰类。</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="1-2-2-getter和setter方法"><a href="#1-2-2-getter和setter方法" class="headerlink" title="1.2.2 getter和setter方法"></a>1.2.2 getter和setter方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">为了保护属性的数据安全，使用了<span class="keyword">private</span>访问权限修饰符，限制了只能在类中使用。那么对于外部的对象，如何给属性进行操作？赋值，取值。</span><br><span class="line">使用setter方法，给属性进行赋值。</span><br><span class="line">	set，词义，设置。。</span><br><span class="line">语法格式：</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	public void set成员变量名(形式参数)&#123;//要给成员变量进行赋值</span></span><br><span class="line"><span class="comment">		this.属性 = 参数名;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	例如：</span></span><br><span class="line"><span class="comment">	public void setAge(int age)&#123;</span></span><br><span class="line"><span class="comment">		//.....</span></span><br><span class="line"><span class="comment">		this.age = age;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">使用getter方法，获取属性值</span><br><span class="line">	get，词义，获取</span><br><span class="line">    </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	public  成员变量的类型 get成员变量名()&#123;</span></span><br><span class="line"><span class="comment">		return this.成语变量名;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">	例如：</span></span><br><span class="line"><span class="comment">	public int getAge()&#123;</span></span><br><span class="line"><span class="comment">		return this.age;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<p>类的设计原则：</p>
+<h2 id="day28——Map集合"><a href="#day28——Map集合" class="headerlink" title="day28——Map集合"></a>day28——Map集合</h2><h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>Collection接口：add()，remove()，size()，iterator()。。。</p>
+<p>List子接口：add(index,E),remove(index),get(index),set(index,E),subList(),indexOf(),listIterator()…</p>
 <ul>
-<li>成员变量(属性)，私有化(使用private修饰)。添加getter方法和setter方法。</li>
-<li>公开方法(public修饰)。</li>
-<li>至少提供无参的构造方法，有参(随意)。</li>
+<li>有序，有下标，index</li>
+<li>允许存储重复的元素</li>
 </ul>
-<p>所以说对类中的属性，进行封装的步骤：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">step1：使用<span class="keyword">private</span>关键字，修饰成员变量(属性)。</span><br><span class="line">step2：提供setter方法，用于对属性进行赋值。</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> set属性名(参数)&#123;</span><br><span class="line">		<span class="keyword">this</span>.属性名 = 参数;</span><br><span class="line">	&#125;</span><br><span class="line">step3：提供getter方法，用于获取属性值。</span><br><span class="line">	<span class="keyword">public</span> 属性值类型 get属性名()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.属性名;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>属性封装，注意点：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">如果一个属性是<span class="keyword">boolean</span>类型的，get方法的写法：方法名是特殊：isXXX()</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">boolean</span> married;<span class="comment">//是否已婚</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//对于boolean类型的get方法：两个状态</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isMarried</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.married;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>扩展内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">数组有长度：表示该数组中存储的元素的个数。</span><br><span class="line">	数组的属性：arr.length</span><br><span class="line">字符串也有长度：表示该字符串中字符的个数。</span><br><span class="line">	&quot;abc&quot;，&quot;hello&quot;,&quot;he llo&quot;</span><br><span class="line">	字符串的方法：str.length();</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h4 id="1-3、继承性"><a href="#1-3、继承性" class="headerlink" title="1.3、继承性"></a>1.3、继承性</h4><h5 id="1-3-1-生活中的继承"><a href="#1-3-1-生活中的继承" class="headerlink" title="1.3.1 生活中的继承"></a>1.3.1 生活中的继承</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">继承&quot;遗产&quot;。</span><br><span class="line">子承父业。儿子可以继承父亲的东西。</span><br></pre></td></tr></table></figure>
-
-<h5 id="1-3-2-Java中的继承的概念"><a href="#1-3-2-Java中的继承的概念" class="headerlink" title="1.3.2 Java中的继承的概念"></a>1.3.2 Java中的继承的概念</h5><p>继承指的是两个类的关系。如果一个类(子类)，继承了另外一个类(父类)。<strong>那么子类就可以直接使用父类的非私有化的成员(属性，和方法)</strong>。</p>
-<h5 id="1-3-3-继承的好处"><a href="#1-3-3-继承的好处" class="headerlink" title="1.3.3 继承的好处"></a>1.3.3 继承的好处</h5><p>1、实现代码的重用和扩展。</p>
-<p>​        避免重复的代码：父类写的非私有化的属性和方法，子类不用再写了，直接使用。</p>
-<p>​        类的扩展：思想，子类扩展父类的功能。(父类是人，子类是学生)</p>
-<p>2、模拟现实世界的关系。</p>
-<h5 id="1-3-4-类的继承"><a href="#1-3-4-类的继承" class="headerlink" title="1.3.4 类的继承"></a>1.3.4 类的继承</h5><ul>
-<li><p>关键字：extends，词义：扩展的。描述两个类的关系：子类，父类。</p>
-</li>
-<li><p>被继承的类：父类，根类，超类，基类，SuperClass</p>
-</li>
-<li><p>继承的类：子类，派生类，SubClass</p>
-</li>
-</ul>
-<h5 id="1-3-5-继承的语法"><a href="#1-3-5-继承的语法" class="headerlink" title="1.3.5 继承的语法"></a>1.3.5 继承的语法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FatherClass</span></span>&#123;</span><br><span class="line">	<span class="comment">//属性</span></span><br><span class="line">	<span class="comment">//方法</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ChildClass</span> <span class="keyword">extends</span> <span class="title">FatherClass</span></span>&#123;</span><br><span class="line">    <span class="comment">//新增的属性</span></span><br><span class="line">    <span class="comment">//方法：重写，新增</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>一旦两个类存在了继承的关系，那么：</p>
+<p>实现类：</p>
 <ul>
-<li><p>子类可以直接使用父类的非私有化的属性(成员变量)和方法(成员方法)。</p>
+<li>ArrayList：底层采用数组结构来实现。</li>
+<li>LinkedList：底层采用双向链表来实现。</li>
+<li>Vector：旧的类，线程安全，效率低。被ArrayList替代。</li>
+</ul>
+<p>Set子接口：</p>
+<ul>
+<li>无序</li>
+<li>不允许存储相同的元素——&gt;去重</li>
+</ul>
+<p>实现类：</p>
+<ul>
+<li><p>HashSet：底层采用哈希表结构来实现。</p>
+<p>step1：对象的hashCode码，不相同就直接存储了。如果相同，进入第二步</p>
+<p>step1：对象的equals()方法。</p>
+<p>​                true：相同对象</p>
+<p>​                false：不同对象</p>
+<p>重写以上两个方法：Object类：hashCode(),equals()</p>
+<p>对象的各个属性值都相同——&gt;相同的元素，重复的。</p>
+<p>同时重写hashCode()和equals()</p>
+<p>规则：</p>
+<p>​    hashCode：如果对象相同，保证哈希值必须相同。如果对象不同，哈希值尽可能不同。</p>
+<p>​    equals：如果对象相同，必须返回true。如果对象不同，必须返回false。</p>
 </li>
-<li><p>子类还可以新增自己的属性和方法。</p>
-</li>
-<li><p>子类可以重写父类已有的方法。</p>
+<li><p>TreeSet：底层采用二叉树结构来实现。</p>
+<p>TreeSet—&gt;SortedSet接口—&gt;Set接口</p>
+<p>去重的同时，还给元素进行排序。</p>
+<p>对象：人类：张三，王二狗，李小花</p>
+<p>对象：狗类：毛毛，啸天，豆豆</p>
 </li>
 </ul>
-<h5 id="1-3-6-什么样的两个类适合继承关系"><a href="#1-3-6-什么样的两个类适合继承关系" class="headerlink" title="1.3.6 什么样的两个类适合继承关系"></a>1.3.6 什么样的两个类适合继承关系</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">要两个类，满足is-a 的范式</span><br><span class="line">子类 是一个 特殊的 父类。</span><br></pre></td></tr></table></figure>
+<p>对象具有可比性：能够进行比较，谁在前谁在后。谁大谁小</p>
+<p>接口：比较器</p>
+<p>java.lang.Comparable接口：强行对该接口的实现类对象进行比较排序。</p>
+<p>compareTo(o)—&gt;int</p>
+<p>o1,o2比较大小</p>
+<ul>
+<li>正数：this对象&gt;o对象，排后面。</li>
+<li>负数：this对象&lt;o对象，排前面</li>
+<li>零：this对象和o对象相同，不存储。——&gt;去重</li>
+</ul>
+<p>java.lang.Comparable接口：比较器</p>
+<p>java.util.Comparator接口：比较器</p>
+<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、Comparable接口"><a href="#1-1、Comparable接口" class="headerlink" title="1.1、Comparable接口"></a>1.1、Comparable接口</h4><p>java.lang.Comparable接口：给对象强行排序的。默认的比较器。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(T o)</span> </span></span><br><span class="line"><span class="function">将此对象与指定的对象进行比较以进行排序。 </span></span><br><span class="line"><span class="function">    比较的两个对象：<span class="keyword">this</span>对象和参数o对象比较</span></span><br></pre></td></tr></table></figure>
+
+<p>说明：排序的规则</p>
+<ul>
+<li>正数：this对象&gt;o对象，排后面。</li>
+<li>负数：this对象&lt;o对象，排前面</li>
+<li>零：this对象和o对象相同，不存储。——&gt;去重</li>
+</ul>
+<h4 id="1-2、Comparator接口"><a href="#1-2、Comparator接口" class="headerlink" title="1.2、Comparator接口"></a>1.2、Comparator接口</h4><p>java.util.Comparator接口：给对象强行排序的。自定义的比较器。</p>
+<p><img src="/2020/04/23/day28Map%E9%9B%86%E5%90%88/3comparator%E5%AF%B9%E8%B1%A1.png" alt="3comparator对象"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(T o1, T o2)</span> </span></span><br><span class="line"><span class="function">比较其两个参数的顺序。</span></span><br><span class="line"><span class="function">    比较的两个对象：o1和o2</span></span><br></pre></td></tr></table></figure>
+
+<p>说明：排序的规则</p>
+<ul>
+<li>正数：o1对象&gt;o2对象，排后面。</li>
+<li>负数：o1对象&lt;o2对象，排前面</li>
+<li>零：o1对象和o2对象相同，不存储。——&gt;去重</li>
+</ul>
+<p>注意点：创建一个TreeSet集合，到底使用哪个比较器？Comparable？Comparator？</p>
+<ul>
+<li>无参构造：new TreeSet();–&gt;使用默认的比较器：Comparable</li>
+<li>有参构造：new TreeSet(Comparator)–&gt;使用自定义的比较器：Comparator</li>
+</ul>
+<p><img src="/2020/04/23/day28Map%E9%9B%86%E5%90%88/1Comparator%E7%9A%84%E5%8C%BF%E5%90%8D%E5%AE%9E%E7%8E%B0.png" alt="1Comparator的匿名实现"></p>
+<h4 id="1-3、LinkedHashSet集合"><a href="#1-3、LinkedHashSet集合" class="headerlink" title="1.3、LinkedHashSet集合"></a>1.3、LinkedHashSet集合</h4><p>回忆：HashSet存储特点？1、无序。2、去重</p>
+<p>HashSet存储数据，记录存储的顺序。</p>
+<p>Set集合的另一个实现类：LinkedHashSet</p>
+<p>​                        继承HashSet类</p>
+<p>存储原理同HashSet相同，但是外层套了一个链表结构。用于记录存储的顺序。</p>
+<blockquote>
+<p>LinkedHashSet作为HashSet的子类，扩展了HashSet的功能，可以记录存储的顺序。保证了迭代的顺序。</p>
+</blockquote>
+<h4 id="1-4、Map接口"><a href="#1-4、Map接口" class="headerlink" title="1.4、Map接口"></a>1.4、Map接口</h4><p>词义：映射，理解为对应。</p>
+<p>map每次操作的元素是成对的。两个：key(键)，value(值)。</p>
+<p>map中存储的元素，键值对。<strong>其中键不能重复</strong>。值可以重复。键和值，必须是一一对应的。</p>
+<p><img src="/2020/04/23/day28Map%E9%9B%86%E5%90%88/4map%E6%8E%A5%E5%8F%A3.png" alt="4map接口"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">成对的：键和值对应</span><br><span class="line">电话本：</span><br><span class="line">	key		  value</span><br><span class="line">	人名		电话号码</span><br><span class="line">	张三		13911114456</span><br><span class="line">	李四		13809485245</span><br><span class="line">	王二狗	    13188585969</span><br><span class="line">	</span><br><span class="line">夫妻两口子</span><br><span class="line">	key			value</span><br><span class="line">	老公			老婆</span><br><span class="line">	邓超			孙俪</span><br><span class="line">	王二狗			李小花</span><br><span class="line">	吴京			谢楠</span><br><span class="line"></span><br><span class="line">表格：存储信息</span><br><span class="line">	key			value</span><br><span class="line">	姓名		   王二狗</span><br><span class="line">	年龄			30</span><br><span class="line">	性别			男</span><br><span class="line">	</span><br><span class="line">。。。。。</span><br><span class="line">程序中，很多数据都是成对出现。</span><br><span class="line">	json，xml，mysql，map。。。</span><br></pre></td></tr></table></figure>
+
+<p>Map是一个接口：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Map中的常用方法：</span><br><span class="line">添加&#x2F;修改元素：</span><br><span class="line">put(key,value)；			向map中添加键值对，键不能重复。如果键重复了，那么value会被覆盖的。</span><br><span class="line">	——&gt;value			如果没重复，返回值为   null</span><br><span class="line">						如果重复，返回值为    被替代掉的元素的value值</span><br><span class="line">删除元素：</span><br><span class="line">remove(key)--&gt;value			删除元素</span><br><span class="line">							如果没有，返回值为   null</span><br><span class="line">							如果有，删除并返回    value</span><br><span class="line">查询元素：</span><br><span class="line">containsKey(key)--&gt;boolean			是否包含此key值</span><br><span class="line">containsValue(value)--&gt;boolean		是否包含此value值</span><br><span class="line">get(key)--&gt;value					得到对应key值的value值</span><br><span class="line">size()--&gt;int						键值对的个数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">keySet()--&gt;Set&lt;key&gt;					用于把map转为set，用collocation结构的迭代器iterator进行遍历</span><br><span class="line">values()--&gt;Collection&lt;value&gt;		得到map中所有的value值，用集合接收</span><br><span class="line">entrySet()--&gt;Set&lt;Entry&gt;				得到map中所有的key和value，并拼接成 key&#x3D;value 存在set结合中</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/04/23/day28Map%E9%9B%86%E5%90%88/2list%E5%B5%8C%E5%A5%97map%E9%9B%86%E5%90%88.png" alt="2list嵌套map集合"></p>
+<h4 id="1-5、HashMap实现类"><a href="#1-5、HashMap实现类" class="headerlink" title="1.5、HashMap实现类"></a>1.5、HashMap实现类</h4><p>HashSet集合——&gt;如何去重？step1：hashCode()，step2：equals()</p>
+<p>HashMap集合——&gt;<strong>key如何去重？</strong>原理同HashSet相同。</p>
+<p>​    step1：对象的hashCode()–&gt;哈希值</p>
+<p>​            如果哈希值不同，就直接存储。</p>
+<p>​            如果哈希值相同，就进入第二步</p>
+<p>​    step2：对象的equals()–&gt;boolean</p>
+<p>​        如果true：相同的元素，key是相同的了。value值，会覆盖map中相同的key的之前的value。</p>
+<p>​        如果false：不同的元素，key，value都可以进行存储。</p>
+<p>如果使用HashMap集合，key的对象所属于的类，必须同时重写hashCode和equals，必须同时重写。重写的规则</p>
+<p>hashCode：</p>
+<p>​    相同的对象，属性都相同，那么哈希值必须相同</p>
+<p>​    不同的对象，有的属性值不同，那么哈希值尽量不同</p>
+<p>equals：</p>
+<p>​    相同的对象，属性都相同，必须返回true。</p>
+<p>​    不同的对象，属性值不同，必须返回false。</p>
+<p>对比HashSet和HashMap</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、都要求同时重写hashCode()和equals()</span><br><span class="line">2、不保证顺序</span><br><span class="line">	HashSet不关心存储的元素的顺序。添加的顺序和迭代的顺序不一定一致。</span><br><span class="line">	HashMap不关心key的顺序。</span><br><span class="line">补充一句话：HashSet的底层就是HashMap，只不过只要key，不要value值。</span><br></pre></td></tr></table></figure>
 
 
 
-<p>小汽车，继承 车</p>
-<p>工人，继承人</p>
-<p>学生，继承人</p>
-<p>猫类：继承动物</p>
-<p>​    name，age</p>
-<p>​    eat()，sleep()</p>
-<p>狗类：继承动物</p>
-<p>​    name，age，color</p>
-<p>​    eat()，sleep()</p>
-<h5 id="1-3-7-继承的注意点"><a href="#1-3-7-继承的注意点" class="headerlink" title="1.3.7 继承的注意点"></a>1.3.7 继承的注意点</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、两个类存在了继承关系。</span><br><span class="line">	子类可以使用父类的属性和方法</span><br><span class="line">	但是父类不能使用子类的属性和方法。</span><br><span class="line"><span class="number">2</span>、Java语言的继承是局限性：单继承。</span><br><span class="line">	一个子类，只能有一个父类。</span><br><span class="line">	Java语言，不允许多继承，但是可以多层继承。</span><br><span class="line">	一个父类，爷爷类，太爷爷，祖爷爷。。祖宗。。</span><br><span class="line">	一个父类是可以有多个子类的。</span><br><span class="line"><span class="number">3</span>、怎么在继承的父类的基础上进行修改呢：想把父类的方法添加点新东西的话</span><br><span class="line">	在子类重写的方法中，调用父类方法 <span class="keyword">super</span>.test(),</span><br><span class="line">	在添加新的内容</span><br></pre></td></tr></table></figure>
+<h4 id="1-6、TreeMap实现类"><a href="#1-6、TreeMap实现类" class="headerlink" title="1.6、TreeMap实现类"></a>1.6、TreeMap实现类</h4><p>TreeMap要给key去重，而且还要排序：从小到大。怎么排序？要看排序的规则</p>
+<p>Comparable接口就是默认的排序规则。</p>
+<p>compareTo(o)–&gt;this和o</p>
+<ul>
+<li>正数：this &gt; o，排后面</li>
+<li>负数：this &lt; o，排前面</li>
+<li>零：相同的对象，这个key对应的value要替换掉原来的value。</li>
+</ul>
+<p>对比TreeSet和TreeMap</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1、都要求对象具有可比性。</span><br><span class="line">	TreeSet来讲：里面所存储的元素，能够进行比较大小。</span><br><span class="line">	TreeMap来讲，所存储 key，能够进行比较大小。</span><br><span class="line">2、区别于HashSet和HashMap，要给排序。从小到大排序。</span><br><span class="line">	Comparable接口：默认的</span><br><span class="line">	Comparator接口：自定义</span><br></pre></td></tr></table></figure>
+
+<p>TreeMap也可以指定Comparator接口作为比较器。</p>
+<p>compare(o1,o2)–&gt;int</p>
+<ul>
+<li>正数：o1 &gt; o2，排后面</li>
+<li>负数：o1&lt; o2，排前面</li>
+<li>零：相同的对象，这个key对应的value要替换掉原来的value。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ceiling()		向上取整包括自己</span><br><span class="line">floor()			向下取整包括自己</span><br><span class="line">higher()		向上取整不包括自己</span><br><span class="line">lower()  		向下取整不包括自己</span><br><span class="line">[aaa, bbb, ccc, ddd, eee]</span><br><span class="line">System.out.println(set.headSet(<span class="string">"ccc"</span>)); <span class="comment">//[aaa, bbb]			</span></span><br><span class="line">System.out.println(set.tailSet(<span class="string">"ccc"</span>)); <span class="comment">//[ccc, ddd, eee]</span></span><br><span class="line">System.out.println(set.subSet(<span class="string">"bbb"</span>, <span class="string">"ddd"</span>)); <span class="comment">//[bbb, ccc]</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="1-4-子类对象的创建过程"><a href="#1-4-子类对象的创建过程" class="headerlink" title="1.4 子类对象的创建过程"></a>1.4 子类对象的创建过程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">调用子类的构造方法中，先调用父类的构造方法。默认父类的无参构造方法。</span><br><span class="line">记住：</span><br><span class="line">	1、子类的构造方法中，第一行一定是调用了父类的构造方法。</span><br><span class="line">	2、如果没有显示的调用父类的构造方法，编译器会自动的添加：super()。父类的无参构造。</span><br><span class="line">	3、子类的构造方法中，既可以调用父类的无参构造方法，也可以调用父类的有参构造方法。</span><br><span class="line">	4、父类的无参构造：super(),父类的有参构造：super(参数)。</span><br></pre></td></tr></table></figure>
+<h3 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h3><p>创建treeSet集合：到底使用哪个比较器？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new TreeSet();&#x2F;&#x2F;无参构造：使用默认的Comparable</span><br><span class="line">new TreeSet(Comparator);&#x2F;&#x2F;有参构造：Comparator的实现类对象作为参数。</span><br><span class="line">还可以使用匿名内部类来实现。</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-<h4 id="1-5-super关键字"><a href="#1-5-super关键字" class="headerlink" title="1.5 super关键字"></a>1.5 super关键字</h4><p>词义：”超级的”。</p>
-<p>用法一：表示父类的构造方法。super()，表示父类的构造方法。同this()相类似。</p>
-<p>​    如果父类中，有多个构造方法，super(),指代哪个构造方法呢？靠参数来区分</p>
-<p>​        super()，无参的父类构造方法</p>
-<p>​        super(参数),有参的父类构造方法。</p>
-<p>​    指代父类的构造方法时，要位于首行。</p>
-<p>用法二：</p>
+<p><img src="/2020/04/23/day28Map%E9%9B%86%E5%90%88/%E9%9B%86%E5%90%88%E7%9A%84%E7%BB%93%E6%9E%84.png" alt="集合的结构"></p>
+<p>面向对象思维导图连接：</p>
+<p><a href="https://www.processon.com/view/link/5e9068c00791294229cc34a1">https://www.processon.com/view/link/5e9068c00791294229cc34a1</a></p>
    
       <div class="essayending">
         <div>
@@ -318,7 +369,7 @@
          suger 
         <br />
         <strong>本文链接：</strong>
-        <a rel="license" href="http://yoursite.com/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/">http://yoursite.com/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/</a>
+        <a rel="license" href="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/">http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/</a>
         <br />
         <strong>版权声明：</strong>
         本作品采用
@@ -426,7 +477,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/04/23/day28Map%E9%9B%86%E5%90%88/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -439,18 +490,18 @@
  
 <nav id="article-nav">
   
-    <a href="/2020/04/02/day15%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%A4%9A%E6%80%81%E6%80%A7/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/23/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          day15面向对象(多态性)
+          思维导图
         
       </div>
     </a>
   
   
-    <a href="/2020/03/31/day13%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">day13面向对象的三大特征</div>
+    <a href="/2020/04/22/day27Set%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">day27Set集合</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -475,7 +526,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、匿名对象"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、匿名对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、封装性"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、封装性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-private关键字"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.2.1 private关键字</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-getter和setter方法"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 getter和setter方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、继承性"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、继承性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-1-生活中的继承"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 生活中的继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-2-Java中的继承的概念"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 Java中的继承的概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-3-继承的好处"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 继承的好处</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-4-类的继承"><span class="toc-number">1.3.4.</span> <span class="toc-text">1.3.4 类的继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-5-继承的语法"><span class="toc-number">1.3.5.</span> <span class="toc-text">1.3.5 继承的语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-6-什么样的两个类适合继承关系"><span class="toc-number">1.3.6.</span> <span class="toc-text">1.3.6 什么样的两个类适合继承关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-7-继承的注意点"><span class="toc-number">1.3.7.</span> <span class="toc-text">1.3.7 继承的注意点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-子类对象的创建过程"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 子类对象的创建过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-super关键字"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 super关键字</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day28——Map集合"><span class="toc-number">1.</span> <span class="toc-text">day28——Map集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#回顾"><span class="toc-number">1.1.</span> <span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.2.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、Comparable接口"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.1、Comparable接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、Comparator接口"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2、Comparator接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、LinkedHashSet集合"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.3、LinkedHashSet集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、Map接口"><span class="toc-number">1.2.4.</span> <span class="toc-text">1.4、Map接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、HashMap实现类"><span class="toc-number">1.2.5.</span> <span class="toc-text">1.5、HashMap实现类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、TreeMap实现类"><span class="toc-number">1.2.6.</span> <span class="toc-text">1.6、TreeMap实现类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、总结"><span class="toc-number">1.3.</span> <span class="toc-text">三、总结</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
