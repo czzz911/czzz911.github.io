@@ -16,7 +16,7 @@
 <meta property="og:description" content="天黑有灯，下雨有伞，偶尔想念，时常庆幸——">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-23T16:19:17.000Z">
-<meta property="article:modified_time" content="2020-04-23T16:21:03.051Z">
+<meta property="article:modified_time" content="2020-04-25T05:52:15.115Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -69,7 +69,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 40
+			总文章数 43
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -301,7 +301,28 @@
 <p>​            int[] arr = {1,7,4,6,2,5}<br>​            排序：冒泡，选择，Arrays.sort()</p>
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、返回**线程安全**的集合</span><br><span class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">synchronizedList</span><span class="params">(List&lt;T&gt; list)</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">static</span> &lt;T&gt; Set&lt;T&gt; <span class="title">synchronizedSet</span><span class="params">(Set&lt;T&gt; s)</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">static</span> &lt;T&gt; Collection&lt;T&gt; <span class="title">synchronizedCollection</span><span class="params">(Collection&lt;T&gt; c)</span>  </span></span><br><span class="line"><span class="function">。。。</span></span><br><span class="line"><span class="function">2、可以向Collection容器中，同时添加多个元素</span></span><br><span class="line"><span class="function">Collections.<span class="title">addAll</span><span class="params">(容器，要添加的元素)</span></span>;</span><br><span class="line"><span class="number">3</span>、List排序</span><br><span class="line">Collections.sort(list);</span><br><span class="line">Collections.sort(list,Comparator)</span><br><span class="line">    如果排的是对象，使用的是默认的比较器：Comparable</span><br><span class="line">Collections.sort(l4, <span class="keyword">new</span> Comparator&lt;Person&gt;() &#123;<span class="comment">//使用的自定义的比较器：Comparator</span></span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Person o1, Person o2)</span> </span>&#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line"><span class="number">4</span>、。。。</span><br></pre></td></tr></table></figure>
+<p>1、返回<strong>线程安全</strong>的集合<br>    线程同步</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function">List&lt;T&gt; <span class="title">synchronizedList</span><span class="params">(List&lt;T&gt; list)</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">static</span> &lt;T&gt; Set&lt;T&gt; <span class="title">synchronizedSet</span><span class="params">(Set&lt;T&gt; s)</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">static</span> &lt;T&gt; Collection&lt;T&gt; <span class="title">synchronizedCollection</span><span class="params">(Collection&lt;T&gt; c)</span>  </span></span><br><span class="line"><span class="function">    </span></span><br><span class="line"><span class="function">    </span></span><br><span class="line"><span class="function"><span class="comment">/*</span></span></span><br><span class="line"><span class="function"><span class="comment">static &lt;T&gt; Collection&lt;T&gt; synchronizedCollection(Collection&lt;T&gt; c) </span></span></span><br><span class="line"><span class="function"><span class="comment">返回由指定集合支持的同步（线程安全）集合。 </span></span></span><br><span class="line"><span class="function"><span class="comment">static &lt;T&gt; List&lt;T&gt; synchronizedList(List&lt;T&gt; list) </span></span></span><br><span class="line"><span class="function"><span class="comment">返回由指定列表支持的同步（线程安全）列表。 </span></span></span><br><span class="line"><span class="function"><span class="comment">static &lt;K,V&gt; Map&lt;K,V&gt; synchronizedMap(Map&lt;K,V&gt; m) </span></span></span><br><span class="line"><span class="function"><span class="comment">返回由指定地图支持的同步（线程安全）映射。 </span></span></span><br><span class="line"><span class="function"><span class="comment">*/</span></span></span><br><span class="line"><span class="function">Collection&lt;Object&gt; c </span>= Collections.synchronizedCollection(<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">List&lt;Object&gt; list = Collections.synchronizedList(<span class="keyword">new</span> ArrayList&lt;&gt;());</span><br><span class="line">Map&lt;Object, Object&gt; map = Collections.synchronizedMap(<span class="keyword">new</span> HashMap&lt;&gt;());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">。。。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">4</span>、。。。</span><br></pre></td></tr></table></figure>
+
+<p>2、2、可以向Collection容器中，同时添加多个元素</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Collections.addAll(容器，要添加的元素);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">static &lt;T&gt; boolean addAll(Collection&lt;? super T&gt; c, T... elements) </span></span><br><span class="line"><span class="comment">将所有指定的元素添加到指定的集合。 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Collections.addAll(list,e1,e2,e3,e4...);</span><br></pre></td></tr></table></figure>
+
+<p>3、List排序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">Collections.sort(list);</span><br><span class="line">Collections.sort(list,Comparator)</span><br><span class="line">    如果排的是对象，使用的是默认的比较器：Comparable</span><br><span class="line">Collections.sort(l4, <span class="keyword">new</span> Comparator&lt;Person&gt;() &#123;<span class="comment">//使用的自定义的比较器：Comparator</span></span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Person o1, Person o2)</span> </span>&#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">static &lt;T extends Comparable&lt;? super T&gt;&gt;</span></span><br><span class="line"><span class="comment">void sort(List&lt;T&gt; list) </span></span><br><span class="line"><span class="comment">根据其元素的natural ordering对指定的列表进行排序。  </span></span><br><span class="line"><span class="comment">static &lt;T&gt; void sort(List&lt;T&gt; list, Comparator&lt;? super T&gt; c) </span></span><br><span class="line"><span class="comment">根据指定的比较器引起的顺序对指定的列表进行排序。  </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">注意点：</span></span><br><span class="line"><span class="comment">List集合中的元素，要具有可比性，才能够进行排序sort()，比较大小。</span></span><br><span class="line"><span class="comment">Comparable接口，Comparator接口。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">ArrayList&lt;Integer&gt; list2 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		Collections.addAll(list2, <span class="number">3</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">7</span>);</span><br><span class="line">		System.out.println(list2);<span class="comment">//list集合本身是添加的顺序</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//集合排序</span></span><br><span class="line">		Collections.sort(list2);</span><br><span class="line">		System.out.println(list2);</span><br><span class="line">		</span><br><span class="line">		Collections.sort(list2, <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line"></span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">				<span class="keyword">return</span> o2-o1;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		System.out.println(list2);</span><br></pre></td></tr></table></figure>
+
+<p>4、将集合中的元素进行翻转：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">static void reverse(List&lt;?&gt; list) </span></span><br><span class="line"><span class="comment">反转指定列表中元素的顺序。  </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//list集合的翻转：元素颠倒过来。</span></span><br><span class="line">Collections.reverse(list2);</span><br></pre></td></tr></table></figure>
+
+<p>5、将集合中元素随机</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">随机洗牌</span></span><br><span class="line"><span class="comment">static void shuffle(List&lt;?&gt; list) </span></span><br><span class="line"><span class="comment">使用默认的随机源随机排列指定的列表</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">		<span class="comment">//让集合中的元素，随机的存储位置</span></span><br><span class="line">		Collections.shuffle(list2);</span><br><span class="line">		System.out.println(list2);</span><br></pre></td></tr></table></figure>
+
+<p>6、替换</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">static &lt;T&gt; boolean replaceAll(List&lt;T&gt; list, T oldVal, T newVal) </span></span><br><span class="line"><span class="comment">将列表中一个指定值的所有出现替换为另一个。 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Collections.replaceAll(list2, <span class="number">1</span>, <span class="number">100</span>);</span><br><span class="line">System.out.println(list2);</span><br></pre></td></tr></table></figure>
+
+<p>7、统计指定元素在集合中出现的次数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">static int frequency(Collection&lt;?&gt; c, Object o) </span></span><br><span class="line"><span class="comment">返回指定集合中与指定对象相等的元素数 </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">int</span> count = Collections.frequency(list2, <span class="number">6</span>);</span><br><span class="line">System.out.println(count);</span><br></pre></td></tr></table></figure>
+
+
 
 <h4 id="1-7、System工具类"><a href="#1-7、System工具类" class="headerlink" title="1.7、System工具类"></a>1.7、System工具类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getProperties()				获取当前系统属性</span><br></pre></td></tr></table></figure>   
       <div class="essayending">
@@ -446,6 +467,15 @@
 </article>
  
 <nav id="article-nav">
+  
+    <a href="/2020/04/28/day30%E5%BC%82%E5%B8%B8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          day30异常
+        
+      </div>
+    </a>
   
   
     <a href="/2020/04/23/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
@@ -708,19 +738,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">目标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
