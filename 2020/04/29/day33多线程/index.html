@@ -6,24 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>day18面向对象(interface) | czzz</title>
+  <title>day33多线程 | czzz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一如流淌一如年少时模样——">
+  <meta name="description" content="你可以错过黄昏的末班车——">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day18面向对象(interface)">
-<meta property="og:url" content="http://yoursite.com/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/index.html">
+<meta property="og:title" content="day33多线程">
+<meta property="og:url" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
 <meta property="og:site_name" content="czzz">
-<meta property="og:description" content="一如流淌一如年少时模样——">
+<meta property="og:description" content="你可以错过黄昏的末班车——">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/3%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%AE%9E%E7%8E%B0%E7%B1%BB.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/4USB.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/5%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9.png">
-<meta property="article:published_time" content="2020-04-08T14:05:54.000Z">
-<meta property="article:modified_time" content="2020-04-15T06:58:15.682Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/E:%5CBaiduNetdiskDownload%5C%E8%AF%BE%E5%A0%82%E7%94%BB%E5%9B%BE%5C2%E9%93%B6%E8%A1%8C%E5%8F%96%E9%92%B1%E5%88%86%E6%9E%90.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/BaiduNetdiskDownload/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/img/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/BaiduNetdiskDownload/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/img/%E7%AD%89%E5%BE%85%E5%92%8C%E5%94%A4%E9%86%92.png">
+<meta property="article:published_time" content="2020-04-28T16:01:28.000Z">
+<meta property="article:modified_time" content="2020-04-28T16:02:22.942Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/3%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%AE%9E%E7%8E%B0%E7%B1%BB.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/E:%5CBaiduNetdiskDownload%5C%E8%AF%BE%E5%A0%82%E7%94%BB%E5%9B%BE%5C2%E9%93%B6%E8%A1%8C%E5%8F%96%E9%92%B1%E5%88%86%E6%9E%90.png">
   
     <link rel="alternative" href="/atom.xml" title="czzz" type="application/atom+xml">
   
@@ -170,7 +170,7 @@
           <div id="js-content" class="content-ll">
             
 <article
-  id="post-day18面向对象-interface"
+  id="post-day33多线程"
   class="article article-type-post "
   itemscope
   itemprop="blogPost"
@@ -181,7 +181,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      day18面向对象(interface)
+      day33多线程
     </h1>
   
 
@@ -191,108 +191,75 @@
 <!-- # span 给的 id 是文章的 url 作为唯一的 key 值 -->
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/" class="pageViews">0</span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="pageViews">0</span>次
   </a>
 
-       <a href="/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/" class="archive-article-date">
-  	<time datetime="2020-04-08T14:05:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+       <a href="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2020-04-28T16:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
 </a> 
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <p>一如流淌一如年少时模样——</p>
+       <p>你可以错过黄昏的末班车——</p>
 <a id="more"></a>
 
-
-
-<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、static关键字"><a href="#1-1、static关键字" class="headerlink" title="1.1、static关键字"></a>1.1、static关键字</h4><p>1、修饰属性【重点】</p>
-<p>​        静态的属性：属于类，仅一份。所有的对象共享。</p>
-<p>​        应用：如果该类的所有的对象的这个属性值都相同，就可以设计为静态的属性。节省内存，便于修改。</p>
-<p>2、修饰方法【重点】</p>
-<p>​        静态的方法：属于类，由类直接调用，方法里不能访问对象的内容（属性，方法），以及this和super关键字。</p>
-<p>​        继承中，子类可以继承父类的静态方法，<strong>但是不能重写</strong>。</p>
-<p>​        应用：如果方法中，没有涉及到对象的内容或者this和super，那么方法就可以设置为静态的方法。由类直接调用，方便。</p>
-<p>工具类：一个类中的方法，看成工具。</p>
-<p>Arrays类：数组的工具类。都是操作数组的常用功能。</p>
-<p>天道酬勤，熟能生巧。。</p>
-<p>​        努力，认真。。。</p>
-<p>​        顿悟：代码量的积累。</p>
-<p>3、修饰代码块</p>
-<p>静态代码块 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">static &#123;</span><br><span class="line">	方法体   &#x2F;&#x2F; 只访问一次  无论创建多少对象 </span><br><span class="line">			&#x2F;&#x2F; 在构造方法之前执行</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">	匿名代码块	&#x2F;&#x2F; 创建一次对象，实现一次</span><br><span class="line">	&#x2F;&#x2F; 在构造方法之前执行</span><br><span class="line">&#125;</span><br><span class="line">public test&#123;</span><br><span class="line">	构造方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>4、修饰内部类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Test&#123;</span><br><span class="line">	static class TestStaticClass&#123;</span><br><span class="line">		public static void print()&#123;</span><br><span class="line">			System.out.println(&quot;111&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>可以用类名.静态内部类.静态内部类</p>
-<blockquote>
-<p>例：Test.TestStaticClass.print();</p>
-</blockquote>
-<p>直接调用静态方法和静态属性</p>
-<h5 id="1-1-1-【扩展】类加载"><a href="#1-1-1-【扩展】类加载" class="headerlink" title="1.1.1 【扩展】类加载"></a>1.1.1 【扩展】类加载</h5><p>类加载就是第一次调用这个类的时候，需要通过classpath找到类的.class文件。将class文件中类的信息描述加载到内存中。</p>
-<p>​    比如：包名，类名，父类，属性，方法。。。</p>
-<p>加载类时机：</p>
+<h2 id="day33——多线程"><a href="#day33——多线程" class="headerlink" title="day33——多线程"></a>day33——多线程</h2><h3 id="一、本节课内容"><a href="#一、本节课内容" class="headerlink" title="一、本节课内容"></a>一、本节课内容</h3><p>同步锁示例：银行取钱分析：</p>
+<p><img src="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/E:%5CBaiduNetdiskDownload%5C%E8%AF%BE%E5%A0%82%E7%94%BB%E5%9B%BE%5C2%E9%93%B6%E8%A1%8C%E5%8F%96%E9%92%B1%E5%88%86%E6%9E%90.png" alt="2银行取钱分析"></p>
+<h4 id="1-1、同步方法"><a href="#1-1、同步方法" class="headerlink" title="1.1、同步方法"></a>1.1、同步方法</h4><p>同步代码块：使用synchronized关键字包裹了一块代码，让这块代码同步执行。就是每次只能一个线程来执行。</p>
+<p>同步方法：使用synchronized关键字修饰一个方法，这个方法同步执行。就是每次只能一个线程来执行。</p>
 <ul>
-<li>创建对象</li>
-<li>创建子类对象</li>
-<li>访问静态属性</li>
-<li>访问静态方法</li>
-<li>主动加载：Class.forName(“包名.类名”);</li>
+<li>普通的方法：对象调用。锁定的对象，就是this对象。</li>
+<li>静态的方法：类调用。锁定的对象，就是类名.class</li>
 </ul>
-<h5 id="1-1-2-static修饰代码块【了解性】"><a href="#1-1-2-static修饰代码块【了解性】" class="headerlink" title="1.1.2 static修饰代码块【了解性】"></a>1.1.2 static修饰代码块【了解性】</h5><p>代码块：一块代码。以{}为范畴。</p>
-<p>1、局部代码块，就是普通的代码块，{}。注意点：作用域</p>
-<p>​        if语句：if(条件){。。。。}</p>
-<p>​        if，for，while，do-while，switch-case。。。{}</p>
-<p>2、构造代码块：类里，方法外的代码块。</p>
-<p>​    执行时机：当构造方法被调用的时候，构造代码块就执行。而且是优先于构造方法执行的。如果创建多个对象，就执行多次。</p>
-<p>​    应用：可以为非静态的属性进行统一赋值。</p>
-<p>3、静态代码块：在代码块前加static关键字。</p>
-<p>​    执行时机：初始化程序，只要类文件加载，静态代码块就会被执行。仅执行1次。在main函数之前执行。。</p>
-<p>​    应用：可以为静态属性进行赋值。</p>
-<p>4、同步代码块：多线程</p>
-<p>知道：执行顺序。</p>
-<h4 id="1-2、接口"><a href="#1-2、接口" class="headerlink" title="1.2、接口"></a>1.2、接口</h4><h5 id="1-2-1-生活中的接口"><a href="#1-2-1-生活中的接口" class="headerlink" title="1.2.1 生活中的接口"></a>1.2.1 生活中的接口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">USB接口，</span><br><span class="line">插座，</span><br><span class="line">type-c接口，解决了世界性的大难题：&quot;USB设备永远插不准。。&quot;，随便插。。</span><br><span class="line">网线，ARJ45</span><br><span class="line">lightning接口，就是苹果充电接口。。</span><br><span class="line">HDMI接口，</span><br><span class="line">3.5mm，耳机。。。</span><br><span class="line">。。。</span><br><span class="line">这些接口有啥用？</span><br><span class="line">	定义标准，定义规范。</span><br><span class="line">	以USB接口为例：</span><br><span class="line">	1、鼠标，U盘，移动硬盘，键盘。。。</span><br><span class="line">	2、都是USB设备</span><br><span class="line">	3、都能够通过USB接口，接入电脑中，可以去干活。。</span><br><span class="line">	</span><br><span class="line">大家都遵守的统一的规则，就是USB接口，就能够连入到电脑中。。。。</span><br></pre></td></tr></table></figure>
+<p>同步的原理：利用对象的互斥锁。</p>
+<p>​    每个线程来访问，只能有一个线程进入执行，第一个动作锁对象(上锁)。来保证其他线程不能进入执行。等到该线程结束这个同步代码块或者同步方法，释放锁对象(开锁)，才允许其他的线程来访问。</p>
+<p>线程安全的类：</p>
+<p>StringBuffer</p>
+<p>Vector</p>
+<p>HashTable</p>
+<p>Collections，集合的工具类</p>
+<h4 id="1-2、线程之间的通信"><a href="#1-2、线程之间的通信" class="headerlink" title="1.2、线程之间的通信"></a>1.2、线程之间的通信</h4><p>线程之间的通信：wait()，notify()，notifyAll()</p>
+<p>wait()——&gt;让线程进入阻塞状态，暂停执行。一直阻塞</p>
+<p>notify()——&gt;唤醒线程，wait()住的线程，被唤醒。如果多个线程wait()了，唤醒其中的一个。</p>
+<p>notifyAll()——&gt;唤醒所有。</p>
+<p>语法要求：必须在同步中，由同步的锁对象来调用。否则java.lang.IllegalMonitorStateException异常。</p>
+<p>生产者消费者模型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">生产者(线程t1)负责生产产品，存入容器中(固定容量)，消费者(线程t2)从容器中获取产品消费掉。</span><br><span class="line">容器：</span><br><span class="line">	生产者：持有资源，生产产品，存入容器中</span><br><span class="line">	消费者：持有资源，消费掉产品。</span><br><span class="line"></span><br><span class="line">容器满了：最多装8个鸡蛋</span><br><span class="line">	生产者：持有资源，暂停执行——直到容器还能继续装。</span><br><span class="line">		锁对象.wait()——&gt;会让线程进入阻塞状态。暂停执行。notify()，notifyAll()</span><br><span class="line">	消费者：持有资源，直接消费。。</span><br><span class="line">	</span><br><span class="line">容器空了：最少0个。</span><br><span class="line">	生产者：持有资源，生产，存入。。</span><br><span class="line">	消费者：持有资源，暂停执行——直到容器中有产品</span><br><span class="line">		锁对象.wait()——&gt;会让线程进入阻塞状态。暂停执行。notify()，notifyAll()</span><br></pre></td></tr></table></figure>
 
-<h5 id="1-2-2-接口的概念"><a href="#1-2-2-接口的概念" class="headerlink" title="1.2.2 接口的概念"></a>1.2.2 接口的概念</h5><ul>
-<li><p>从语法的角度：接口是一种特殊的抽象类。这种抽象类只包含了抽象方法和静态常量，没有方法的实现。</p>
-<p>也就是说：接口中都是抽象方法和静态常量的集合。</p>
+<p><img src="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/BaiduNetdiskDownload/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/img/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B.png" alt="生产者消费者模型"></p>
+<p>代码分析：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、产品类：Egg()--&gt;id</span><br><span class="line">2、产生者：线程</span><br><span class="line">	cpu执行，run()--&gt;生产鸡蛋，装入容器</span><br><span class="line">3、消费者：线程</span><br><span class="line">	cpu执行，run()--&gt;从容器中获取鸡蛋，吃掉(打印。。)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>容器对象：</p>
+<p>​    Class实现容器</p>
+<p>​    数组： Egg[] arr = new Egg[8];</p>
+<p>​    集合：栈，后进先出</p>
+<p>同步的代码：</p>
+<p>​    锁的是容器对象：</p>
+<p>wait()和sleep()方法的区别：</p>
+<ul>
+<li>出处不同：<ul>
+<li>sleep()方法是Thread类中定义的。</li>
+<li>wait()方法是Object类中定义的。</li>
+</ul>
 </li>
-<li><p>从功能的角度：接口表示一种约定，或者能力。</p>
+<li>解除阻塞的方式不同<ul>
+<li>sleep()是时间到，自己醒。</li>
+<li>wait()方法等待被唤醒：notify()，或者是notifyAll()</li>
+</ul>
+</li>
+<li>对锁资源的释放情况<ul>
+<li>sleep()，不释放，抱着不撒手</li>
+<li>wait()，释放</li>
+</ul>
 </li>
 </ul>
-<h5 id="1-2-3-Java中的接口的语法格式"><a href="#1-2-3-Java中的接口的语法格式" class="headerlink" title="1.2.3 Java中的接口的语法格式"></a>1.2.3 Java中的接口的语法格式</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.定义一个类</span></span><br><span class="line">关键字：<span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125;</span><br><span class="line"><span class="comment">//2.定义一个接口，语法</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">    <span class="comment">//1.静态常量</span></span><br><span class="line">    <span class="comment">//2.抽象方法</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//3.【等待子类继承(extends)，并实现所有的抽象方法，才能创建子类对象。】</span></span><br><span class="line">实现类，实现一个接口的语法：</span><br><span class="line"><span class="class"><span class="keyword">class</span> 实现类 <span class="keyword">implements</span> 接口名</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">一个实现类，去实现一个接口？就是这个实现类中，实现接口中的所有的方法。</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/BaiduNetdiskDownload/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/img/%E7%AD%89%E5%BE%85%E5%92%8C%E5%94%A4%E9%86%92.png" alt="等待和唤醒"></p>
+<h4 id="1-3、线程池"><a href="#1-3、线程池" class="headerlink" title="1.3、线程池"></a>1.3、线程池</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">线程宝贵的资源，线程对象。都是我们自己new来的线程对象。单个线程对象大概占1M左右的内存空间。</span><br><span class="line">线程对象创建出来：生命周期</span><br><span class="line">	从创建到死亡：run()执行线程体</span><br><span class="line">	</span><br><span class="line">假如说，我们需要大量的线程，来执行任务。频繁的创建线程，销毁线程。。。是一种资源的浪费，造成程序性能的下降。</span><br><span class="line"></span><br><span class="line">线程池：理解为一个容器，装线程的。里面可以事先创建好一些线程。。</span><br><span class="line">	如果有任务要执行，从线程池中获取线程对象，干活。。。归还给线程池，等待下次的任务</span><br><span class="line">	降低频繁的创建和销毁线程的过程</span><br><span class="line"></span><br><span class="line">客服：</span><br><span class="line">	4个客服：</span><br><span class="line">			13个用户：9个等一下</span><br><span class="line">	客服A：用户1</span><br><span class="line">		接收下一个任务。。用户5.。</span><br><span class="line">	客服B：用户2</span><br><span class="line">	客服C：用户3</span><br><span class="line">	客服D：用户4</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/3%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%AE%9E%E7%8E%B0%E7%B1%BB.png" alt="3接口和实现类"></p>
-<h5 id="1-2-4-接口的特点"><a href="#1-2-4-接口的特点" class="headerlink" title="1.2.4 接口的特点"></a>1.2.4 接口的特点</h5><ul>
-<li>接口不能创建对象，不能被实例化。而且接口中没有构造方法。</li>
-<li>接口中的方法，一般都是公共的抽象方法：public abstract来修饰</li>
-<li>接口中的属性，都是公共的静态常量：public static final来修饰</li>
-</ul>
-<p>在一个接口中，声明方法的时候，如果没有声明访问权限，默认也是public的。如果没有其他的修饰符默认也是abstract。声明属性，如果没有声明访问权限和其他的关键字，默认也是public static final。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> 数据类型 常量名 = <span class="string">"初始值"</span>;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/4USB.png" alt="4USB"></p>
-<h5 id="1-2-5-接口的好处"><a href="#1-2-5-接口的好处" class="headerlink" title="1.2.5 接口的好处"></a>1.2.5 接口的好处</h5><ul>
-<li><p>降低代码之间的耦合性：（藕断丝连），类和类之间，耦合性越低越好。</p>
-</li>
-<li><p>定义的都是规则，对外保持接口的一致。</p>
-</li>
-<li><p>接口可以多继承</p>
-</li>
-</ul>
-<h5 id="1-2-6-接口的注意点"><a href="#1-2-6-接口的注意点" class="headerlink" title="1.2.6 接口的注意点"></a>1.2.6 接口的注意点</h5><p>1、接口可以多继承</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个接口允许继承另外一个接口，而且允许继承多个接口。只不过该接口的实现类，要实现该接口中，以及从父接口中继承来的抽象方法，都需要实现。</span><br></pre></td></tr></table></figure>
-
-<p>接口中：声明都是抽象方法。只有声明(描述功能)，没有具体的实现(完成这个功能)。声明和实现分离。</p>
-<p>2、一个类还可以实现多个接口</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个实现类，可以同时实现多个接口。</span><br></pre></td></tr></table></figure>
-
-<p>3、一个实现类如果没有实现接口中的所有的方法，那么该类是抽象的。等待子类继承，并实现其他的抽象方法。</p>
-<p>4、一个类也可以继承父类，同时实现接口。</p>
-<p>5、jdk1.8的新特性：default方法。</p>
-<p><img src="/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/5%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9.png" alt="5接口的注意点"></p>
+<p>未完待续。。。</p>
    
       <div class="essayending">
         <div>
@@ -316,7 +283,7 @@
          suger 
         <br />
         <strong>本文链接：</strong>
-        <a rel="license" href="http://yoursite.com/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/">http://yoursite.com/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/</a>
+        <a rel="license" href="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/">http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/</a>
         <br />
         <strong>版权声明：</strong>
         本作品采用
@@ -424,7 +391,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/04/08/day18%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-interface/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -437,18 +404,9 @@
  
 <nav id="article-nav">
   
-    <a href="/2020/04/10/day19%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          day19匿名内部类&amp;面向对象总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/08/day17%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-final-static/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">day17面向对象(final&amp;static)</div>
+    <a href="/2020/04/28/day32%E5%A4%9A%E7%BA%BF%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">day32多线程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -473,7 +431,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、static关键字"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、static关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-1-【扩展】类加载"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1 【扩展】类加载</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-2-static修饰代码块【了解性】"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 static修饰代码块【了解性】</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、接口"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、接口</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-1-生活中的接口"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.2.1 生活中的接口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-2-接口的概念"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 接口的概念</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-3-Java中的接口的语法格式"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.2.3 Java中的接口的语法格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-4-接口的特点"><span class="toc-number">1.2.4.</span> <span class="toc-text">1.2.4 接口的特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-5-接口的好处"><span class="toc-number">1.2.5.</span> <span class="toc-text">1.2.5 接口的好处</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-6-接口的注意点"><span class="toc-number">1.2.6.</span> <span class="toc-text">1.2.6 接口的注意点</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day33——多线程"><span class="toc-number">1.</span> <span class="toc-text">day33——多线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、本节课内容"><span class="toc-number">1.1.</span> <span class="toc-text">一、本节课内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、同步方法"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、同步方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、线程之间的通信"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、线程之间的通信</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、线程池"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、线程池</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
