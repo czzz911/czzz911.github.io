@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/28/day32%E5%A4%9A%E7%BA%BF%E7%A8%8B/6%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81%E5%9D%97%E7%9A%84%E5%88%86%E6%9E%90.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/28/day32%E5%A4%9A%E7%BA%BF%E7%A8%8B/7%E6%AD%BB%E9%94%81.png">
 <meta property="article:published_time" content="2020-04-28T06:57:32.000Z">
-<meta property="article:modified_time" content="2020-04-28T07:20:47.397Z">
+<meta property="article:modified_time" content="2020-05-05T04:21:29.598Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -81,7 +81,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 44
+			总文章数 46
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -211,7 +211,9 @@
        <p>成王败寇，当你失败了，连呼吸都是错的，人们只能看到他们想看到的东西——</p>
 <a id="more"></a>
 
-<h2 id="day32——多线程"><a href="#day32——多线程" class="headerlink" title="day32——多线程"></a>day32——多线程</h2><h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><p>单线程的程序：</p>
+
+
+<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><p>单线程的程序：</p>
 <p><img src="/2020/04/28/day32%E5%A4%9A%E7%BA%BF%E7%A8%8B/1%E5%8D%95%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%A8%8B%E5%BA%8F.png" alt="1单线程的程序"></p>
 <p>多线程之间的数据共享：</p>
 <p><img src="/2020/04/28/day32%E5%A4%9A%E7%BA%BF%E7%A8%8B/2%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE.png" alt="2多线程之间共享数据"></p>
@@ -462,7 +464,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day32——多线程"><span class="toc-number">1.</span> <span class="toc-text">day32——多线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、线程的两种启动方式"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1、线程的两种启动方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、线程的常用方法"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2、线程的常用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、线程的状态"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3、线程的状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、临界资源的安全问题"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4、临界资源的安全问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、同步synchronized"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.5、同步synchronized</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、线程的两种启动方式"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、线程的两种启动方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、线程的常用方法"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、线程的常用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、线程的状态"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、线程的状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、临界资源的安全问题"><span class="toc-number">1.4.</span> <span class="toc-text">1.4、临界资源的安全问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、同步synchronized"><span class="toc-number">1.5.</span> <span class="toc-text">1.5、同步synchronized</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -692,6 +694,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
@@ -700,15 +706,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">简易搭建博客...</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">圣经</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
              
               <li class="article-tag-list-item">
