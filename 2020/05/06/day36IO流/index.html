@@ -6,24 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>day33多线程 | czzz</title>
+  <title>day36IO流 | czzz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="你可以错过黄昏的末班车——">
+  <meta name="description" content="可以错过四月的樱花——">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day33多线程">
-<meta property="og:url" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
+<meta property="og:title" content="day36IO流">
+<meta property="og:url" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/index.html">
 <meta property="og:site_name" content="czzz">
-<meta property="og:description" content="你可以错过黄昏的末班车——">
+<meta property="og:description" content="可以错过四月的樱花——">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/2%E9%93%B6%E8%A1%8C%E5%8F%96%E9%92%B1%E5%88%86%E6%9E%90.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%AD%89%E5%BE%85%E5%92%8C%E5%94%A4%E9%86%92.png">
-<meta property="article:published_time" content="2020-04-28T16:01:28.000Z">
-<meta property="article:modified_time" content="2020-05-05T04:22:47.033Z">
+<meta property="og:image" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/eclipse%E5%88%87%E6%8D%A2%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/%E8%AE%BE%E7%BD%AEeclipse%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BC%96%E7%A0%81%E9%9B%86%E4%B8%BAutf-8.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/3InputStreamReader%E6%B5%81.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/4OutputStreamWriter.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/5%E7%BC%93%E5%AD%98%E6%B5%81.png">
+<meta property="article:published_time" content="2020-05-06T13:27:01.000Z">
+<meta property="article:modified_time" content="2020-05-06T13:30:56.900Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/2%E9%93%B6%E8%A1%8C%E5%8F%96%E9%92%B1%E5%88%86%E6%9E%90.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/eclipse%E5%88%87%E6%8D%A2%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png">
   
     <link rel="alternative" href="/atom.xml" title="czzz" type="application/atom+xml">
   
@@ -170,7 +172,7 @@
           <div id="js-content" class="content-ll">
             
 <article
-  id="post-day33多线程"
+  id="post-day36IO流"
   class="article article-type-post "
   itemscope
   itemprop="blogPost"
@@ -181,7 +183,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      day33多线程
+      day36IO流
     </h1>
   
 
@@ -191,77 +193,85 @@
 <!-- # span 给的 id 是文章的 url 作为唯一的 key 值 -->
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="pageViews">0</span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/05/06/day36IO%E6%B5%81/" class="pageViews">0</span>次
   </a>
 
-       <a href="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-04-28T16:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
+       <a href="/2020/05/06/day36IO%E6%B5%81/" class="archive-article-date">
+  	<time datetime="2020-05-06T13:27:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-06</time>
 </a> 
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <p>你可以错过黄昏的末班车——</p>
+       <p>可以错过四月的樱花——</p>
 <a id="more"></a>
 
+<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、FileReader"><a href="#1-1、FileReader" class="headerlink" title="1.1、FileReader"></a>1.1、FileReader</h4><p>同FileInputStream，单位不同。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">读取：</span><br><span class="line">read()--&gt;<span class="keyword">int</span>，读取一个字符，返回值就是读到的数据，末尾-<span class="number">1</span>.</span><br><span class="line">read(<span class="keyword">char</span>[] cs)--&gt;<span class="keyword">int</span>，读取多个字符，存入cs字符数组中，返回值读取的个数。末尾-<span class="number">1</span></span><br><span class="line">read(<span class="keyword">char</span>[] cs,<span class="keyword">int</span> off,<span class="keyword">int</span> len)--&gt;<span class="keyword">int</span>，读取多个字符，末尾-<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">字节流：操作的单位是字节，可以读取一个字节，也可以读取多个字节，存入字节数组：byte[] bs，</span><br><span class="line">字符流：操作的单位是字符，可以读取一个字符，也可以读取多个字符，存入字符数组：char[] cs，</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><p>同步锁示例：银行取钱分析：</p>
-<p><img src="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/2%E9%93%B6%E8%A1%8C%E5%8F%96%E9%92%B1%E5%88%86%E6%9E%90.png" alt="2银行取钱分析"></p>
-<h4 id="1-1、同步方法"><a href="#1-1、同步方法" class="headerlink" title="1.1、同步方法"></a>1.1、同步方法</h4><p>同步代码块：使用synchronized关键字包裹了一块代码，让这块代码同步执行。就是每次只能一个线程来执行。</p>
-<p>同步方法：使用synchronized关键字修饰一个方法，这个方法同步执行。就是每次只能一个线程来执行。</p>
+
+<p>选择流的时候，到低是选择字节为单位的还是字符单位的？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">数据：计算机存储数据，都是采用2进制：01码</span><br><span class="line">单位：</span><br><span class="line">	一个0或一个1，叫一个bit，位</span><br><span class="line">	8个0或1，叫一个byte，字节</span><br><span class="line">	</span><br><span class="line">所有的数据的本质，都是字节为单位的。</span><br><span class="line">	图片，音频，视频，压缩文件，exe可执行文件，包括文本文件。。</span><br><span class="line">	</span><br><span class="line">字符流：字符——&gt;字符编码(GBK,UTF-8)</span><br><span class="line">	a：97</span><br><span class="line">	中：20013</span><br><span class="line">	</span><br><span class="line">【禁止】！！！使用字符流去操作非字符的文件。比如音频，视频，图片等等。。。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>字符流：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1、使用字节流(FileInputStream)读取一个文本文件(包含中文)，边读边看(打印)，乱码。原因？</span><br><span class="line">	GBK，UTF-8，一个中文可能占多个字节。</span><br><span class="line">	GBK：一个字符占2个字节</span><br><span class="line">	UTF-8：一个字符占3个字节</span><br><span class="line">	如果使用字节流读取数据，按照字节来读，一个字节一个字节的读取，读了一个字节，打印对应的字符，所以存在了乱码。一个汉字是多个字节，但是读一个字节看一个字节，肯定乱码。</span><br><span class="line">2、字符流 &#x3D; 字节流 + 解码过程</span><br><span class="line">	字节组合操作 ——&gt; 当前环境的编码集</span><br><span class="line">		字符流将读取的编码值，根据编码集，对应的字符。</span><br><span class="line">	</span><br><span class="line">3、总结：</span><br><span class="line">	所有的文件都可以是使用字节流。</span><br><span class="line">		图片，音频，视频，压缩文件，exe可以执行文件。。。</span><br><span class="line">		</span><br><span class="line">	文本文件，建议使用字符流。因为里面都是文本(字符)。</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1-2、FileWriter"><a href="#1-2、FileWriter" class="headerlink" title="1.2、FileWriter"></a>1.2、FileWriter</h4><p>1、构造方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FileWriter(String path);</span><br><span class="line">FileWriter(File file);</span><br><span class="line">FileWriter(String path,boolean append);</span><br><span class="line">FileWriter(File file, boolean append);</span><br></pre></td></tr></table></figure>
+
+<p>2、写出数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void write(int)，将参数这个字符，写出去</span><br><span class="line">void write(char[] cs)，将整个cs数组的所有数据，全部写出</span><br><span class="line">void write(char[] cs,int off,int len)，将cs数组的一部分写出，从下标off开始，len个</span><br><span class="line">void write(String s)，直接将一个字符串写出</span><br><span class="line">void write(String s, int off,int len)，写出字符串的一部分</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1-3、InputStreamReader"><a href="#1-3、InputStreamReader" class="headerlink" title="1.3、InputStreamReader"></a>1.3、InputStreamReader</h4><p>下面和输出转换流一起进行对比说明。</p>
+<h4 id="1-4、OutputStreamWriter"><a href="#1-4、OutputStreamWriter" class="headerlink" title="1.4、OutputStreamWriter"></a>1.4、OutputStreamWriter</h4><p>转换流：输入：InputStreamReader，继承了Reader，读取</p>
+<p>转换流：输出：OutputStreamWriter，继承了Writer，写出</p>
+<p>构造方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">InputStreamReader(InputStream);&#x2F;&#x2F;读取字符为单位的数据</span><br><span class="line">OutputStreamWriter(OutputStream);&#x2F;&#x2F;写出字符为单位的数据</span><br><span class="line"></span><br><span class="line">InputStreamReader(InputStream,&quot;编码集&quot;);&#x2F;&#x2F;读取字符为单位的数据</span><br><span class="line">OutputStreamWriter(OutputStream，&quot;编码集&quot;);&#x2F;&#x2F;写出字符为单位的数据</span><br></pre></td></tr></table></figure>
+
+
+
 <ul>
-<li>普通的方法：对象调用。锁定的对象，就是this对象。</li>
-<li>静态的方法：类调用。锁定的对象，就是类名.class</li>
+<li>转换了单位：字节-字符之间的桥梁</li>
+<li>设置编码：因为java采用的编码Unicode编码，程序应该使用utf-8的编码集。但是eclipse这个软件的工作空间，默认的编码集是gbk。为了一劳永逸，更改工作空间的编码集为utf-8。</li>
 </ul>
-<p>同步的原理：利用对象的互斥锁。</p>
-<p>​    每个线程来访问，只能有一个线程进入执行，第一个动作锁对象(上锁)。来保证其他线程不能进入执行。等到该线程结束这个同步代码块或者同步方法，释放锁对象(开锁)，才允许其他的线程来访问。</p>
-<p>线程安全的类：</p>
-<p>StringBuffer</p>
-<p>Vector</p>
-<p>HashTable</p>
-<p>Collections，集合的工具类</p>
-<h4 id="1-2、线程之间的通信"><a href="#1-2、线程之间的通信" class="headerlink" title="1.2、线程之间的通信"></a>1.2、线程之间的通信</h4><p>线程之间的通信：wait()，notify()，notifyAll()</p>
-<p>wait()——&gt;让线程进入阻塞状态，暂停执行。一直阻塞</p>
-<p>notify()——&gt;唤醒线程，wait()住的线程，被唤醒。如果多个线程wait()了，唤醒其中的一个。</p>
-<p>notifyAll()——&gt;唤醒所有。</p>
-<p>语法要求：必须在同步中，由同步的锁对象来调用。否则java.lang.IllegalMonitorStateException异常。</p>
-<p>生产者消费者模型：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">生产者(线程t1)负责生产产品，存入容器中(固定容量)，消费者(线程t2)从容器中获取产品消费掉。</span><br><span class="line">容器：</span><br><span class="line">	生产者：持有资源，生产产品，存入容器中</span><br><span class="line">	消费者：持有资源，消费掉产品。</span><br><span class="line"></span><br><span class="line">容器满了：最多装8个鸡蛋</span><br><span class="line">	生产者：持有资源，暂停执行——直到容器还能继续装。</span><br><span class="line">		锁对象.wait()——&gt;会让线程进入阻塞状态。暂停执行。notify()，notifyAll()</span><br><span class="line">	消费者：持有资源，直接消费。。</span><br><span class="line">	</span><br><span class="line">容器空了：最少0个。</span><br><span class="line">	生产者：持有资源，生产，存入。。</span><br><span class="line">	消费者：持有资源，暂停执行——直到容器中有产品</span><br><span class="line">		锁对象.wait()——&gt;会让线程进入阻塞状态。暂停执行。notify()，notifyAll()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/05/06/day36IO%E6%B5%81/eclipse%E5%88%87%E6%8D%A2%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4.png" alt="eclipse切换工作空间"></p>
+<p><img src="/2020/05/06/day36IO%E6%B5%81/%E8%AE%BE%E7%BD%AEeclipse%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BC%96%E7%A0%81%E9%9B%86%E4%B8%BAutf-8.png" alt="设置eclipse的工作空间的编码集为utf-8"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">OutputStream流：字节输出流</span><br><span class="line">FileOutputStream</span><br><span class="line">	write(int),写一个字节</span><br><span class="line">	write(byte[] bs )，写一个字节数组的数据</span><br><span class="line">	write(byte[] bs,int off, int len)，写出一个字节数组的一部分</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">Writer流：字符输出流</span><br><span class="line">FileWriter</span><br><span class="line">	write(int)，写一个字符</span><br><span class="line">	write(char[] cs)，写一个字符数组的数据</span><br><span class="line">	write(char[] cs,int off,int len)</span><br><span class="line">	write(String s)</span><br><span class="line">	write(String s,int off,int len)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B.png" alt="生产者消费者模型"></p>
-<p>代码分析：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、产品类：Egg()--&gt;id</span><br><span class="line">2、产生者：线程</span><br><span class="line">	cpu执行，run()--&gt;生产鸡蛋，装入容器</span><br><span class="line">3、消费者：线程</span><br><span class="line">	cpu执行，run()--&gt;从容器中获取鸡蛋，吃掉(打印。。)</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/05/06/day36IO%E6%B5%81/3InputStreamReader%E6%B5%81.png" alt="3InputStreamReader流"></p>
+<p><img src="/2020/05/06/day36IO%E6%B5%81/4OutputStreamWriter.png" alt="4OutputStreamWriter"></p>
+<p>字符编码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">本质：每个字符——&gt;编码值</span><br><span class="line">	a：97</span><br><span class="line">	b：98</span><br><span class="line">	A：65</span><br><span class="line">	B：66</span><br><span class="line">	。。。</span><br><span class="line">编码集：ASCII(美国标准信息交换码)</span><br><span class="line"></span><br><span class="line">每个国家都有个自己的编码集：</span><br><span class="line">中国：GBK编码集，兼容了ASCII。</span><br><span class="line">	包含了我们中国的字符。</span><br><span class="line">	中：编码值</span><br><span class="line">	国：编码值</span><br><span class="line">	字符：都给排个编号，就是编码值</span><br><span class="line">	</span><br><span class="line">编码集：乱码</span><br><span class="line">	编码和解码不对应，就会乱码。</span><br><span class="line"></span><br><span class="line">Unicode编码：号称统一了全世界的字符。</span><br><span class="line">	UTF-8</span><br></pre></td></tr></table></figure>
 
 
 
-<p>容器对象：</p>
-<p>​    Class实现容器</p>
-<p>​    数组： Egg[] arr = new Egg[8];</p>
-<p>​    集合：栈，后进先出</p>
-<p>同步的代码：</p>
-<p>​    锁的是容器对象：</p>
-<p>wait()和sleep()方法的区别：</p>
-<ul>
-<li>出处不同：<ul>
-<li>sleep()方法是Thread类中定义的。</li>
-<li>wait()方法是Object类中定义的。</li>
-</ul>
-</li>
-<li>解除阻塞的方式不同<ul>
-<li>sleep()是时间到，自己醒。</li>
-<li>wait()方法等待被唤醒：notify()，或者是notifyAll()</li>
-</ul>
-</li>
-<li>对锁资源的释放情况<ul>
-<li>sleep()，不释放，抱着不撒手</li>
-<li>wait()，释放</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%AD%89%E5%BE%85%E5%92%8C%E5%94%A4%E9%86%92.png" alt="等待和唤醒"></p>
-<h4 id="1-3、线程池"><a href="#1-3、线程池" class="headerlink" title="1.3、线程池"></a>1.3、线程池</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">线程宝贵的资源，线程对象。都是我们自己new来的线程对象。单个线程对象大概占1M左右的内存空间。</span><br><span class="line">线程对象创建出来：生命周期</span><br><span class="line">	从创建到死亡：run()执行线程体</span><br><span class="line">	</span><br><span class="line">假如说，我们需要大量的线程，来执行任务。频繁的创建线程，销毁线程。。。是一种资源的浪费，造成程序性能的下降。</span><br><span class="line"></span><br><span class="line">线程池：理解为一个容器，装线程的。里面可以事先创建好一些线程。。</span><br><span class="line">	如果有任务要执行，从线程池中获取线程对象，干活。。。归还给线程池，等待下次的任务</span><br><span class="line">	降低频繁的创建和销毁线程的过程</span><br><span class="line"></span><br><span class="line">客服：</span><br><span class="line">	4个客服：</span><br><span class="line">			13个用户：9个等一下</span><br><span class="line">	客服A：用户1</span><br><span class="line">		接收下一个任务。。用户5.。</span><br><span class="line">	客服B：用户2</span><br><span class="line">	客服C：用户3</span><br><span class="line">	客服D：用户4</span><br></pre></td></tr></table></figure>
 
-<p>未完待续。。。</p>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">A、4大基类流</span><br><span class="line">InputStream</span><br><span class="line">OutputSteam</span><br><span class="line">Reader</span><br><span class="line">Writer</span><br><span class="line">B：文件流</span><br><span class="line">FileInputStream</span><br><span class="line">FileOutputStream</span><br><span class="line">FileReader</span><br><span class="line">FileWriter</span><br><span class="line"></span><br><span class="line">C、缓存流</span><br><span class="line">BufferedInputStream</span><br><span class="line">BufferedOutputStream</span><br><span class="line">BufferedReader</span><br><span class="line">BufferedWriter</span><br><span class="line"></span><br><span class="line">D、对象流</span><br><span class="line">ObjectInputStream</span><br><span class="line">ObjectOutputStream</span><br><span class="line"></span><br><span class="line">E：转换流：</span><br><span class="line">InputStreamReader</span><br><span class="line">OutputStreamWriter</span><br><span class="line">	转换单位：字节-字符之间的桥梁</span><br><span class="line">	指明编码：</span><br></pre></td></tr></table></figure>
+
+
+
+<p>流的分类：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">流向：输入，输出</span><br><span class="line">单位：字节，字符</span><br><span class="line">功能：</span><br><span class="line">	节点流：直接接触数据源的流</span><br><span class="line">	处理流：也叫过滤流，套在别的流上的流。</span><br><span class="line">		关闭的时候：倒着关闭。或者干脆直接关闭处理流。</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1-5、BufferedInputStream"><a href="#1-5、BufferedInputStream" class="headerlink" title="1.5、BufferedInputStream"></a>1.5、BufferedInputStream</h4><h4 id="1-6、BufferedOutoutStream"><a href="#1-6、BufferedOutoutStream" class="headerlink" title="1.6、BufferedOutoutStream"></a>1.6、BufferedOutoutStream</h4><h4 id="1-7、BufferedReader"><a href="#1-7、BufferedReader" class="headerlink" title="1.7、BufferedReader"></a>1.7、BufferedReader</h4><p>新增的方法：readLine()—&gt;String，每次读取一行。</p>
+<p>​                        newline()方法 自动区分平台  win系统 “\r\n” linux系统 “\n”</p>
+<h4 id="1-8、BufferedWriter"><a href="#1-8、BufferedWriter" class="headerlink" title="1.8、BufferedWriter"></a>1.8、BufferedWriter</h4><p>新增的方法：newLine()–&gt;void</p>
+<p>写换行：write(“\r\n”)；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">缓存流(重点掌握)：目的：高效。</span><br><span class="line">原理：自带了一个数组作为缓冲区。读写发生在数组上。数组占内存，速度很快。</span><br><span class="line">FileInputStream</span><br><span class="line">	read()--&gt;int,访问磁盘，操作文件，读一个字节回来。。</span><br><span class="line"></span><br><span class="line">BufferedInputStream</span><br><span class="line">	read()--&gt;int,先找缓冲区，从缓冲区中读取一个字节回来。fill()，读取磁盘文件，填充缓冲区</span><br><span class="line">byte[] bs ,作为缓冲区：1024*8。</span><br><span class="line"></span><br><span class="line">类似于之前写的自定义byte[] 数组</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/05/06/day36IO%E6%B5%81/5%E7%BC%93%E5%AD%98%E6%B5%81.png" alt="5缓存流"></p>
+<h4 id="1-9、ObjectInputStream"><a href="#1-9、ObjectInputStream" class="headerlink" title="1.9、ObjectInputStream"></a>1.9、ObjectInputStream</h4><h4 id="1-10、ObjectOutputStream"><a href="#1-10、ObjectOutputStream" class="headerlink" title="1.10、ObjectOutputStream"></a>1.10、ObjectOutputStream</h4><p>对象的序列化。</p>
    
       <div class="essayending">
         <div>
@@ -285,7 +295,7 @@
          suger 
         <br />
         <strong>本文链接：</strong>
-        <a rel="license" href="http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/">http://yoursite.com/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/</a>
+        <a rel="license" href="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/">http://yoursite.com/2020/05/06/day36IO%E6%B5%81/</a>
         <br />
         <strong>版权声明：</strong>
         本作品采用
@@ -393,7 +403,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/04/29/day33%E5%A4%9A%E7%BA%BF%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/05/06/day36IO%E6%B5%81/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -406,18 +416,9 @@
  
 <nav id="article-nav">
   
-    <a href="/2020/05/05/day34IO%E5%88%9D%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          day34IO初识
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/28/day32%E5%A4%9A%E7%BA%BF%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">day32多线程</div>
+    <a href="/2020/05/05/day35IO%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">day35IO流</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -442,7 +443,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、同步方法"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、同步方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、线程之间的通信"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、线程之间的通信</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、线程池"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、线程池</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、FileReader"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、FileReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、FileWriter"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、FileWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、InputStreamReader"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、InputStreamReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、OutputStreamWriter"><span class="toc-number">1.4.</span> <span class="toc-text">1.4、OutputStreamWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、BufferedInputStream"><span class="toc-number">1.5.</span> <span class="toc-text">1.5、BufferedInputStream</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、BufferedOutoutStream"><span class="toc-number">1.6.</span> <span class="toc-text">1.6、BufferedOutoutStream</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7、BufferedReader"><span class="toc-number">1.7.</span> <span class="toc-text">1.7、BufferedReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8、BufferedWriter"><span class="toc-number">1.8.</span> <span class="toc-text">1.8、BufferedWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-9、ObjectInputStream"><span class="toc-number">1.9.</span> <span class="toc-text">1.9、ObjectInputStream</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-10、ObjectOutputStream"><span class="toc-number">1.10.</span> <span class="toc-text">1.10、ObjectOutputStream</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
