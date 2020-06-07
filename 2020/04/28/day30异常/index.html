@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/28/day30%E5%BC%82%E5%B8%B8/Exception%E7%9A%84%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/28/day30%E5%BC%82%E5%B8%B8/2trycatch%E5%88%86%E6%9E%90.png">
 <meta property="article:published_time" content="2020-04-28T06:33:54.000Z">
-<meta property="article:modified_time" content="2020-05-05T04:21:45.273Z">
+<meta property="article:modified_time" content="2020-05-27T07:58:05.987Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -73,7 +73,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -230,7 +230,8 @@
 <p>step3：解释器去执行。</p>
 <p>​    java HelloWorld</p>
 <p><img src="/2020/04/28/day30%E5%BC%82%E5%B8%B8/Exception%E7%9A%84%E7%BB%A7%E6%89%BF%E7%BB%93%E6%9E%84.png" alt="Exception的继承结构"></p>
-<h4 id="1-3、捕获异常"><a href="#1-3、捕获异常" class="headerlink" title="1.3、捕获异常"></a>1.3、捕获异常</h4><p>捕获的语法结构：</p>
+<h4 id="1-3、捕获异常"><a href="#1-3、捕获异常" class="headerlink" title="1.3、捕获异常"></a>1.3、捕获异常</h4><p><strong>捕获后，不影响后面程序的正常运行。</strong></p>
+<p>捕获的语法结构：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">**这些必须搭配使用**</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	<span class="comment">//try语句块中，有可能产生异常的代码，尝试着执行</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">1</span> e)&#123;</span><br><span class="line">	<span class="comment">//对异常处理</span></span><br><span class="line">    e.printStack();<span class="comment">//打印：异常类型，异常的原因，哪行产生的。。。</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型<span class="number">2</span> e)&#123;</span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">&#125;...</span><br><span class="line"><span class="keyword">finally</span>&#123;</span><br><span class="line">	<span class="comment">//此处的操作是可选的，</span></span><br><span class="line">    <span class="comment">//无论try语句中，是否产生异常，此处的代码一定会被执行。</span></span><br><span class="line">	<span class="comment">//惯用于做最后的清理工作：断开资源链接，删除临时文件。。。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>解释说明：关键字</p>
@@ -245,7 +246,10 @@
 <p>3、一个try语句可以配合多个catch，产生异常时，会从上向下匹配这些异常类型。和哪个匹配上了就执行哪个catch。小类型的异常写前面，大类型的异常写后面。</p>
 <p>4、如果有finally语句，无论是否产生异常，都会执行finally里面的代码。该语句块是可选的。<strong>一般用于资源的释放，文件的断开，临时文件的删除。。</strong></p>
 <p><img src="/2020/04/28/day30%E5%BC%82%E5%B8%B8/2trycatch%E5%88%86%E6%9E%90.png" alt="2trycatch分析"></p>
-<h4 id="1-4、抛出异常"><a href="#1-4、抛出异常" class="headerlink" title="1.4、抛出异常"></a>1.4、抛出异常</h4><p>throws关键字，该方法不处理异常，抛出，交给调用处进行处理异常。</p>
+<h4 id="1-4、抛出异常"><a href="#1-4、抛出异常" class="headerlink" title="1.4、抛出异常"></a>1.4、抛出异常</h4><blockquote>
+<p><strong>子类重写父类的方法时，不能抛出比父类更大的异常。</strong></p>
+</blockquote>
+<p>throws关键字，该方法不处理异常，抛出，交给调用处进行处理异常。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span><span class="keyword">throws</span> 异常类型1,异常类型2...</span>&#123;</span><br><span class="line">	<span class="comment">//方法体;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用处：</span></span><br><span class="line">    方法名(实参);<span class="comment">//就要处理这个异常：可抓，可抛</span></span><br><span class="line">           </span><br><span class="line">JVM--&gt;main()--&gt;test1()--&gt;test2()--&gt;test3()....</span><br><span class="line">           </span><br><span class="line">编码习惯上：</span><br><span class="line">     <span class="keyword">try</span>...<span class="keyword">catch</span>语句：<span class="keyword">try</span>语句块中的代码越少越好。</span><br><span class="line">     <span class="keyword">throws</span>...功能方法：main()不要再<span class="keyword">throws</span>异常了。</span><br></pre></td></tr></table></figure>
 
 <p>表示该方法不处理异常，向外抛出，交由调用处进行处理。受检异常，调用处就必须处理，非受检异常调用处可以暂时不处理。</p>
@@ -253,6 +257,9 @@
 <p>​        非受检异常：可以运行，只是运行到异常处，会报相应的错误。</p>
 <p>【扩展内容】</p>
 <p>1、throw关键字，主动抛出一个异常对象。</p>
+<blockquote>
+<p>哦   这个主动抛出异常就是给这个方法检查的<br>抛出的异常   没有处理，就会打断剩下的内容执行，<br>如果处理了，例如try。。。catch。。。了就会打印报错内容，然后忽略报错，继续执行下面的内容</p>
+</blockquote>
   
 
       <!-- 增加版权声明 -->
@@ -653,7 +660,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -662,14 +681,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/5%E7%BC%93%E5%AD%98%E6%B5%81.png">
 <meta property="og:image" content="http://yoursite.com/2020/05/06/day36IO%E6%B5%81/%E5%A4%84%E7%90%86%E6%B5%81.jpg">
 <meta property="article:published_time" content="2020-05-06T13:27:01.000Z">
-<meta property="article:modified_time" content="2020-05-07T13:27:41.426Z">
+<meta property="article:modified_time" content="2020-05-11T04:30:50.551Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -76,7 +76,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -271,10 +271,20 @@
 <p>​                        newline()方法 自动区分平台  win系统 “\r\n” linux系统 “\n”</p>
 <h4 id="1-8、BufferedWriter"><a href="#1-8、BufferedWriter" class="headerlink" title="1.8、BufferedWriter"></a>1.8、BufferedWriter</h4><p>新增的方法：newLine()–&gt;void</p>
 <p>写换行：write(“\r\n”)；</p>
+<p><strong>读行的时候    如果有空行也会读的</strong></p>
+<blockquote>
+<p>newline()方法 自动区分平台  win系统 “\r\n” linux系统 “\n”</p>
+</blockquote>
+<blockquote>
+<p>缓存流和之前自己定义的缓存数组用法相同</p>
+</blockquote>
+<blockquote>
+<p>关流的时候只需要关最外层就可以了   外层有内置方法    会去关闭内层流</p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">缓存流(重点掌握)：目的：高效。</span><br><span class="line">原理：自带了一个数组作为缓冲区。读写发生在数组上。数组占内存，速度很快。</span><br><span class="line">FileInputStream</span><br><span class="line">	read()--&gt;int,访问磁盘，操作文件，读一个字节回来。。</span><br><span class="line"></span><br><span class="line">BufferedInputStream</span><br><span class="line">	read()--&gt;int,先找缓冲区，从缓冲区中读取一个字节回来。fill()，读取磁盘文件，填充缓冲区</span><br><span class="line">byte[] bs ,作为缓冲区：1024*8。</span><br><span class="line"></span><br><span class="line">类似于之前写的自定义byte[] 数组</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2020/05/06/day36IO%E6%B5%81/5%E7%BC%93%E5%AD%98%E6%B5%81.png" alt="5缓存流"></p>
-<h4 id="1-9、对象流：操作对象的"><a href="#1-9、对象流：操作对象的" class="headerlink" title="1.9、对象流：操作对象的"></a>1.9、对象流：操作对象的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">ObjectInputStream</span><br><span class="line">	readObject()---&gt;Object---&gt;子类对象即可。</span><br><span class="line">ObjectOutputStream	</span><br><span class="line">	writeObject(Object obj)</span><br><span class="line">	报错啦：java.io.NotSerializableException: com.qf.demo02.Person</span><br><span class="line">		就是说Person这个类，没有被序列化。没有实现Serializable接口。</span><br><span class="line">	java.io.Serializable接口：类要想具有序列化的功能，那么需要实现java.io.Serializable接口的类启用。 如果没有实现该接口，那么类的实例不会具有序列化和反序列化的功能。</span><br><span class="line">	该接口没有任何的方法需要实现。我们称为“标记接口”。</span><br><span class="line">	</span><br><span class="line">	序列化和反序列化：</span><br><span class="line">		序列化：将对象，转为一系列的二进制编码。p1---&gt;0101010101011....</span><br><span class="line">		反序列化：将二进制数值，再转为对象的过程，就叫反序列化。0101010101011....---&gt;p1</span><br><span class="line">	</span><br><span class="line">	serialVersionUID，每一个实现java.io.Serializable的类，表示能够被序列化和反序列化。都需要提供一个serialVersionUID序列化的版本号。如果代码中没有显示的提供，那么程序中自动生成(类中的结构：属性，方法)。序列化的对象的serialVersionUID和反序列化回来的时候serialVersionUID要对应上，否则异常：java.io.InvalidClassException</span><br><span class="line">	</span><br><span class="line">	在每个类实现java.io.Serializable接口的时候，提供一个固定的serialVersionUID。</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">构造方法：</span><br><span class="line">ObjectOutputStream(OutputStream out) </span><br><span class="line">创建一个写入指定的OutputStream的ObjectOutputStream。 </span><br><span class="line">ObjectInputStream(InputStream in) </span><br><span class="line">创建从指定的InputStream读取的ObjectInputStream。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;1.操作1</span><br><span class="line">step1：先构建了Person类，创建p1对象</span><br><span class="line">step2：让Person类实现Serializable接口，&quot;贴标签&quot;</span><br><span class="line">step3：ObjectOutputStream写对象出去到person.txt中</span><br><span class="line">	序列化</span><br><span class="line">step4：ObjectInputStream将对象读回来：Object--&gt;p1</span><br><span class="line">	反序列化</span><br><span class="line">	</span><br><span class="line">&#x2F;&#x2F;2.操作2</span><br><span class="line">step1：先构建了Person类，创建p1对象</span><br><span class="line">step2：让Person类实现Serializable接口，&quot;贴标签&quot;</span><br><span class="line">step3：ObjectOutputStream写对象出去到person.txt中</span><br><span class="line">	序列化</span><br><span class="line">	</span><br><span class="line">插入一步：修改Person类</span><br><span class="line">	属性封装，提供get和set方法。。。</span><br><span class="line"></span><br><span class="line">step4：ObjectInputStream将对象读回来：Object--&gt;p1</span><br><span class="line">	反序列化</span><br><span class="line">	-------------</span><br><span class="line">	操作2会出问题：因为他的UID是根据类中所有的内容抽象出来的一个UID，所以要修改后，会无法找到当前UID对应的类，会报异常</span><br><span class="line">	提示什么这个UID是多少多少，但你要找的类UID多少多少，一串红字异常</span><br></pre></td></tr></table></figure>
+<h4 id="1-9、对象流：操作对象的"><a href="#1-9、对象流：操作对象的" class="headerlink" title="1.9、对象流：操作对象的"></a>1.9、对象流：操作对象的</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">ObjectInputStream</span><br><span class="line">	readObject()---&gt;Object---&gt;子类对象即可。</span><br><span class="line">ObjectOutputStream	</span><br><span class="line">	writeObject(Object obj)</span><br><span class="line">	报错啦：java.io.NotSerializableException: com.qf.demo02.Person</span><br><span class="line">		就是说Person这个类，没有被序列化。没有实现Serializable接口。</span><br><span class="line">	java.io.Serializable接口：类要想具有序列化的功能，那么需要实现java.io.Serializable接口的类启用。 如果没有实现该接口，那么类的实例不会具有序列化和反序列化的功能。</span><br><span class="line">	该接口没有任何的方法需要实现。我们称为“标记接口”。</span><br><span class="line">	</span><br><span class="line">	序列化和反序列化：</span><br><span class="line">		序列化：将对象，转为一系列的二进制编码。p1---&gt;<span class="number">0101010101011</span>....</span><br><span class="line">		反序列化：将二进制数值，再转为对象的过程，就叫反序列化。<span class="number">0101010101011</span>....---&gt;p1</span><br><span class="line">	</span><br><span class="line">	serialVersionUID，每一个实现java.io.Serializable的类，表示能够被序列化和反序列化。都需要提供一个serialVersionUID序列化的版本号。如果代码中没有显示的提供，那么程序中自动生成(类中的结构：属性，方法)。序列化的对象的serialVersionUID和反序列化回来的时候serialVersionUID要对应上，否则异常：java.io.InvalidClassException</span><br><span class="line">	</span><br><span class="line">	在每个类实现java.io.Serializable接口的时候，提供一个固定的serialVersionUID。</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">构造方法：</span><br><span class="line">ObjectOutputStream(OutputStream out) </span><br><span class="line">创建一个写入指定的OutputStream的ObjectOutputStream。 </span><br><span class="line">ObjectInputStream(InputStream in) </span><br><span class="line">创建从指定的InputStream读取的ObjectInputStream。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//1.操作1</span></span><br><span class="line">step1：先构建了Person类，创建p1对象</span><br><span class="line">step2：让Person类实现Serializable接口，<span class="string">"贴标签"</span></span><br><span class="line">step3：ObjectOutputStream写对象出去到person.txt中</span><br><span class="line">	序列化</span><br><span class="line">step4：ObjectInputStream将对象读回来：Object--&gt;p1</span><br><span class="line">	反序列化</span><br><span class="line">	</span><br><span class="line"><span class="comment">//2.操作2</span></span><br><span class="line">step1：先构建了Person类，创建p1对象</span><br><span class="line">step2：让Person类实现Serializable接口，<span class="string">"贴标签"</span></span><br><span class="line">step3：ObjectOutputStream写对象出去到person.txt中</span><br><span class="line">	序列化</span><br><span class="line">	</span><br><span class="line">插入一步：修改Person类</span><br><span class="line">	属性封装，提供get和set方法。。。</span><br><span class="line"></span><br><span class="line">step4：ObjectInputStream将对象读回来：Object--&gt;p1</span><br><span class="line">	反序列化</span><br><span class="line">	-------------</span><br><span class="line">	操作<span class="number">2</span>会出问题：因为他的UID是根据类中所有的内容抽象出来的一个UID，所以要修改后，会无法找到当前UID对应的类，会报异常</span><br><span class="line">	提示什么这个UID是多少多少，但你要找的类UID多少多少，一串红字异常</span><br></pre></td></tr></table></figure>
 
 
 
@@ -311,6 +321,12 @@
 
 <p>处理流：关闭的时候：倒着关。也可以直接关闭处理流。</p>
 <p><img src="/2020/05/06/day36IO%E6%B5%81/%E5%A4%84%E7%90%86%E6%B5%81.jpg" alt="处理流"></p>
+<h5 id="对比两条BufferedWriter"><a href="#对比两条BufferedWriter" class="headerlink" title="对比两条BufferedWriter"></a><strong>对比两条BufferedWriter</strong></h5><p>FileOutputStream –&gt; OutputStreamWriter –&gt; BufferedWriter   和</p>
+<p>FileWriter –&gt; BufferedWriter   的区别</p>
+<p>如果想要转码的话，需要在OutputStreamWriter     包装字节流时   进行转码设置（fos, “rgb”）</p>
+<h5 id="对于用缓存流进行流操作时，文件中没有数据情况"><a href="#对于用缓存流进行流操作时，文件中没有数据情况" class="headerlink" title="对于用缓存流进行流操作时，文件中没有数据情况"></a>对于用缓存流进行流操作时，文件中没有数据情况</h5><p>BufferedWriter流执行close()方法，会把缓存中的元素存入文件中，然后在关闭流<br>也可以手动flush() 刷新   功能类似<br>所以有的时候会产生文件已经创建，但文件中未写入数据的情况，</p>
+<p>很有可能是<strong>没有关闭缓存流</strong></p>
+<h5 id="用缓存流和自己定义缓存的区别"><a href="#用缓存流和自己定义缓存的区别" class="headerlink" title="用缓存流和自己定义缓存的区别"></a>用缓存流和自己定义缓存的区别</h5><p>缓存流是用data 接收   是一个数据一个数据接收的   但是里面肯定封装了相应的方法   把缓存数组拆分开，一个一个返回<br>不同于自己定义的缓存 byte[] 需要定义的是len   操作的是一整个bs数组</p>
    
       <div class="essayending">
         <div>
@@ -491,7 +507,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、FileReader"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、FileReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、FileWriter"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、FileWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、InputStreamReader"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、InputStreamReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、OutputStreamWriter"><span class="toc-number">1.4.</span> <span class="toc-text">1.4、OutputStreamWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、BufferedInputStream"><span class="toc-number">1.5.</span> <span class="toc-text">1.5、BufferedInputStream</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、BufferedOutoutStream"><span class="toc-number">1.6.</span> <span class="toc-text">1.6、BufferedOutoutStream</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7、BufferedReader"><span class="toc-number">1.7.</span> <span class="toc-text">1.7、BufferedReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8、BufferedWriter"><span class="toc-number">1.8.</span> <span class="toc-text">1.8、BufferedWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-9、对象流：操作对象的"><span class="toc-number">1.9.</span> <span class="toc-text">1.9、对象流：操作对象的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结："><span class="toc-number">1.10.</span> <span class="toc-text">总结：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、FileReader"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、FileReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、FileWriter"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、FileWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、InputStreamReader"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、InputStreamReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、OutputStreamWriter"><span class="toc-number">1.4.</span> <span class="toc-text">1.4、OutputStreamWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、BufferedInputStream"><span class="toc-number">1.5.</span> <span class="toc-text">1.5、BufferedInputStream</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、BufferedOutoutStream"><span class="toc-number">1.6.</span> <span class="toc-text">1.6、BufferedOutoutStream</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7、BufferedReader"><span class="toc-number">1.7.</span> <span class="toc-text">1.7、BufferedReader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-8、BufferedWriter"><span class="toc-number">1.8.</span> <span class="toc-text">1.8、BufferedWriter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-9、对象流：操作对象的"><span class="toc-number">1.9.</span> <span class="toc-text">1.9、对象流：操作对象的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结："><span class="toc-number">1.10.</span> <span class="toc-text">总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#对比两条BufferedWriter"><span class="toc-number">1.10.1.</span> <span class="toc-text">对比两条BufferedWriter</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#对于用缓存流进行流操作时，文件中没有数据情况"><span class="toc-number">1.10.2.</span> <span class="toc-text">对于用缓存流进行流操作时，文件中没有数据情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#用缓存流和自己定义缓存的区别"><span class="toc-number">1.10.3.</span> <span class="toc-text">用缓存流和自己定义缓存的区别</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -725,7 +741,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -734,14 +762,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

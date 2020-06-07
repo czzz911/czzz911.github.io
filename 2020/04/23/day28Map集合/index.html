@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/2list%E5%B5%8C%E5%A5%97map%E9%9B%86%E5%90%88.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/23/day28Map%E9%9B%86%E5%90%88/%E9%9B%86%E5%90%88%E7%9A%84%E7%BB%93%E6%9E%84.png">
 <meta property="article:published_time" content="2020-04-22T17:01:47.000Z">
-<meta property="article:modified_time" content="2020-04-22T17:23:25.882Z">
+<meta property="article:modified_time" content="2020-05-31T08:42:08.939Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -75,7 +75,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -298,7 +298,16 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Map中的常用方法：</span><br><span class="line">添加&#x2F;修改元素：</span><br><span class="line">put(key,value)；			向map中添加键值对，键不能重复。如果键重复了，那么value会被覆盖的。</span><br><span class="line">	——&gt;value			如果没重复，返回值为   null</span><br><span class="line">						如果重复，返回值为    被替代掉的元素的value值</span><br><span class="line">删除元素：</span><br><span class="line">remove(key)--&gt;value			删除元素</span><br><span class="line">							如果没有，返回值为   null</span><br><span class="line">							如果有，删除并返回    value</span><br><span class="line">查询元素：</span><br><span class="line">containsKey(key)--&gt;boolean			是否包含此key值</span><br><span class="line">containsValue(value)--&gt;boolean		是否包含此value值</span><br><span class="line">get(key)--&gt;value					得到对应key值的value值</span><br><span class="line">size()--&gt;int						键值对的个数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">keySet()--&gt;Set&lt;key&gt;					用于把map转为set，用collocation结构的迭代器iterator进行遍历</span><br><span class="line">values()--&gt;Collection&lt;value&gt;		得到map中所有的value值，用集合接收</span><br><span class="line">entrySet()--&gt;Set&lt;Entry&gt;				得到map中所有的key和value，并拼接成 key&#x3D;value 存在set结合中</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2020/04/23/day28Map%E9%9B%86%E5%90%88/2list%E5%B5%8C%E5%A5%97map%E9%9B%86%E5%90%88.png" alt="2list嵌套map集合"></p>
-<h4 id="1-5、HashMap实现类"><a href="#1-5、HashMap实现类" class="headerlink" title="1.5、HashMap实现类"></a>1.5、HashMap实现类</h4><p>HashSet集合——&gt;如何去重？step1：hashCode()，step2：equals()</p>
+<h4 id="1-5、HashMap实现类"><a href="#1-5、HashMap实现类" class="headerlink" title="1.5、HashMap实现类"></a>1.5、HashMap实现类</h4><blockquote>
+<p>hashcode方法，返回一个16进制的哈希码，哈希码是由hash算法生成的一个码，hash算法是将复杂的数据散列成哈希码。</p>
+</blockquote>
+<blockquote>
+<p>HashSet虽然说是无序的，其实底层是维护的一个hash表，用一定的hash算法，进行插入排序<br>hash表可以顺序存储，也可以链式存储，当然用索引结构也可以的，这个具体实现不一定</p>
+</blockquote>
+<blockquote>
+<p>HashMap实现Map接口，它允许任何类型的键和值对象，允许将null用作键或值<br>HashMap最多只允许一条记录的键为Null；允许多条记录的值为Null</p>
+</blockquote>
+<p>HashSet集合——&gt;如何去重？step1：hashCode()，step2：equals()</p>
 <p>HashMap集合——&gt;<strong>key如何去重？</strong>原理同HashSet相同。</p>
 <p>​    step1：对象的hashCode()–&gt;哈希值</p>
 <p>​            如果哈希值不同，就直接存储。</p>
@@ -316,8 +325,7 @@
 <p>对比HashSet和HashMap</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、都要求同时重写hashCode()和equals()</span><br><span class="line">2、不保证顺序</span><br><span class="line">	HashSet不关心存储的元素的顺序。添加的顺序和迭代的顺序不一定一致。</span><br><span class="line">	HashMap不关心key的顺序。</span><br><span class="line">补充一句话：HashSet的底层就是HashMap，只不过只要key，不要value值。</span><br></pre></td></tr></table></figure>
 
-
-
+<p><strong>HashMap 说是无序为什么每次打印出来的都是一样的？<br>这个底层的哈希表是用hash算法算出来的，HashMap底层是维护了一个哈希表的</strong></p>
 <h4 id="1-6、TreeMap实现类"><a href="#1-6、TreeMap实现类" class="headerlink" title="1.6、TreeMap实现类"></a>1.6、TreeMap实现类</h4><p>TreeMap要给key去重，而且还要排序：从小到大。怎么排序？要看排序的规则</p>
 <p>Comparable接口就是默认的排序规则。</p>
 <p>compareTo(o)–&gt;this和o</p>
@@ -338,8 +346,11 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ceiling()		向上取整包括自己</span><br><span class="line">floor()			向下取整包括自己</span><br><span class="line">higher()		向上取整不包括自己</span><br><span class="line">lower()  		向下取整不包括自己</span><br><span class="line">[aaa, bbb, ccc, ddd, eee]</span><br><span class="line">System.out.println(set.headSet(<span class="string">"ccc"</span>)); <span class="comment">//[aaa, bbb]			</span></span><br><span class="line">System.out.println(set.tailSet(<span class="string">"ccc"</span>)); <span class="comment">//[ccc, ddd, eee]</span></span><br><span class="line">System.out.println(set.subSet(<span class="string">"bbb"</span>, <span class="string">"ddd"</span>)); <span class="comment">//[bbb, ccc]</span></span><br></pre></td></tr></table></figure>
 
-
-
+<h4 id="1-7-ConcurrentHashMap"><a href="#1-7-ConcurrentHashMap" class="headerlink" title="1.7 ConcurrentHashMap"></a>1.7 ConcurrentHashMap</h4><p>初始容量默认为16段（Segment），使用分段锁设计。</p>
+<p>不对整个Map加锁，而是为每个Segment加锁。</p>
+<p>当多个对象存入同一个Segment时，才需要互斥。</p>
+<p>最理想状态为16个对象分别存入16个Segment，并行数量16.</p>
+<p>使用方式与HashMap无异。</p>
 <h3 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h3><p>创建treeSet集合：到底使用哪个比较器？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new TreeSet();&#x2F;&#x2F;无参构造：使用默认的Comparable</span><br><span class="line">new TreeSet(Comparator);&#x2F;&#x2F;有参构造：Comparator的实现类对象作为参数。</span><br><span class="line">还可以使用匿名内部类来实现。</span><br></pre></td></tr></table></figure>
 
@@ -526,7 +537,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day28——Map集合"><span class="toc-number">1.</span> <span class="toc-text">day28——Map集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#回顾"><span class="toc-number">1.1.</span> <span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.2.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、Comparable接口"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.1、Comparable接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、Comparator接口"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2、Comparator接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、LinkedHashSet集合"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.3、LinkedHashSet集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、Map接口"><span class="toc-number">1.2.4.</span> <span class="toc-text">1.4、Map接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、HashMap实现类"><span class="toc-number">1.2.5.</span> <span class="toc-text">1.5、HashMap实现类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、TreeMap实现类"><span class="toc-number">1.2.6.</span> <span class="toc-text">1.6、TreeMap实现类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、总结"><span class="toc-number">1.3.</span> <span class="toc-text">三、总结</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#day28——Map集合"><span class="toc-number">1.</span> <span class="toc-text">day28——Map集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#回顾"><span class="toc-number">1.1.</span> <span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.2.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、Comparable接口"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.1、Comparable接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、Comparator接口"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2、Comparator接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、LinkedHashSet集合"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.3、LinkedHashSet集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、Map接口"><span class="toc-number">1.2.4.</span> <span class="toc-text">1.4、Map接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、HashMap实现类"><span class="toc-number">1.2.5.</span> <span class="toc-text">1.5、HashMap实现类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、TreeMap实现类"><span class="toc-number">1.2.6.</span> <span class="toc-text">1.6、TreeMap实现类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7-ConcurrentHashMap"><span class="toc-number">1.2.7.</span> <span class="toc-text">1.7 ConcurrentHashMap</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、总结"><span class="toc-number">1.3.</span> <span class="toc-text">三、总结</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -760,7 +771,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -769,14 +792,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

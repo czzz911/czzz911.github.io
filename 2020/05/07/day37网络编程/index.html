@@ -30,8 +30,11 @@
 <meta property="og:image" content="http://yoursite.com/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/1%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.png">
 <meta property="og:image" content="http://yoursite.com/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/socket2.png">
 <meta property="og:image" content="http://yoursite.com/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/2%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/2ECHO%E7%A8%8B%E5%BA%8F%E5%8F%AF%E4%BB%A5%E6%94%B9%E8%81%8A%E5%A4%A9.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/1%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/3%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.png">
 <meta property="article:published_time" content="2020-05-07T15:57:57.000Z">
-<meta property="article:modified_time" content="2020-05-07T16:00:53.941Z">
+<meta property="article:modified_time" content="2020-05-09T15:53:40.047Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -85,7 +88,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -263,6 +266,22 @@
 <p>如果服务器端没有调用accept()去接瘦客户端发送的连接请求</p>
 <p>​    则客户端运行会报错</p>
 </blockquote>
+<p><strong>网络编程总结：</strong></p>
+<p>网络编程：</p>
+<p>1、核心的三要素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A：协议：TCP，UDP</span><br><span class="line">	ServerSocket类：服务端</span><br><span class="line">	Socket类：客户端</span><br><span class="line">	</span><br><span class="line">B：IP地址：标识网络中的主机</span><br><span class="line">C：port端口：标识主机中的程序</span><br><span class="line">	一个端口只能被一个程序所占用。</span><br></pre></td></tr></table></figure>
+
+<p>2、网络编程 流程&amp;模型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">服务器：</span><br><span class="line">step1：创建ServerSocket类，</span><br><span class="line">step2：等待客户端链接：accept()——&gt;Socket</span><br><span class="line">step3：获取流：InputStream，OutputStream，</span><br><span class="line">step4：关闭资源：socket，流</span><br><span class="line">客户端：</span><br><span class="line">step1：创建Socket类，申请链接服务器</span><br><span class="line">step2：获取流：InputStream，OutputStream，</span><br><span class="line">step3：关闭资源：socket，流</span><br></pre></td></tr></table></figure>
+
+
+
+<p>ECHO程序：</p>
+<p><img src="/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/2ECHO%E7%A8%8B%E5%BA%8F%E5%8F%AF%E4%BB%A5%E6%94%B9%E8%81%8A%E5%A4%A9.png" alt="2ECHO程序可以改聊天"></p>
+<p>程序分析：</p>
+<p><img src="/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/1%E7%A8%8B%E5%BA%8F%E5%88%86%E6%9E%90.png" alt="1程序分析"></p>
+<p>文件上传：</p>
+<p><img src="/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/3%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.png" alt="3文件上传"></p>
    
       <div class="essayending">
         <div>
@@ -406,6 +425,15 @@
 </article>
  
 <nav id="article-nav">
+  
+    <a href="/2020/06/07/mysql/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          mysql
+        
+      </div>
+    </a>
   
   
     <a href="/2020/05/06/day36IO%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
@@ -668,7 +696,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -677,14 +717,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,24 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>day10课堂笔记(数组) | czzz</title>
+  <title>mysql | czzz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个一个走过，一个一个错过，一遍一遍来过，一次一次放过，一声一声笑着，一声一声吼着，一幕一幕闪着——">
+  <meta name="description" content="MySQL一、引言1.1现有的数据存储方式有哪些？ java程序存储数据（变量、对象、数组、集合），数据保存在内存中，属于瞬时状态存储。 文件（File）存储数据，保存在硬盘上，属于持久状态存储  1.2 以上存储方式存在的缺点？ 存储数据量级较小 没有访问安全限制 没有备份、恢复机制  二、数据库2.1 概念 数据库是按照数据结构来存储的，存储和管理数据的仓库，可以长期存储  2.2 数据库分类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day10课堂笔记(数组)">
-<meta property="og:url" content="http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:title" content="mysql">
+<meta property="og:url" content="http://yoursite.com/2020/06/07/mysql/index.html">
 <meta property="og:site_name" content="czzz">
-<meta property="og:description" content="一个一个走过，一个一个错过，一遍一遍来过，一次一次放过，一声一声笑着，一声一声吼着，一幕一幕闪着——">
+<meta property="og:description" content="MySQL一、引言1.1现有的数据存储方式有哪些？ java程序存储数据（变量、对象、数组、集合），数据保存在内存中，属于瞬时状态存储。 文件（File）存储数据，保存在硬盘上，属于持久状态存储  1.2 以上存储方式存在的缺点？ 存储数据量级较小 没有访问安全限制 没有备份、恢复机制  二、数据库2.1 概念 数据库是按照数据结构来存储的，存储和管理数据的仓库，可以长期存储  2.2 数据库分类">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/3%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/4%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/5%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC.png">
-<meta property="article:published_time" content="2020-03-27T14:56:55.000Z">
-<meta property="article:modified_time" content="2020-04-15T07:00:22.080Z">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%851.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%852.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%853.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%854.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%855.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%856.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%857.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%858.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%859.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%8510.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%8511.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%8512.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%8513.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%8514.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%8515.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%8516.png">
+<meta property="article:published_time" content="2020-06-07T04:55:32.000Z">
+<meta property="article:modified_time" content="2020-06-07T04:59:08.046Z">
 <meta property="article:author" content="suger">
-<meta property="article:tag" content="JavaSE">
+<meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/3%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/07/mysql/%E5%AE%89%E8%A3%851.png">
   
     <link rel="alternative" href="/atom.xml" title="czzz" type="application/atom+xml">
   
@@ -73,7 +86,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -170,7 +183,7 @@
           <div id="js-content" class="content-ll">
             
 <article
-  id="post-day10课堂笔记-数组"
+  id="post-mysql"
   class="article article-type-post "
   itemscope
   itemprop="blogPost"
@@ -181,7 +194,7 @@
       
   
     <h1 class="article-title" itemprop="name">
-      day10课堂笔记(数组)
+      mysql
     </h1>
   
 
@@ -191,65 +204,815 @@
 <!-- # span 给的 id 是文章的 url 作为唯一的 key 值 -->
 
   <a href="javascript:;" class="archive-article-date">
-      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/" class="pageViews">0</span>次
+      <i class="icon-smile icon"></i> 阅读数:<span id="/2020/06/07/mysql/" class="pageViews">0</span>次
   </a>
 
-       <a href="/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2020-03-27T14:56:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-27</time>
+       <a href="/2020/06/07/mysql/" class="archive-article-date">
+  	<time datetime="2020-06-07T04:55:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-07</time>
 </a> 
     </header>
     
     <div class="article-entry" itemprop="articleBody">
-       <p>一个一个走过，一个一个错过，一遍一遍来过，一次一次放过，一声一声笑着，一声一声吼着，一幕一幕闪着——</p>
-<a id="more"></a>
+       <h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><h4 id="1-1现有的数据存储方式有哪些？"><a href="#1-1现有的数据存储方式有哪些？" class="headerlink" title="1.1现有的数据存储方式有哪些？"></a>1.1现有的数据存储方式有哪些？</h4><blockquote>
+<p>java程序存储数据（变量、对象、数组、集合），数据保存在内存中，属于瞬时状态存储。</p>
+<p>文件（File）存储数据，保存在硬盘上，属于持久状态存储</p>
+</blockquote>
+<h4 id="1-2-以上存储方式存在的缺点？"><a href="#1-2-以上存储方式存在的缺点？" class="headerlink" title="1.2 以上存储方式存在的缺点？"></a>1.2 以上存储方式存在的缺点？</h4><blockquote>
+<p>存储数据量级较小</p>
+<p>没有访问安全限制</p>
+<p>没有备份、恢复机制</p>
+</blockquote>
+<h3 id="二、数据库"><a href="#二、数据库" class="headerlink" title="二、数据库"></a>二、数据库</h3><h4 id="2-1-概念"><a href="#2-1-概念" class="headerlink" title="2.1 概念"></a>2.1 概念</h4><blockquote>
+<p>数据库是按照数据结构来存储的，<strong>存储和管理数据的仓库</strong>，可以长期存储</p>
+</blockquote>
+<h4 id="2-2-数据库分类"><a href="#2-2-数据库分类" class="headerlink" title="2.2 数据库分类"></a>2.2 数据库分类</h4><ul>
+<li>网状结构数据库：以<strong>节点形式</strong>存储和访问</li>
+<li>层次结构数据库：定向有序的<strong>树状结构</strong>实现存储和访问</li>
+<li>关系结构数据库：Oracle、DB2、MySQL、SQL Server，以<strong>表格</strong>存储，多表间建立关联关系，通过分类、合并、连接、选取等运算实现访问</li>
+<li>非关系型数据库:ElasterSearch、MongoDB、Redis，多数使用<strong>哈希表</strong>、表中以键值（key-value）的方式实现特定的键和一个指针指向的特定数据</li>
+</ul>
+<h3 id="三、数据库管理系统"><a href="#三、数据库管理系统" class="headerlink" title="三、数据库管理系统"></a>三、数据库管理系统</h3><h4 id="3-1-概念"><a href="#3-1-概念" class="headerlink" title="3.1 概念"></a>3.1 概念</h4><p>数据库管理系统（DBMS）：指一种操作和<strong>管理数据库的大型软件</strong>，用于建立、使用、和维护数据库，对数据库进行统一管理和控制，以保证数据库的安全性和完整性。用户通过DBMS访问数据库中的数据。</p>
+<h4 id="3-2-常见的数据库管理系统"><a href="#3-2-常见的数据库管理系统" class="headerlink" title="3.2 常见的数据库管理系统"></a>3.2 常见的数据库管理系统</h4><ul>
+<li>Oracle：贵、好</li>
+<li>DB2：IBM产品，采用多进程多线索体系结构。</li>
+<li>SQL Server：Microsoft产品，只支持win系统</li>
+<li>SQLLite：应用在手机端的数据库</li>
+</ul>
+<h3 id="四、Mysql"><a href="#四、Mysql" class="headerlink" title="四、Mysql"></a>四、Mysql</h3><h4 id="4-1-简介"><a href="#4-1-简介" class="headerlink" title="4.1 简介"></a>4.1 简介</h4><p>一个关系型数据库，商业版慢慢变成了Oracle的阉割版。</p>
+<h4 id="4-2-访问和下载"><a href="#4-2-访问和下载" class="headerlink" title="4.2 访问和下载"></a>4.2 访问和下载</h4><blockquote>
+<p>官网：<a href="http://www.mysql.com">www.mysql.com</a></p>
+<p>下载地址：dev.mysql.com/downloads/mysql/</p>
+</blockquote>
+<h4 id="4-3-mysql-5-7-安装"><a href="#4-3-mysql-5-7-安装" class="headerlink" title="4.3 mysql 5.7 安装"></a>4.3 mysql 5.7 安装</h4><p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%851.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%852.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%853.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%854.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%855.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%856.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%857.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%858.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%859.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%8510.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%8511.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%8512.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%8513.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%8514.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%8515.png" alt="安装"></p>
+<p><img src="/2020/06/07/mysql/%E5%AE%89%E8%A3%8516.png" alt="安装"></p>
+<h4 id="4-4-卸载"><a href="#4-4-卸载" class="headerlink" title="4.4 卸载"></a>4.4 卸载</h4><ul>
+<li>控制台卸载</li>
+<li>找到mysql的安装目录进行删除</li>
+<li>programdata删除mysql</li>
+</ul>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>如果卸载后，如有未删除的MySQL服务可采用手动删除。</p>
+<p>以管理员身份打开命令行，输入 sc delete MySQL57回车</p>
+</blockquote>
+<h4 id="4-5-配置环境变量"><a href="#4-5-配置环境变量" class="headerlink" title="4.5 配置环境变量"></a>4.5 配置环境变量</h4><p>用于在cmd可以直接访问</p>
+<ul>
+<li>Windows<ul>
+<li>创建MYSQL_HOME: c:\Program File\MySQL\MySQL Server 5.7（安装目录）</li>
+<li>追加PATH：%MYSQL_HOME%\bin;</li>
+</ul>
+</li>
+<li>MacOS/Linux<ul>
+<li>终端中输入cd-进入目录，并检查.bash_profile是否存在，有则追加，无则创建</li>
+<li>创建文件 touch .bash_profile</li>
+<li>打开文件open .bash_profile</li>
+<li>输入export PATH=S{PATH:/us/local/mysql/bin保存并退出终端</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-6-MySQL目录结构"><a href="#4-6-MySQL目录结构" class="headerlink" title="4.6 MySQL目录结构"></a>4.6 MySQL目录结构</h4><p>核心文件介绍：</p>
+<table>
+<thead>
+<tr>
+<th align="center">文件夹名称</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">bin</td>
+<td align="center">命令文件</td>
+</tr>
+<tr>
+<td align="center">lib</td>
+<td align="center">库文件</td>
+</tr>
+<tr>
+<td align="center">include</td>
+<td align="center">头文件</td>
+</tr>
+<tr>
+<td align="center">Share</td>
+<td align="center">字符集、语言等信息</td>
+</tr>
+</tbody></table>
+<p>4.7 MySQL配置文件</p>
+<p>在MySQL安装目录中找到my.ini文件，并打开my.ini文件查看几个常用配置参数</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">default-character-set</td>
+<td align="center">客户端默认字符集</td>
+</tr>
+<tr>
+<td align="center">character-set-server</td>
+<td align="center">服务器端默认字符集</td>
+</tr>
+<tr>
+<td align="center">port</td>
+<td align="center">客户端和服务器端的端口号</td>
+</tr>
+<tr>
+<td align="center">default storage- engine</td>
+<td align="center">MySQL默认存储引擎INNODB</td>
+</tr>
+</tbody></table>
+<h3 id="五、SQL语言"><a href="#五、SQL语言" class="headerlink" title="五、SQL语言"></a>五、SQL语言</h3><h4 id="5-1-概念"><a href="#5-1-概念" class="headerlink" title="5.1 概念"></a>5.1 概念</h4><p>SQL (Structured Query Language)结构化查询语言，用于存取数据、更新、查询和管理关系数据库系统的程序设计语言。</p>
+<blockquote>
+<p><strong>经验:</strong> 通常执行对数据库的“增删改查”，简称C (Create) R (Read) U (Update) D (Delete) 。</p>
+</blockquote>
+<h4 id="5-2-基本命令"><a href="#5-2-基本命令" class="headerlink" title="5.2 基本命令"></a>5.2 基本命令</h4><p><strong>数据库中不区分大小写</strong></p>
+<p>查看MySQL中所有数据库</p>
+<blockquote>
+<p>show databases</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">数据库名称</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">information_ schema</td>
+<td align="center">信息数据库,其中保存着关于所有数据库的信息(元数据)。</td>
+</tr>
+<tr>
+<td align="center">元数据是关于数据的数据，如数据库名或表名，列的数据类型，或访问权限等。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">mysql</td>
+<td align="center">核心数据库，主要负责存储数据库的用户、权限设置、关键字等，以及需要使用的控制和管理信息，不可以删除。</td>
+</tr>
+<tr>
+<td align="center">performance_ schema</td>
+<td align="center">性能优化的数据库，MySQL 5.5版本中新增的一个性能优化的引擎。</td>
+</tr>
+<tr>
+<td align="center">sys</td>
+<td align="center">系统数据库，MySQL5.7版本中新增的可以快速的了解元数据信息的系统库便于发现数据库的多样信息，解决性能瓶颈问题。</td>
+</tr>
+</tbody></table>
+<p>创建自定义数据库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create database mydb1;  #创建mydb数据库</span><br><span class="line">create database mydb2 character set gbk; #创建数据库并设置编码格式为gbk</span><br><span class="line">create database if not exists mydb4; #如果mydb4不存在，则创建，存在则不创建</span><br></pre></td></tr></table></figure>
+
+<p>查看数据库创建信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create database mydb2; #查看创建数据库时的基本信息</span><br></pre></td></tr></table></figure>
+
+<p>修改数据库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter database mydb2 character set gbk; #修改数据库的编码格式为gbk</span><br></pre></td></tr></table></figure>
+
+<p>删除数据库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database mysql1; #删除数据库mydb1</span><br></pre></td></tr></table></figure>
+
+<p>查看当前所使用的的数据库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select database(); #查看当前使用的数据库</span><br></pre></td></tr></table></figure>
+
+<p>使用数据库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mydb1; #使用mydb数据库</span><br></pre></td></tr></table></figure>
+
+<h3 id="六、客户端工具"><a href="#六、客户端工具" class="headerlink" title="六、客户端工具"></a>六、客户端工具</h3><ul>
+<li>Navicate</li>
+<li>SQLyog</li>
+</ul>
+<h3 id="七：数据查询（重点）"><a href="#七：数据查询（重点）" class="headerlink" title="七：数据查询（重点）"></a>七：数据查询（重点）</h3><h4 id="7-1-数据库表的基本结构"><a href="#7-1-数据库表的基本结构" class="headerlink" title="7.1 数据库表的基本结构"></a>7.1 数据库表的基本结构</h4><p>关系结构数据库是以表格(Table) 进行数据存储，表格由“行”和“列”组成</p>
+<blockquote>
+<p><strong>经验：</strong>执行查询语句返回的结果集是-张虚拟表。</p>
+</blockquote>
+<p>6.</p>
+<h4 id="7-2-基本查询"><a href="#7-2-基本查询" class="headerlink" title="7.2 基本查询"></a>7.2 基本查询</h4><blockquote>
+<p>语法：select 列名 from 表名</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">select</td>
+<td align="center">指定要查询的列</td>
+</tr>
+<tr>
+<td align="center">from</td>
+<td align="center">指定要查询的表</td>
+</tr>
+</tbody></table>
+<h5 id="7-2-1-查询部分列"><a href="#7-2-1-查询部分列" class="headerlink" title="7.2.1 查询部分列"></a>7.2.1 查询部分列</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select name, email from t_student</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-2-2-查询所有列"><a href="#7-2-2-查询所有列" class="headerlink" title="7.2.2 查询所有列"></a>7.2.2 查询所有列</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意:</strong>生产环境下，优先使用列名查询。*的方式需转换成全列名，效率低，可读性差。</p>
+</blockquote>
+<h5 id="7-2-3-对列中的数据进行运算"><a href="#7-2-3-对列中的数据进行运算" class="headerlink" title="7.2.3 对列中的数据进行运算"></a>7.2.3 对列中的数据进行运算</h5><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">两列做加法运算</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">减法</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">乘法</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">除法</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>注意:</strong> %是占位符，而非模运算符。</p>
+</blockquote>
+<h5 id="7-2-4-列的别名"><a href="#7-2-4-列的别名" class="headerlink" title="7.2.4 列的别名"></a>7.2.4 列的别名</h5><blockquote>
+<p>列 as ‘列名’</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select name as &#39;姓名&#39; from t_student;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-3-排列查询"><a href="#7-3-排列查询" class="headerlink" title="7.3 排列查询"></a>7.3 排列查询</h4><blockquote>
+<p>语法： select  列名  from  表名 <strong>order by （desc/ asc）</strong></p>
+</blockquote>
+<p><strong>注意：</strong>默认升序（asc）排列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 薪水降序，id升序</span><br><span class="line">select id, name, salary from t_student order by salary desc,id asc</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-4-条件查询"><a href="#7-4-条件查询" class="headerlink" title="7.4 条件查询"></a>7.4 条件查询</h4><blockquote>
+<p>语法：select 列名 from 表名 <strong>where 条件</strong></p>
+</blockquote>
+<p>在查询结果中，筛选符合条件的查询结果，<strong>条件为布尔类型表达式</strong></p>
+<h5 id="7-4-1-等值判断（-）"><a href="#7-4-1-等值判断（-）" class="headerlink" title="7.4.1 等值判断（=）"></a>7.4.1 等值判断（=）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id, salary from t_student where salary &#x3D; 11000</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：与java不同（==），mysql中等值判断使用=</p>
+</blockquote>
+<h5 id="7-4-2-逻辑判断（and、or、-not）"><a href="#7-4-2-逻辑判断（and、or、-not）" class="headerlink" title="7.4.2 逻辑判断（and、or、 not）"></a>7.4.2 逻辑判断（and、or、 not）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id, name from student where id &#x3D; 1 and name &#x3D; &#39;cccc&#39;</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-4-3-不等值判断（-gt-、-lt-、-gt-、-lt-、-、-lt-gt-）"><a href="#7-4-3-不等值判断（-gt-、-lt-、-gt-、-lt-、-、-lt-gt-）" class="headerlink" title="7.4.3 不等值判断（&gt;、&lt;、&gt;=、&lt;=、!=、&lt;&gt;）"></a>7.4.3 不等值判断（&gt;、&lt;、&gt;=、&lt;=、!=、&lt;&gt;）</h5><blockquote>
+<p>!= 和&lt;&gt;都表示不等于</p>
+</blockquote>
+<h5 id="7-4-4-区间判断（between-and）"><a href="#7-4-4-区间判断（between-and）" class="headerlink" title="7.4.4 区间判断（between and）"></a>7.4.4 区间判断（between and）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id from student where salary between 6000 and 10000</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-4-5-null-值判断（is-null、-is-not-null）"><a href="#7-4-5-null-值判断（is-null、-is-not-null）" class="headerlink" title="7.4.5 null 值判断（is null、 is not null）"></a>7.4.5 null 值判断（is null、 is not null）</h5><blockquote>
+<p>is null</p>
+<p>​    列名 is null</p>
+<p>is not null</p>
+<p>​    列名 is not null</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id from student where name is null</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-4-6-枚举查询（in-（值1，值2-值3））"><a href="#7-4-6-枚举查询（in-（值1，值2-值3））" class="headerlink" title="7.4.6 枚举查询（in （值1，值2 值3））"></a>7.4.6 枚举查询（in （值1，值2 值3））</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id, name from where id in(70, 80, 90)</span><br></pre></td></tr></table></figure>
+
+<p>注：in的查询效率较低，可通过多条件拼接</p>
+<h5 id="7-4-7-模糊查询"><a href="#7-4-7-模糊查询" class="headerlink" title="7.4.7 模糊查询"></a>7.4.7 模糊查询</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- like _ (单个任意字符)</span><br><span class="line">	列名 Like &#39;张_&#39;</span><br><span class="line">- like % (任意长度的任意字符)</span><br><span class="line">	列名 like &#39;张%&#39;</span><br></pre></td></tr></table></figure>
+
+<p>注：模糊查询只能和 like 关键结合使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select id, name, salary from student where name like &#39;L%&#39;;</span><br><span class="line"></span><br><span class="line">select id, name, salary from student where name like &#39;L___&#39;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-4-8-分支结构查询"><a href="#7-4-8-分支结构查询" class="headerlink" title="7.4.8 分支结构查询"></a>7.4.8 分支结构查询</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">case</span><br><span class="line">	when 条件1 then 结果1</span><br><span class="line">	when 条件2 then 结果2</span><br><span class="line">	when 条件3 then 结果3</span><br><span class="line">	else 结果</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>注意：通过使用case end 进行条件判断，每条数据对应生成一个值</p>
+<p>经验：类似 java中的switch。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select id, name, salary,</span><br><span class="line">	case</span><br><span class="line">		when salary&gt;&#x3D; 10000 then &#39;A&#39;</span><br><span class="line">		when salary&gt;&#x3D; 8000 and salary&lt; 10000 then &#39;B&#39;</span><br><span class="line">		when salary&gt;&#x3D; 6000 and salary&lt; 8000 then &#39;C&#39;</span><br><span class="line">		when salary&gt;&#x3D; 4000 and salary&lt; 6000 then &#39;D&#39;</span><br><span class="line">	else &#39;E&#39;</span><br><span class="line">		end as &#39;level&#39;</span><br><span class="line">from t_employee;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-5-时间查询"><a href="#7-5-时间查询" class="headerlink" title="7.5 时间查询"></a>7.5 时间查询</h4><blockquote>
+<p>语法：select 时间函数（[参数列表]）</p>
+</blockquote>
+<p>经验：执行时间函数查询，会自动生成一张虚表（一行一列）</p>
+<table>
+<thead>
+<tr>
+<th align="center">时间函数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">sysdate()</td>
+<td align="center">当前系统时间</td>
+</tr>
+<tr>
+<td align="center">curdate()</td>
+<td align="center">获取当前日期</td>
+</tr>
+<tr>
+<td align="center">curtime()</td>
+<td align="center">获取当前时间</td>
+</tr>
+<tr>
+<td align="center">week(date)</td>
+<td align="center">获取指定日期为一年中的第几周</td>
+</tr>
+<tr>
+<td align="center">year(date)</td>
+<td align="center">获取指定日期的年份</td>
+</tr>
+<tr>
+<td align="center">hour(time)</td>
+<td align="center">获取指定时间的小时值</td>
+</tr>
+<tr>
+<td align="center">minute(time)</td>
+<td align="center">获取时间的分钟值</td>
+</tr>
+<tr>
+<td align="center">datediff(date1, date2)</td>
+<td align="center">获取date1 和date2之间相隔的天数</td>
+</tr>
+<tr>
+<td align="center">adddate(date,n)</td>
+<td align="center">计算date加上n天后的日期</td>
+</tr>
+</tbody></table>
+<h5 id="7-5-1-获取当前系统时间"><a href="#7-5-1-获取当前系统时间" class="headerlink" title="7.5.1 获取当前系统时间"></a>7.5.1 获取当前系统时间</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 查询当前时间</span><br><span class="line">select sysdate()</span><br><span class="line"># 查询当前时间</span><br><span class="line">select now()</span><br><span class="line"># 获取当前日期</span><br><span class="line">select curdate()</span><br><span class="line"># 获取当前时间</span><br><span class="line">select curtime()</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-6-字符串查询"><a href="#7-6-字符串查询" class="headerlink" title="7.6 字符串查询"></a>7.6 字符串查询</h4><blockquote>
+<p>语法：select 字符串函数（[参数列表]）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">字符串函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CONCAT(srt1,str2,str…)</td>
+<td align="center">将多个字符串连接</td>
+</tr>
+<tr>
+<td align="center">INSERT(str,pos,len,newStr)</td>
+<td align="center">将str中指定pos位置开始len长度的内容替换为newStr</td>
+</tr>
+<tr>
+<td align="center">LOWER(str)</td>
+<td align="center">将指定字符串转换为小写</td>
+</tr>
+<tr>
+<td align="center">UPPER(str)</td>
+<td align="center">将指定字符串转换为大写</td>
+</tr>
+<tr>
+<td align="center">SUBSTRING(str,num,len)</td>
+<td align="center">将str字符串指定num位置开始截取len个内容</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 拼接</span><br><span class="line">select concat(&#39;My&#39;,&#39;S&#39;,&#39;QL&#39;);</span><br><span class="line"># 字符串替换</span><br><span class="line">select insert(&#39;这是一个数据库&#39;, 3, 2, &#39;MySql&#39;);  #这是 MySql 数据库</span><br><span class="line"># 指定内容转换为小写</span><br><span class="line">select lower(&#39;MYSQL&#39;): #mysql</span><br><span class="line"># 指定内容转换为大写</span><br><span class="line">select upper(&#39;mysql&#39;); #MYSQL</span><br><span class="line"># 指定内容截取</span><br><span class="line">select substring(&#39;JavaMySQLOracle&#39;, 5, 5); #MySQL</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-7-聚合函数"><a href="#7-7-聚合函数" class="headerlink" title="7.7 聚合函数"></a>7.7 聚合函数</h4><blockquote>
+<p>语法：select 聚合函数（列名）from 表名</p>
+</blockquote>
+<p>经验：对多条数据的单列进行统计，返回统计后的一行结果。</p>
+<p>​            where 后面不能跟聚合函数</p>
+<p>​            可以跟在group by 的having后面</p>
+<table>
+<thead>
+<tr>
+<th align="center">聚合函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">sum()</td>
+<td align="center">求所有行中单列结果的总和</td>
+</tr>
+<tr>
+<td align="center">avg()</td>
+<td align="center">平均值</td>
+</tr>
+<tr>
+<td align="center">max()</td>
+<td align="center">最大值</td>
+</tr>
+<tr>
+<td align="center">min()</td>
+<td align="center">最小值</td>
+</tr>
+<tr>
+<td align="center">count()</td>
+<td align="center">求总行数</td>
+</tr>
+</tbody></table>
+<h4 id="7-8-分组查询"><a href="#7-8-分组查询" class="headerlink" title="7.8 分组查询"></a>7.8 分组查询</h4><blockquote>
+<p>语法：select 列名 from 表名 where 条件 group by 分组依据 (列)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">gourp by</td>
+<td align="center">分组依据</td>
+</tr>
+</tbody></table>
+<h5 id="7-8-1-查询各部门的总人数"><a href="#7-8-1-查询各部门的总人数" class="headerlink" title="7.8.1 查询各部门的总人数"></a>7.8.1 查询各部门的总人数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 思路</span><br><span class="line">#1.按照部门编号进行分组（分组依据是 deptid）</span><br><span class="line">#2.在针对各部门的人数进行统计(count)</span><br><span class="line">select deptid, count(empid) from emp group by deptid</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-8-2-查找各部门、各岗位的人数"><a href="#7-8-2-查找各部门、各岗位的人数" class="headerlink" title="7.8.2 查找各部门、各岗位的人数"></a>7.8.2 查找各部门、各岗位的人数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select deptid, jobid, count(empid) from emp group by deptid, jobid</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-8-4-常见问题"><a href="#7-8-4-常见问题" class="headerlink" title="7.8.4 常见问题"></a>7.8.4 常见问题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 查询各个部门id、总人数、frist_name</span><br><span class="line">select deptid, count(*), first_name from emp group by deptid;</span><br><span class="line"># error   不能够显示frist_name列</span><br></pre></td></tr></table></figure>
+
+<p>注：分组查询中，select显示的列只能是<strong>分组依据列</strong>，或者<strong>聚合函数列，不能出现其他列。</strong></p>
+<h4 id="7-9-分组过滤查询"><a href="#7-9-分组过滤查询" class="headerlink" title="7.9 分组过滤查询"></a>7.9 分组过滤查询</h4><blockquote>
+<p>语法：select 列名 from 表名 where 条件 group by 分组列 having 过滤规则</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>having过滤规则</td>
+<td>过滤规则定义对分组偶的数据机型过滤</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 统计60、80、90号部门的最该工资</span><br><span class="line">select deptid, max(salary) from emp group by deptid having deptid in (60, 70, 80)</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-10-限定查询"><a href="#7-10-限定查询" class="headerlink" title="7.10 限定查询"></a>7.10 限定查询</h4><blockquote>
+<p>select 列名 from 表名 limit 起始行， 查询行数</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">limit offset_start, row_count</td>
+<td align="center">限定查询结果的起始行数和总行数</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 查询前五行记录</span><br><span class="line">select * from emp limit 0, 5;</span><br></pre></td></tr></table></figure>
+
+<p>注意：起始行是从0开始，代表了第一行，第二个参数代表的是从指定行开始查询几行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 从第四行开始，查询 10 行</span><br><span class="line">select * from emp limit 3, 10</span><br></pre></td></tr></table></figure>
+
+<p>经验：在分页应用场景中，起始行是变化的，但是一页显示的条数是不变的</p>
+<h4 id="7-11-查询结果"><a href="#7-11-查询结果" class="headerlink" title="7.11 查询结果"></a>7.11 查询结果</h4><h5 id="7-11-1-SQL-语句编写顺序"><a href="#7-11-1-SQL-语句编写顺序" class="headerlink" title="7.11.1 SQL 语句编写顺序"></a>7.11.1 SQL 语句编写顺序</h5><blockquote>
+<p>select 列名 from 表名 where 条件 group by 分组 having 过滤条件 order by 排序列（asc/desc）limit 起始行，总条数</p>
+</blockquote>
+<h5 id="7-11-2-语句执行顺序"><a href="#7-11-2-语句执行顺序" class="headerlink" title="7.11.2 语句执行顺序"></a>7.11.2 语句执行顺序</h5><blockquote>
+<p>1、from： 指定数据来源变</p>
+<p>2、where：对查询数据做第一次过滤</p>
+<p>3、group by：分组</p>
+<p>4、having：对分组后的数据第二次过滤</p>
+<p>5、select：查询名字段的值</p>
+<p>6、order by：排序</p>
+<p>7、limit：限定查询结果</p>
+</blockquote>
+<h4 id="7-12-子查询（作为条件判断）"><a href="#7-12-子查询（作为条件判断）" class="headerlink" title="7.12 子查询（作为条件判断）"></a>7.12 子查询（作为条件判断）</h4><blockquote>
+<p>select 列名 from 表名 where 条件（子查询结果）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#查询工资大于bruse 的员工</span><br><span class="line">select * from emp where salary &gt; (select salary from emp where name &#x3D; &#39;&#39;bruse);</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-13-子查询-（作为枚举查询条件）"><a href="#7-13-子查询-（作为枚举查询条件）" class="headerlink" title="7.13 子查询 （作为枚举查询条件）"></a>7.13 子查询 （作为枚举查询条件）</h4><blockquote>
+<p>select 列名 from 表名 where 列名 in（子查询结果）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 查询&#39;king&#39;所在部门的员工信息</span><br><span class="line">select * from emp where deptid in (select deptid from emp where name &#x3D; &#39;king&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>将子查询”多行一列”的结果作为外部查询的枚举查询结果，做第二次查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 查询 60 部门所有人的工资</span><br><span class="line">select salary from emp where deptid &#x3D; 60;</span><br><span class="line"># 查询高于 60 部门所有人的工资的员工信息(高于所有)</span><br><span class="line">select * from emp where salary &gt; all (select salary from emp where deptid &#x3D;60)</span><br><span class="line"># 查询高于 60 部门的工资的员工信息(高于部分)</span><br><span class="line">select * from emp where salary &gt; any (select salary from emp where deptid &#x3D;60)</span><br></pre></td></tr></table></figure>
+
+<p>注意：当子查询结果形式为多行单列时可以使用any 或all关键字</p>
+<h4 id="7-14-子查询（作为一张表）"><a href="#7-14-子查询（作为一张表）" class="headerlink" title="7.14 子查询（作为一张表）"></a>7.14 子查询（作为一张表）</h4><blockquote>
+<p>select 列名 from (子查询的结果集) where 条件；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 对所有员工的薪资进行排序，查询前五行员工信息</span><br><span class="line">select empid, name, salary from (select empid, name, salary from emp order by salary desc) as temp limit 0,5;</span><br></pre></td></tr></table></figure>
+
+<p>将子查询”多行多列”的结果作为外部查询的一张表，制作第二次查询</p>
+<p>注意:子查询作为临时表，为其赋予一个临时表名</p>
+<h4 id="7-15-合并查询"><a href="#7-15-合并查询" class="headerlink" title="7.15 合并查询"></a>7.15 合并查询</h4><blockquote>
+<p>select * from 表名1 union select * from 表名2</p>
+<p>select * from 表名1 union  all select * from 表名2</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 合并两张表的结果，去除重复记录</span><br><span class="line">select * from t1 union select * from t2</span><br><span class="line"># 合并两张表的结果，不去除重复记录（显示所有）</span><br><span class="line">select * from t1 union all select * from t2</span><br></pre></td></tr></table></figure>
+
+<p>注意：合并结果的两张表，列数必须相同，列的数据类型可以不同</p>
+<p>经验：使用union合并结果集，会去除掉两张表中重复的数据</p>
+<h4 id="7-16-表连接查询"><a href="#7-16-表连接查询" class="headerlink" title="7.16 表连接查询"></a>7.16 表连接查询</h4><blockquote>
+<p>select 列名 from 表1 连接方式 表2 on 连接条件</p>
+</blockquote>
+<h5 id="7-16-1-内连接查询-（inner-join-on）"><a href="#7-16-1-内连接查询-（inner-join-on）" class="headerlink" title="7.16.1 内连接查询 （inner join on）"></a>7.16.1 内连接查询 （inner join on）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#1、查询所有部门的员工信息（不包括没有部门的员工） SQL 标准</span><br><span class="line">select * from emp inner join jobs on emp.jobid &#x3D; jobs.jobid;</span><br><span class="line"></span><br><span class="line">#2、查询所有部门的员工信息（不包括没有部门的员工） MYSQL</span><br><span class="line">select * from emp, jobs where emp.jobid &#x3D; jobs.jobid;</span><br></pre></td></tr></table></figure>
+
+<p>经验：在mysql中，第二种方式也可以作为内连接查询，但是不符合SQL标准</p>
+<p>而第一种属于sql 标准，与其他关系型数据库通用</p>
+<h5 id="7-16-2-三标连接查询"><a href="#7-16-2-三标连接查询" class="headerlink" title="7.16.2 三标连接查询"></a>7.16.2 三标连接查询</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#查询所有员工工号、名字、部门名称，部门所在国家ID</span><br><span class="line">SELECT * FROM t_employees e</span><br><span class="line">INNER JOIN t_departments d</span><br><span class="line">on e.department_id &#x3D; d.department_id</span><br><span class="line">INNER JOIN t_locations l</span><br><span class="line">ON d.location_id &#x3D; l.location_id</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-16-3-左外连接-（left-join-on）"><a href="#7-16-3-左外连接-（left-join-on）" class="headerlink" title="7.16.3 左外连接 （left join on）"></a>7.16.3 左外连接 （left join on）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#查询所有员工信息，以及所对应的部门名称(没有部门的员工，也在查询结果中,部门名称以NULL填充)</span><br><span class="line">SELECT e.employee_id, e.first_name, e.salary, d.department_name FROM t_employees e</span><br><span class="line">LEFT JOIN t_departments d</span><br><span class="line">ON e.department_id &#x3D; d.department_1d;</span><br></pre></td></tr></table></figure>
+
+<p>注意:左外连接，是以左表为主表，依次向右匹配，匹配到，返回结果s<br>匹配不到，则返回NULL值填充</p>
+<h5 id="7-16-4-右外连接-RIGHT-JOIN-ON"><a href="#7-16-4-右外连接-RIGHT-JOIN-ON" class="headerlink" title="7.16.4 右外连接 (RIGHT JOIN ON)"></a>7.16.4 右外连接 (RIGHT JOIN ON)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#查询所有部门信息，以及此部门中的所有员工信息(没有员工的部门，也在查询结果中，员工信息以NULL填充)</span><br><span class="line">SELECT e.employee_id, e.first_name, e.salary, d.department_name FROM t_employees e</span><br><span class="line">RIGHT JOIN t_departments d</span><br><span class="line">ON e.department_id &#x3D; d.department_id;</span><br></pre></td></tr></table></figure>
+
+<p>注意:右外连接，是以右表为主表，依次向左匹配，匹配到，返回结果<br>匹配不到，则返回NULL值填充</p>
+<h3 id="八、DML操作【重点】"><a href="#八、DML操作【重点】" class="headerlink" title="八、DML操作【重点】"></a>八、DML操作【重点】</h3><h4 id="8-1新增（insert）"><a href="#8-1新增（insert）" class="headerlink" title="8.1新增（insert）"></a>8.1新增（insert）</h4><blockquote>
+<p>insert into 表名（列1， 列2， 列3…） values(值1， 值2， 值3……)</p>
+</blockquote>
+<h5 id="8-1-1添加一条信息"><a href="#8-1-1添加一条信息" class="headerlink" title="8.1.1添加一条信息"></a>8.1.1添加一条信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#添加一条工作岗位信息</span><br><span class="line">INSERT INTO t_jobs(JOB_ID, JOB_TITLE,  MIN_SALARY, MAX_SALARY) VALUES(&#39;JAVA._Le&#39;, &#39; JAVA._Lecturer&#39;, 2500, 9000);</span><br></pre></td></tr></table></figure>
+
+<p>注意:表名后的列名和 VALUES 里的值要一一 对应 (个数、顺序、类型)</p>
+<h5 id="8-2修改-UPDATE"><a href="#8-2修改-UPDATE" class="headerlink" title="8.2修改 (UPDATE)"></a>8.2修改 (UPDATE)</h5><blockquote>
+<p>UPDATE 表名 SET 列1 = 新值1, 列2 = 新值, …WHERE条件;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#修改编号为135的员工信息岗位编号为ST_MAN, 工资为3500</span><br><span class="line">UPDATE t_uemployees SET JOB_ID &#x3D; ST_MAN, SALARY &#x3D; 3500 WHERE EMPLOYEE_ID &#x3D; &#39;135&#39;;</span><br></pre></td></tr></table></figure>
+
+<p>注意: SET 后多个列名=值，绝大多数情况下都要加WHERE条件，指定修改，否则为整表更新</p>
+<h4 id="8-4-删除（DELETE）"><a href="#8-4-删除（DELETE）" class="headerlink" title="8.4 删除（DELETE）"></a>8.4 删除（DELETE）</h4><blockquote>
+<p>delete from 表名 where 条件;</p>
+</blockquote>
+<h5 id="8-3-1-删除一条信息"><a href="#8-3-1-删除一条信息" class="headerlink" title="8.3.1 删除一条信息"></a>8.3.1 删除一条信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#删除姓Peter,并且名为Hall的员工</span><br><span class="line">DELETE FROM t_employees WHERE FIRST_NAME &#x3D; &#39;Peter&#39; AND LAST_NAME&#x3D; &#39;Hall&#39;;</span><br></pre></td></tr></table></figure>
+
+<p>注意:删除时，如若不加WHERE条件， 删除的是整张表的数据</p>
+<h4 id="8-4清空整表数据-TRUNCATE"><a href="#8-4清空整表数据-TRUNCATE" class="headerlink" title="8.4清空整表数据(TRUNCATE)"></a>8.4清空整表数据(TRUNCATE)</h4><blockquote>
+<p>TRUNCATE TABLE 表名;</p>
+</blockquote>
+<h5 id="8-4-1清空整张表"><a href="#8-4-1清空整张表" class="headerlink" title="8.4.1清空整张表"></a>8.4.1清空整张表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#清空t_countries整张表</span><br><span class="line">TRUNCATE TABLE t_countries;</span><br></pre></td></tr></table></figure>
 
 
+<p>注意:与 DELETE 不加 WHERE 删除整表数据不同，TRUNCATE 是把表销毁，再按照原表的格式创建一张新表</p>
+<h3 id="九、数据库操作"><a href="#九、数据库操作" class="headerlink" title="九、数据库操作"></a>九、数据库操作</h3><h4 id="9-1数据类型"><a href="#9-1数据类型" class="headerlink" title="9.1数据类型"></a>9.1数据类型</h4><p>MySQL支持多种类型，大致可以分为三类:<strong>数值、日期/时间和字符串(字符)类型</strong>。对于我们约束数据的类型有很大的帮助</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小</th>
+<th align="center">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">int</td>
+<td align="center">4字节</td>
+<td align="center">大整数</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">8字节</td>
+<td align="center">双精度浮点数值</td>
+</tr>
+<tr>
+<td align="center">double（M，D）</td>
+<td align="center">八个字节，M表示小数位数</td>
+<td align="center">双精度浮点数值</td>
+</tr>
+<tr>
+<td align="center">decimal(M, D)</td>
+<td align="center">decimal(M,D)</td>
+<td align="center">小数值</td>
+</tr>
+</tbody></table>
+<h5 id="9-1-2-日期类型"><a href="#9-1-2-日期类型" class="headerlink" title="9.1.2 日期类型"></a>9.1.2 日期类型</h5><table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小</th>
+<th align="center">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">date</td>
+<td align="center">3</td>
+<td align="center">日期值</td>
+</tr>
+<tr>
+<td align="center">time</td>
+<td align="center">3</td>
+<td align="center">时间值或持续时间</td>
+</tr>
+<tr>
+<td align="center">year</td>
+<td align="center">1</td>
+<td align="center">年份值</td>
+</tr>
+<tr>
+<td align="center">datetime</td>
+<td align="center">8</td>
+<td align="center">混合日期</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">4</td>
+<td align="center">混合日期和时间值，时间戳</td>
+</tr>
+</tbody></table>
+<h5 id="9-1-3-字符串类型"><a href="#9-1-3-字符串类型" class="headerlink" title="9.1.3 字符串类型"></a>9.1.3 字符串类型</h5><table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">大小</th>
+<th align="center">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">char</td>
+<td align="center">0-255字符</td>
+<td align="center">定长字符串char(10) 10个字符</td>
+</tr>
+<tr>
+<td align="center">varchar</td>
+<td align="center">0-65535字节</td>
+<td align="center">变长字符串 varchar(10) 10个字符</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>CHAR和VARCHAR类型类似，但它们保存和检索的方式不同。它们的最大长度和是首尾部空格被保留等方面也不同。在存储或检索过程中不进行大小写转换。</p>
+</blockquote>
+<h4 id="9-2-数据表的创建（create）"><a href="#9-2-数据表的创建（create）" class="headerlink" title="9.2 数据表的创建（create）"></a>9.2 数据表的创建（create）</h4><blockquote>
+<p>CREATE TABLE表名(<br>   列名数据类型[约束]，<br>   列名数据类型[约束]，<br>   列名数据类型[约束]<br>) [charset=utf8] //可根据需要指定表的字符编码集</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#依据上述表格创建数据表，并向表中插入3条测试语句</span><br><span class="line">create table subject(</span><br><span class="line">	id int,</span><br><span class="line">    name varchar(20),</span><br><span class="line">    hours int</span><br><span class="line">) charset &#x3D; utf8;</span><br><span class="line"></span><br><span class="line">insert into subject(id, name, hours) values(1, &#39;java&#39;, 40);</span><br><span class="line">insert into subject values(2, &#39;java&#39;, 40);</span><br></pre></td></tr></table></figure>
 
-<h3 id="一、内容"><a href="#一、内容" class="headerlink" title="一、内容"></a>一、内容</h3><h4 id="1-1、数组的遍历"><a href="#1-1、数组的遍历" class="headerlink" title="1.1、数组的遍历"></a>1.1、数组的遍历</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">遍历：依次访问，从第一个元素，访问到最后一个元素。</span><br><span class="line"><span class="number">1</span>、使用循环来遍历数组</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; arr.length; i++)&#123;</span><br><span class="line">	arr[i] = i;<span class="comment">//赋值</span></span><br><span class="line">	System.out.println(arr[i]);<span class="comment">//获取数值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="9-3-数据表的修改-（alter）"><a href="#9-3-数据表的修改-（alter）" class="headerlink" title="9.3 数据表的修改 （alter）"></a>9.3 数据表的修改 （alter）</h4><blockquote>
+<p>alter table 表名 操作；</p>
+</blockquote>
+<h5 id="9-3-1向现有表中添加列"><a href="#9-3-1向现有表中添加列" class="headerlink" title="9.3.1向现有表中添加列"></a>9.3.1向现有表中添加列</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#在课程表基础上添加gradeId列</span><br><span class="line">alter table subject add gradeid int;</span><br></pre></td></tr></table></figure>
 
-<h6 id="1-1-1、for-each循环"><a href="#1-1-1、for-each循环" class="headerlink" title="1.1.1、for-each循环"></a>1.1.1、for-each循环</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>-each循环：【扩展】</span><br><span class="line">增强<span class="keyword">for</span>循环：JDK1<span class="number">.5</span>的版本出现的。</span><br><span class="line">特定的用法：专门用于获取数组中的每一个元素的值。</span><br><span class="line">语法结构：</span><br><span class="line"><span class="keyword">for</span>(数据类型 变量名 : 数组名)&#123;</span><br><span class="line">    System.out.println(变量名);</span><br><span class="line">&#125;</span><br><span class="line">工作原理：</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> e :arr)&#123;</span><br><span class="line">    System.out.println(e);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> e，定义变量e，</span><br><span class="line">	依次获取数组的元素，赋值给e</span><br><span class="line">注意点：</span><br><span class="line">    A：<span class="keyword">for</span>-each只能获取数组的数据，但是不能给数组进行赋值</span><br><span class="line">    B：<span class="keyword">for</span>-each，在代码这个层面，不能操作下标。</span><br></pre></td></tr></table></figure>
+<h5 id="9-3-2修改表中的列"><a href="#9-3-2修改表中的列" class="headerlink" title="9.3.2修改表中的列"></a>9.3.2修改表中的列</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#修改课程表中课程名称长度为10个字符</span><br><span class="line">alter table subject modify subjectName varchar(10);</span><br></pre></td></tr></table></figure>
 
+<p>注意:修改表中的某列时，也要写全列的名字，数据类型，约束</p>
+<h5 id="9-3-3删除表中的列"><a href="#9-3-3删除表中的列" class="headerlink" title="9.3.3删除表中的列"></a>9.3.3删除表中的列</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#删除课程表中gradeId 列</span><br><span class="line">alter table subject drop gradeid</span><br></pre></td></tr></table></figure>
 
+<p>注意: 删除列时，每次只能删除一列</p>
+<h5 id="9-3-4修改列名"><a href="#9-3-4修改列名" class="headerlink" title="9.3.4修改列名"></a>9.3.4修改列名</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#修改课程表中subjectHours 列为classHours</span><br><span class="line">alter table subject change subjectHours classHours int;</span><br></pre></td></tr></table></figure>
 
-<h4 id="1-2、数组中的默认值"><a href="#1-2、数组中的默认值" class="headerlink" title="1.2、数组中的默认值"></a>1.2、数组中的默认值</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">数组的默认值，就是数组创建后，里面存储的默认的数据。</span><br><span class="line">数组的引用存在栈内存中，数组本身存在堆内存中。</span><br><span class="line">数组创建完，就有默认的数据了。</span><br><span class="line">数组中存储的默认值：</span><br><span class="line">			数组中是有默认值的</span><br><span class="line">			整数：<span class="number">0</span></span><br><span class="line">			小数：<span class="number">0.0</span></span><br><span class="line">			字符：\u0000</span><br><span class="line">			布尔：<span class="keyword">false</span></span><br><span class="line">			其他：<span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+<p>注意: 修改列名时，在给定列新名称时，要指定列的类型和约束</p>
+<h5 id="9-3-5修改表名"><a href="#9-3-5修改表名" class="headerlink" title="9.3.5修改表名"></a>9.3.5修改表名</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#修改课程表的subject为sub</span><br><span class="line">alter table subject rename sub</span><br></pre></td></tr></table></figure>
 
+<h4 id="9-4数据表的删除-DROP"><a href="#9-4数据表的删除-DROP" class="headerlink" title="9.4数据表的删除(DROP)"></a>9.4数据表的删除(DROP)</h4><blockquote>
+<p>DROP TABLE 表名</p>
+</blockquote>
+<h5 id="9-4-1删除学生表"><a href="#9-4-1删除学生表" class="headerlink" title="9.4.1删除学生表"></a>9.4.1删除学生表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#删除学生表</span><br><span class="line">DROP TABLE subject;</span><br></pre></td></tr></table></figure>
 
+<h3 id="十、约束"><a href="#十、约束" class="headerlink" title="十、约束"></a>十、约束</h3><h4 id="10-1实体完整性约束"><a href="#10-1实体完整性约束" class="headerlink" title="10.1实体完整性约束"></a>10.1实体完整性约束</h4><blockquote>
+<p>表中的一行数据代表一个实体(entity) ，实体完整性的作用即是标识每一行数据不重复、 实体唯一。</p>
+</blockquote>
+<h5 id="10-1-1主键约束"><a href="#10-1-1主键约束" class="headerlink" title="10.1.1主键约束"></a>10.1.1主键约束</h5><blockquote>
+<p>PRIMARYKEY唯一， 标识表中的一行数据，此列的值不可重复，且不能为NULL</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#为表中适用主键的列添加主键约束</span><br><span class="line">CREATE TABLE subject(</span><br><span class="line">subjectId INT PRIMARY KEY, #课程编号标识每一个课程的编号唯一- -，且不能为NULL</span><br><span class="line">subjectName VARCHAR(20)，</span><br><span class="line">subjectHours INT</span><br><span class="line">) charset&#x3D;utf8;</span><br><span class="line">INSERT INTO subject(subjectId, subjectName , subjectHours) VALUES(1,&#39;Java&#39;, 40);</span><br><span class="line">INSERT INTO subject(subjectId, subjec tName , subjectHours) VALUES(1,&#39;Java&#39;, 40);#error主键1已存在</span><br></pre></td></tr></table></figure>
 
-<h4 id="1-3、创建数组的其他语法"><a href="#1-3、创建数组的其他语法" class="headerlink" title="1.3、创建数组的其他语法"></a>1.3、创建数组的其他语法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">动态创建数组：先创建数组，然后再根据下标一个一个存储数据。</span></span><br><span class="line"><span class="comment">A：先声明，再创建(分配内存空间)</span></span><br><span class="line"><span class="comment">数据类型 [] 数组名;</span></span><br><span class="line"><span class="comment">数组名 = new 数据类型[长度];</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">B：声明并创建</span></span><br><span class="line"><span class="comment">数据类型 [] 数组名 = new 数据类型[长度];</span></span><br><span class="line"><span class="comment">数据类型  数组名[] = new 数据类型[长度];</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">//静态创建数组：声明，创建，赋值一起写完。</span></span><br><span class="line"><span class="comment">C：声明，创建，并赋值</span></span><br><span class="line"><span class="comment">数据类型[] 数组名 = &#123;数值1,数值2,数值3,数值4.。。。&#125;;</span></span><br><span class="line"><span class="comment">//=左边声明数组，=右边，会先根据&#123;&#125;中数据的个数，然后再将&#123;&#125;中数据，按照顺序存储进去。</span></span><br><span class="line"><span class="comment">完成了几件事：</span></span><br><span class="line"><span class="comment">			1.先声明：int[] c</span></span><br><span class="line"><span class="comment">			2.根据&#123;&#125;中数组值的个数，开辟堆内存</span></span><br><span class="line"><span class="comment">			3.将&#123;&#125;中的数组值，依次按照顺序存入数组中</span></span><br><span class="line"><span class="comment">D：声明，创建，并赋值</span></span><br><span class="line"><span class="comment">数据类型[] 数组名 = new 数据类型[]&#123;数值1,数值2,数值3,数值4.。。。&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h5 id="10-1-2唯一约束"><a href="#10-1-2唯一约束" class="headerlink" title="10.1.2唯一约束"></a>10.1.2唯一约束</h5><blockquote>
+<p>UNIQUE唯一-，标识表中的一 行数据，不可重复，可以为NULL</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#为表中列值不允许重复的列添加唯一约束</span><br><span class="line">CREATE TABLE subject (</span><br><span class="line">	subjectId INT PRIMARY KEY,</span><br><span class="line">	subjectName VARCHAR(20) UNIQUE , #课程名称唯一!</span><br><span class="line">	subjectHours INT</span><br><span class="line">)charset&#x3D;utf8;</span><br><span class="line"></span><br><span class="line">INSERT INTO subject( subjectId, subjec tName , subjectHours) VALUES(1,&#39; Java&#39; , 40);</span><br><span class="line">INSERT INTO subject(subjectId, subjec tName , subjectHours) VALUES(2, &#39; Java&#39;，40);#error课程名称已存在</span><br></pre></td></tr></table></figure>
 
+<h5 id="10-1-3自动增长列"><a href="#10-1-3自动增长列" class="headerlink" title="10.1.3自动增长列"></a>10.1.3自动增长列</h5><blockquote>
+<p>AUTO_ INCREMENT自动增长，给主键数值列添加自动增长。从1开始，每次加1。不能单独使用，和主键配合。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#为表中主键列添加自动增长，避免忘记主键ID序号</span><br><span class="line">CREATE TABLE subject(</span><br><span class="line">subjectId INT PRIMARY KEY AUTO_INCREMENT, #课程编号主键且自动增长，会从1开始根据添加数据的顺序依次加1</span><br><span class="line">subjectName VARCHAR(20) UNIQUE,</span><br><span class="line">subjectHours INT</span><br><span class="line">) charset &#x3D; utf8;</span><br><span class="line">INSERT INTO subject(subjectName, subjectHours) VALUES(&#39;Java&#39;, 40);#课程编号自动从1增长</span><br><span class="line">INSERT INTO subject(subjectName, subjectHours) VALUES(&#39;JavaScript&#39;, 30);#第二条编号为2</span><br></pre></td></tr></table></figure>
 
+<h4 id="10-2域完整性约束"><a href="#10-2域完整性约束" class="headerlink" title="10.2域完整性约束"></a>10.2域完整性约束</h4><blockquote>
+<p>限制列的单元格的数据正确性。</p>
+</blockquote>
+<h5 id="10-2-1非空约束"><a href="#10-2-1非空约束" class="headerlink" title="10.2.1非空约束"></a>10.2.1非空约束</h5><blockquote>
+<p>NOT NULL非空，此列必须有值。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#课程名称虽然添加了唯一约束，但是有NULL值存在的可能，要避免课程名称为NULL</span><br><span class="line">CREATE TABLE subject(</span><br><span class="line">	subjectId INT PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line">	subjectName VARCHAR(20) UNIQUE NOT NULL,</span><br><span class="line">	subjectHours INT</span><br><span class="line">)charset&#x3D;utf8;</span><br><span class="line"></span><br><span class="line">INSERT INTO subject(subjectName, subjectHours) VALUES (NULL, 40) ;#error,课程名称约束了非空</span><br></pre></td></tr></table></figure>
 
-<h4 id="1-4、数组的地址转移：知道"><a href="#1-4、数组的地址转移：知道" class="headerlink" title="1.4、数组的地址转移：知道"></a>1.4、数组的地址转移：知道</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Java中的数据分为两大类：</span><br><span class="line">基本类型：4类8种</span><br><span class="line">	操作的都是数值本身</span><br><span class="line">引用类型：数组</span><br><span class="line">	操作的是地址</span><br><span class="line"></span><br><span class="line">基本类型进行赋值：数值</span><br><span class="line">引用类型进行赋值：地址</span><br></pre></td></tr></table></figure>
+<h5 id="10-2-2默认值约束"><a href="#10-2-2默认值约束" class="headerlink" title="10.2.2默认值约束"></a>10.2.2默认值约束</h5><blockquote>
+<p>DEFAULT值为列赋予默认值，当新增数据不指定值时，书写DEFAULT,以指定的默认值进行填充。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#当存储课程信息时，若课程时长没有指定值，则以默认课时20填充</span><br><span class="line">CREATE TABLE subject(</span><br><span class="line">	subjectId INT PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line">	subjectName VARCHAR(20) UNIQUE NOT NULL,</span><br><span class="line">	subjectHours INT DEFAULT 20</span><br><span class="line">) charset &#x3D; utf8;</span><br><span class="line"></span><br><span class="line">INSERT INTO subject(subjectName, subjectHours) VALUES(&#39;Java&#39;, DEFAULT) ;#课程时长以默认值20填充</span><br></pre></td></tr></table></figure>
 
+<h5 id="10-2-3-引用完整性约束"><a href="#10-2-3-引用完整性约束" class="headerlink" title="10.2.3 引用完整性约束"></a>10.2.3 引用完整性约束</h5><blockquote>
+<p>语法：constraint 引用名 foreign key（列名） reference 被引用表名（列名）</p>
+<p>详解：foreign key 引用外部表的某个列的值，新增数据时，约束此列的值必须是引用表中存在的值</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 创建专业表</span><br><span class="line">create table speciality(</span><br><span class="line">	id int primary key auto_increment,</span><br><span class="line">    name varchar(20) unique not null</span><br><span class="line">) charset &#x3D; utf8;</span><br><span class="line"></span><br><span class="line"># 创建课程表(课程表的specialityid 引用专业表的id)</span><br><span class="line">create table subject(</span><br><span class="line">	id int primary key auto_increament,</span><br><span class="line">    name varchar(20) unique not null,</span><br><span class="line">    hours int default 20,</span><br><span class="line">    specialid int not null,</span><br><span class="line">    constraint fk_subject_specialid fereign key (specialid)</span><br><span class="line"> references(id)</span><br><span class="line">) charset &#x3D; utf8;</span><br><span class="line"></span><br><span class="line">#专业表新增数据</span><br><span class="line">INSERT INTO Speciality(SpecialName) VALUES(&#39;Java&#39;);</span><br><span class="line">INSERT INTO Speciality(SpecialName) VALUES(&#39;C#&#39;);</span><br><span class="line"></span><br><span class="line">#课程信息表添加数据</span><br><span class="line">INSERT INTO subject(subjectName, subjectHours) VALUES(&#39;Java&#39;, 30, 1);#专业id为1,引用的是专业表的Java</span><br><span class="line">INSERT INTO subject(subjectName, subjectHours) VALUES(&#39;C#MVC&#39;, 10, 2);#专业id为2，引用的是专业表的C#</span><br></pre></td></tr></table></figure>
 
+<h4 id="10-3约束创建整合"><a href="#10-3约束创建整合" class="headerlink" title="10.3约束创建整合"></a>10.3约束创建整合</h4><blockquote>
+<p>创建带有约束的表。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE student(</span><br><span class="line">student_1d varchar(50) PRIMARY KEY,</span><br><span class="line">student_name varchar(50) NOT NULL,</span><br><span class="line">sex CHAR(2) DEFAULT‘男&#39;</span><br><span class="line">borndate date NOT NULL,</span><br><span class="line">phone varchar(11),</span><br><span class="line">gradeId int not nul1,</span><br><span class="line">CONSTRAINT fk_student_gradeId FOREIGN KEY(gradeId) REFERENCES Grade(GradeId) #引用Grade表的GradeId列的值作为外键，插入时约束学生的班级编号必须存在。</span><br><span class="line">):</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">示例代码：</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test4ArrayAddress</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		数组：引用类型的数据</span></span><br><span class="line"><span class="comment">			数组名，存储是引用地址。</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">		System.out.println(a.length);<span class="comment">//3</span></span><br><span class="line">		System.out.println(a);<span class="comment">//a数组的地址</span></span><br><span class="line">		System.out.println(a[<span class="number">0</span>]);<span class="comment">//0</span></span><br><span class="line"></span><br><span class="line">		a[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		a[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">		a[<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span>[] b = &#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>&#125;;</span><br><span class="line">		System.out.println(b.length);<span class="comment">//4</span></span><br><span class="line">		System.out.println(b);<span class="comment">//b的地址</span></span><br><span class="line">		System.out.println(b[<span class="number">0</span>]);<span class="comment">//4</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span>[] c = a;<span class="comment">//将a的值赋值给c，就是将a存储的数组的地址赋值给c</span></span><br><span class="line">		<span class="comment">//a和c存储的地址相同，那么就指向了同一个数组</span></span><br><span class="line">		System.out.println(c.length);<span class="comment">//3</span></span><br><span class="line">		System.out.println(c);<span class="comment">//a的地址</span></span><br><span class="line">		System.out.println(c[<span class="number">0</span>]);<span class="comment">//1</span></span><br><span class="line"></span><br><span class="line">		c[<span class="number">0</span>] = <span class="number">100</span>;</span><br><span class="line">		System.out.println(a[<span class="number">0</span>]);</span><br><span class="line">		System.out.println(b[<span class="number">0</span>]);</span><br><span class="line">		System.out.println(c[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		b = c;</span><br><span class="line"></span><br><span class="line">		b[<span class="number">1</span>] = <span class="number">200</span>;</span><br><span class="line">		System.out.println(a[<span class="number">1</span>]);<span class="comment">//200</span></span><br><span class="line">		System.out.println(b[<span class="number">1</span>]);<span class="comment">//200</span></span><br><span class="line">		System.out.println(c[<span class="number">1</span>]);<span class="comment">//200</span></span><br><span class="line"></span><br><span class="line">		System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意:创建关系表时，- -定要先创建主表，再创建从表<br>删除关系表时，先删除从表，再删除主表。</p>
+<h3 id="十一、-事务-重点"><a href="#十一、-事务-重点" class="headerlink" title="十一、 事务[重点]"></a>十一、 事务[重点]</h3><h4 id="11-1模拟转账"><a href="#11-1模拟转账" class="headerlink" title="11.1模拟转账"></a>11.1模拟转账</h4><blockquote>
+<p>生活当中转账是转账方账户扣钱，收账方账户加钱。我们用数据库操作来模拟现实转账。</p>
+</blockquote>
+<h5 id="11-1-2模拟转账错误"><a href="#11-1-2模拟转账错误" class="headerlink" title="11.1.2模拟转账错误"></a>11.1.2模拟转账错误</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#A账户转账给B账户1000元。</span><br><span class="line">#A账户减1000元</span><br><span class="line">UPDATE account SET MONEY &#x3D; MONEY-1000 WHERE 1d&#x3D;1 ;</span><br><span class="line">#断电、异常、出错...</span><br><span class="line"></span><br><span class="line">#B 账户加1000 元</span><br><span class="line">UPDATE account SET MONEY &#x3D; MONEY+1000 WHERE 1d&#x3D;2 ;</span><br></pre></td></tr></table></figure>
 
-<p>内存分析：</p>
-<p><img src="/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/3%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90.png" alt></p>
-<h4 id="1-5、数组作为参数"><a href="#1-5、数组作为参数" class="headerlink" title="1.5、数组作为参数"></a>1.5、数组作为参数</h4><p>数组是引用类型：传递的是地址。就是参数也会指向这块内存。当方法结束的时候，参数就销毁了。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test5ArrayMethod</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设计一个方法，用于打印数组</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArray</span><span class="params">(<span class="keyword">int</span>[] arr)</span></span>&#123;<span class="comment">//int[] arr = a;a的地址给了arr，那么arr和</span></span><br><span class="line">       <span class="comment">// a指向同一块内存的数组</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> e : arr)&#123;</span><br><span class="line">			System.out.print(e +<span class="string">"\t"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//设计一个方法，用于打印数组</span></span><br><span class="line">		printArray(a);<span class="comment">//将a的地址，传递给arr</span></span><br><span class="line">		System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述代码在减操作后过程中出现了异常或加钱语句出错，会发现，减钱仍旧是成功的，而加钱失败了!<br>注意:每条SQL语句都是一 个独立的操作，-个操作执行完对数据库是永久性的影响。</p>
+<h4 id="11-2事务的概念"><a href="#11-2事务的概念" class="headerlink" title="11.2事务的概念"></a>11.2事务的概念</h4><blockquote>
+<p>事务是一个原子操作。是一个最小执行单元。可以由一个或多个SQL语句组成，在同一个事务当中，所有的SQL语句都成功执行时，整个事务成功，有一个SQL语句执行失败，整个事务都执行失败。</p>
+</blockquote>
+<h4 id="11-3事务的边界"><a href="#11-3事务的边界" class="headerlink" title="11.3事务的边界"></a>11.3事务的边界</h4><blockquote>
+<p>开始:连接到数据库，执行一条DML语句。 上一个事务结束后，又输入了一条DML语句，即事务的开始</p>
+<p>结束:<br>    1).提交:<br>    a.显示提交: commit;<br>    b.隐式提交:一条创建、删除的语句，正常退出(客户端退出连接) ;<br>    2).回滚:<br>    a.显示回滚: rolback;<br>    b.隐式回滚:非正常退出(断电、宕机)，执行了创建、删除的语句，但是失败了，    会为这个无效的语句执行回滚。</p>
+</blockquote>
+<h4 id="11-4事务的原理"><a href="#11-4事务的原理" class="headerlink" title="11.4事务的原理"></a>11.4事务的原理</h4><blockquote>
+<p>数据库会为每一个客户端都维护一个空间独立的缓存区(回滚段)，一个事务中所有的增删改语句的执行结果都会缓存在回滚段中，只有当事务中所有SQL语句均正常结束(commit) ，才会将回滚段中的数据同步到数据库。否则无论因为哪种原因失败，整个事务将回滚(rollback)。</p>
+</blockquote>
+<h4 id="11-5事务的特性"><a href="#11-5事务的特性" class="headerlink" title="11.5事务的特性"></a>11.5事务的特性</h4><blockquote>
+<ul>
+<li>Atomicity(原子性)<br>表示一个事务内的所有操作是一个整体，要么全部成功，要么全部失败. - </li>
+<li>Consistency(一致性)<br>表示一个事务内有一个操作失败时，所有的更改过的数据都必须回滚到修改前状态</li>
+<li>Isolation(隔离性)<br>事务查看数据操作时数据所处的状态，要么是另一并发事务修改它之前的状态，要么是另一事务修改它之后的状态，事务会查看中间状态的数据。</li>
+<li>Durability(持久性)<br>持久性事务完成之后，它对于系统的影响是永久性的。</li>
+</ul>
+</blockquote>
+<h4 id="11-6-事务应用"><a href="#11-6-事务应用" class="headerlink" title="11.6 事务应用"></a>11.6 事务应用</h4><blockquote>
+<p>应用环境：基于增删改语句的操作结果（均返回操作后受影响的行数）可通过程序逻辑手动控制事务或回滚</p>
+</blockquote>
+<h5 id="11-6-1事务完成转账"><a href="#11-6-1事务完成转账" class="headerlink" title="11.6.1事务完成转账"></a>11.6.1事务完成转账</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#A账户给B账户转账。</span><br><span class="line">#1.开启事务</span><br><span class="line">START TRANSACTION; |IsetAutoCommit&#x3D;0 ;#禁止自动提交setAutoCommit&#x3D;1 ;#开启自动提交</span><br><span class="line">#2.事务内数据操作语句</span><br><span class="line">UPDATE ACCOUNT SET MONEY &#x3D; MONEY-1000 WHERE ID &#x3D; 1;</span><br><span class="line">UPDATE ACCOUNT SET MONEY &#x3D; MONEY+1000 WHERE ID &#x3D; 2;</span><br><span class="line">#3.事务内语句都成功了，执行COMMIT:</span><br><span class="line">COMMIT:</span><br><span class="line">#4.事务内如果出现错误，执行ROLLBACK;</span><br><span class="line">ROLLBACK;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/4%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0.png" alt></p>
-<h4 id="1-6、数组作为返回值"><a href="#1-6、数组作为返回值" class="headerlink" title="1.6、数组作为返回值"></a>1.6、数组作为返回值</h4><p>示例代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设计一个方法，用于创建一个数组， 并赋值。数组要返回给调用处</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] createArray(<span class="keyword">int</span> len)&#123;</span><br><span class="line">		<span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;arr.length;i++)&#123;</span><br><span class="line">			arr[i] = i * <span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> arr;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>注意:开启事务后，执行的语句均属于当前事务，成功再执行COMIT， 失败要进行ROLLBACK</p>
+<h3 id="十二、权限管理"><a href="#十二、权限管理" class="headerlink" title="十二、权限管理"></a>十二、权限管理</h3><h4 id="12-1创建用户"><a href="#12-1创建用户" class="headerlink" title="12.1创建用户"></a>12.1创建用户</h4><blockquote>
+<p>create user 用户名 identified by 密码</p>
+</blockquote>
+<h5 id="12-1-1-创建一个用户"><a href="#12-1-1-创建一个用户" class="headerlink" title="12.1.1 创建一个用户"></a>12.1.1 创建一个用户</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个 zhangsan 用户</span><br><span class="line">create user &#39;zhangsan&#39; identified by &#39;123&#39;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/5%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E8%BF%94%E5%9B%9E%E5%80%BC.png" alt></p>
-<h4 id="1-6、可变参数"><a href="#1-6、可变参数" class="headerlink" title="1.6、可变参数"></a>1.6、可变参数</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">概念：一个方法可以接收的参数的数量不定(<span class="number">0</span>-多个)，但是类型固定。</span><br><span class="line"></span><br><span class="line">语法：数据类型 ... 参数名，可变参数在方法中当数组使用。</span><br><span class="line"></span><br><span class="line">注意事项：</span><br><span class="line">	<span class="number">1</span>、如果参数列表中，除了可变参数还有其他的参数，可变参数要写在整个参数列表的最后。</span><br><span class="line">    <span class="number">2</span>、一个方法最多只能有一个可变参数。</span><br></pre></td></tr></table></figure>
+<h4 id="12-2-授权"><a href="#12-2-授权" class="headerlink" title="12.2 授权"></a>12.2 授权</h4><blockquote>
+<p>grant all on 数据库.表 to 用户名；</p>
+</blockquote>
+<h5 id="12-2-1-用户授权"><a href="#12-2-1-用户授权" class="headerlink" title="12.2.1 用户授权"></a>12.2.1 用户授权</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将 companyDB 下的所有表的权限都赋给 zhangsan</span><br><span class="line">grant all on companyDB.* to &#39;zhangsan&#39;;</span><br></pre></td></tr></table></figure>
 
+<p>注意:撤销权限后，账户要重新连接客户端才会生效</p>
+<h5 id="12-3-1-撤销用户权限"><a href="#12-3-1-撤销用户权限" class="headerlink" title="12.3.1 撤销用户权限"></a>12.3.1 撤销用户权限</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将 zhangsan 的 companyDB 的权限撤销</span><br><span class="line">revoke all on companyDB.* from &#39;zhangsan&#39;</span><br></pre></td></tr></table></figure>
 
+<h4 id="12-4-删除用户"><a href="#12-4-删除用户" class="headerlink" title="12.4 删除用户"></a>12.4 删除用户</h4><blockquote>
+<p>drop user 用户名</p>
+</blockquote>
+<p>12.4.1 删除用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 删除用户 zhangsan</span><br><span class="line">drop user &#39;zhangsan&#39;;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test6Array</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//求一组int类型的数据的和</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> ... nums )</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;nums.length;i++)&#123;</span><br><span class="line">			sum += nums[i];</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"结果："</span> + sum);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		可变参数：同一种类型的参数，类型固定的，但是个数不固定。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">		语法的支持：</span></span><br><span class="line"><span class="comment">			数据类型 ... 参数名</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">			可变参数，类型固定，个数可变。0-多个</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">		在方法中可变参数当数组使用</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line"></span><br><span class="line">		getSum(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line">		getSum(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>);</span><br><span class="line">		System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="十三、视图"><a href="#十三、视图" class="headerlink" title="十三、视图"></a>十三、视图</h3><h4 id="13-1-概念"><a href="#13-1-概念" class="headerlink" title="13.1 概念"></a>13.1 概念</h4><blockquote>
+<p>视图，虚拟表，从一个表或多个表中查询出来的表，作用和真实表一样，包含一系列带有行和列的数据。 视图中，用户可以使用SELECT语句查询数据，也可以使用INSERT, UPDATE， DELETE修改记录， 视图可以使用户操作方便，并保障数据库系统安全。</p>
+</blockquote>
+<h4 id="13-2视图特点"><a href="#13-2视图特点" class="headerlink" title="13.2视图特点"></a>13.2视图特点</h4><blockquote>
+<ul>
+<li>优点<br>。简单化，数据所见即所得。<br>。安全性，用户只能查询或修改他们所能见到得到的数据。<br>。逻辑独立性，可以屏蔽真实表结构变化带来的影响。</li>
+<li>缺点<br>。性能相对较差，简单的查询也会变得稍显复杂。<br>。修改不方便，特变是复杂的聚合视图基本无法修改。</li>
+</ul>
+</blockquote>
+<h4 id="13-3视图的创建"><a href="#13-3视图的创建" class="headerlink" title="13.3视图的创建"></a>13.3视图的创建</h4><blockquote>
+<p>语法: CREATE VIEW 视图名 AS 查询数据源表语句;</p>
+</blockquote>
+<h5 id="13-3-1-创建-视图"><a href="#13-3-1-创建-视图" class="headerlink" title="13.3.1 创建 视图"></a>13.3.1 创建 视图</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#创建t_empInfo的视图，其视图从t_employees表中查询到员工编号、员工姓名、员工邮箱、工资</span><br><span class="line">CREATE VIEW t_empInfo</span><br><span class="line">AS</span><br><span class="line">SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, SALARY from t_ employees;</span><br></pre></td></tr></table></figure>
 
+<h5 id="13-3-2使用视图"><a href="#13-3-2使用视图" class="headerlink" title="13.3.2使用视图"></a>13.3.2使用视图</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#查询t_empInfo视图中编号为101 的员工信息</span><br><span class="line">SELECT * FROM t_empInfo where employee_id &#39;101&#39;;</span><br></pre></td></tr></table></figure>
 
+<h4 id="13-4视图的修改"><a href="#13-4视图的修改" class="headerlink" title="13.4视图的修改"></a>13.4视图的修改</h4><blockquote>
+<p>方式一: CREATE OR REPLACE VIEW 视图名 AS 查询语句<br>方式二: ALTER VIEW 视图名 AS 查询语句</p>
+</blockquote>
+<h5 id="13-4-1修改视图"><a href="#13-4-1修改视图" class="headerlink" title="13.4.1修改视图"></a>13.4.1修改视图</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#方式1:如果视图存在则进行修改，反之，进行创建</span><br><span class="line">CREATE OR REPLACE VIEW t_empInfo</span><br><span class="line">AS</span><br><span class="line">SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, SALARY, DEPARTMENT_ID from t_employees;</span><br><span class="line"></span><br><span class="line">#方式 2: 直接对已存在的视图进行修改</span><br><span class="line">ALTER VIEW t_empInfo</span><br><span class="line">AS</span><br><span class="line">SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, SALARY from t. employees;</span><br></pre></td></tr></table></figure>
 
+<h4 id="13-5-视图的删除"><a href="#13-5-视图的删除" class="headerlink" title="13.5 视图的删除"></a>13.5 视图的删除</h4><blockquote>
+<p>drop view 视图名</p>
+</blockquote>
+<h5 id="13-5-1-删除视图"><a href="#13-5-1-删除视图" class="headerlink" title="13.5.1 删除视图"></a>13.5.1 删除视图</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#删除 t_empInfo 视图</span><br><span class="line">drop view t_empInfo;</span><br></pre></td></tr></table></figure>
 
-
-<h4 id="1-7、数组的排序"><a href="#1-7、数组的排序" class="headerlink" title="1.7、数组的排序"></a>1.7、数组的排序</h4><p>排序：数组是存储一组数据，而且这些数据是有顺序的。但是数值本身可能是无序的。通过算法来实现给数组进行排序，升序(数值从小到大)，降序(数值从大到小)。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、冒泡排序：Bubble Sort</span><br><span class="line">原理：比较相邻的两个数，将较大的数，向后移动。</span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test7BubbleSort</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] arr = &#123;<span class="number">15</span>,<span class="number">23</span>,<span class="number">8</span>,<span class="number">10</span>,<span class="number">7</span>&#125;;</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i= <span class="number">1</span>; i&lt;arr.length;i++)&#123;<span class="comment">//控制轮数：</span></span><br><span class="line">			<span class="comment">//i=1,2,3,4</span></span><br><span class="line">			<span class="comment">/*</span></span><br><span class="line"><span class="comment">			i=1,	j&lt;4</span></span><br><span class="line"><span class="comment">			i=2,	j&lt;3</span></span><br><span class="line"><span class="comment">			i=3,	j&lt;2</span></span><br><span class="line"><span class="comment">			*/</span></span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; arr.length - i;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(arr[j] &gt; arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">					<span class="comment">//交换</span></span><br><span class="line">					<span class="keyword">int</span> temp = arr[j];</span><br><span class="line">					arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">					arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">			System.out.println(arr[i]);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
+<p>注意：删除视图不会影响原表</p>
+<h4 id="13-6-视图的注意事项"><a href="#13-6-视图的注意事项" class="headerlink" title="13.6 视图的注意事项"></a>13.6 视图的注意事项</h4><blockquote>
+<ul>
+<li>注意:</li>
+<li>视图不会独立存储数据，原表发生改变，视图也发生改变。没有优化任何查询性能。</li>
+<li>如果视图包含以下结构中的一种，则视图不可更新<ul>
+<li>聚合函数的结果</li>
+<li>DISTINCT去重后的结果</li>
+<li>GROUP BY分组后的结果</li>
+<li>HAVING 筛选过滤后的结果</li>
+<li>UNION、 UNION ALL联合后的结果</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="十四、SQL-语言分类"><a href="#十四、SQL-语言分类" class="headerlink" title="十四、SQL 语言分类"></a>十四、SQL 语言分类</h3><h4 id="14-1-SQL语言分类"><a href="#14-1-SQL语言分类" class="headerlink" title="14.1 SQL语言分类"></a>14.1 SQL语言分类</h4><blockquote>
+<ul>
+<li>数据查询语言DQL (Data Query Language) : select. where、 order by、 group by、 having。</li>
+<li>数据定义语言DDL (Data Definition Language) : create、 alter、 drop。</li>
+<li>数据操作语言DML (Data Manipulation Language) : insert、 update、 delete 。</li>
+<li>事务处理语言TPL (Transaction Process Language) : commit、 rolback。</li>
+<li>数据控制语言DCL (Data Control Language) : grant、 revoke。</li>
+</ul>
+</blockquote>
    
       <div class="essayending">
         <div>
@@ -273,7 +1036,7 @@
          suger 
         <br />
         <strong>本文链接：</strong>
-        <a rel="license" href="http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/">http://yoursite.com/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/</a>
+        <a rel="license" href="http://yoursite.com/2020/06/07/mysql/">http://yoursite.com/2020/06/07/mysql/</a>
         <br />
         <strong>版权声明：</strong>
         本作品采用
@@ -330,7 +1093,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaSE</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
         		</li>
       		
 		</ul>
@@ -381,7 +1144,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://czzz911.github.io/2020/06/07/mysql/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -394,18 +1157,9 @@
  
 <nav id="article-nav">
   
-    <a href="/2020/03/28/%E4%BB%8EWindows%E8%BF%87%E5%BA%A6%E5%88%B0Mac%E5%BF%85%E5%A4%87%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%AF%B9%E7%85%A7%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          从Windows过度到Mac必备快捷键对照表
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/26/day09%E6%95%B0%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">day09数组</div>
+    <a href="/2020/05/07/day37%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">day37--网络编程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -430,7 +1184,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、内容"><span class="toc-number">1.</span> <span class="toc-text">一、内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、数组的遍历"><span class="toc-number">1.1.</span> <span class="toc-text">1.1、数组的遍历</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-1-1、for-each循环"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">1.1.1、for-each循环</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、数组中的默认值"><span class="toc-number">1.2.</span> <span class="toc-text">1.2、数组中的默认值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、创建数组的其他语法"><span class="toc-number">1.3.</span> <span class="toc-text">1.3、创建数组的其他语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4、数组的地址转移：知道"><span class="toc-number">1.4.</span> <span class="toc-text">1.4、数组的地址转移：知道</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5、数组作为参数"><span class="toc-number">1.5.</span> <span class="toc-text">1.5、数组作为参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、数组作为返回值"><span class="toc-number">1.6.</span> <span class="toc-text">1.6、数组作为返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6、可变参数"><span class="toc-number">1.7.</span> <span class="toc-text">1.6、可变参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-7、数组的排序"><span class="toc-number">1.8.</span> <span class="toc-text">1.7、数组的排序</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL"><span class="toc-number">1.</span> <span class="toc-text">MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、引言"><span class="toc-number">1.1.</span> <span class="toc-text">一、引言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1现有的数据存储方式有哪些？"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1现有的数据存储方式有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-以上存储方式存在的缺点？"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 以上存储方式存在的缺点？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、数据库"><span class="toc-number">1.2.</span> <span class="toc-text">二、数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-概念"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-数据库分类"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 数据库分类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、数据库管理系统"><span class="toc-number">1.3.</span> <span class="toc-text">三、数据库管理系统</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-概念"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-常见的数据库管理系统"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 常见的数据库管理系统</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、Mysql"><span class="toc-number">1.4.</span> <span class="toc-text">四、Mysql</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-简介"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-访问和下载"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 访问和下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-mysql-5-7-安装"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 mysql 5.7 安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-卸载"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4 卸载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-配置环境变量"><span class="toc-number">1.4.5.</span> <span class="toc-text">4.5 配置环境变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-MySQL目录结构"><span class="toc-number">1.4.6.</span> <span class="toc-text">4.6 MySQL目录结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、SQL语言"><span class="toc-number">1.5.</span> <span class="toc-text">五、SQL语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-概念"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-基本命令"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 基本命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、客户端工具"><span class="toc-number">1.6.</span> <span class="toc-text">六、客户端工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七：数据查询（重点）"><span class="toc-number">1.7.</span> <span class="toc-text">七：数据查询（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-数据库表的基本结构"><span class="toc-number">1.7.1.</span> <span class="toc-text">7.1 数据库表的基本结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-基本查询"><span class="toc-number">1.7.2.</span> <span class="toc-text">7.2 基本查询</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#7-2-1-查询部分列"><span class="toc-number">1.7.2.1.</span> <span class="toc-text">7.2.1 查询部分列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-2-2-查询所有列"><span class="toc-number">1.7.2.2.</span> <span class="toc-text">7.2.2 查询所有列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-2-3-对列中的数据进行运算"><span class="toc-number">1.7.2.3.</span> <span class="toc-text">7.2.3 对列中的数据进行运算</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-2-4-列的别名"><span class="toc-number">1.7.2.4.</span> <span class="toc-text">7.2.4 列的别名</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-3-排列查询"><span class="toc-number">1.7.3.</span> <span class="toc-text">7.3 排列查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-4-条件查询"><span class="toc-number">1.7.4.</span> <span class="toc-text">7.4 条件查询</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#7-4-1-等值判断（-）"><span class="toc-number">1.7.4.1.</span> <span class="toc-text">7.4.1 等值判断（&#x3D;）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-4-2-逻辑判断（and、or、-not）"><span class="toc-number">1.7.4.2.</span> <span class="toc-text">7.4.2 逻辑判断（and、or、 not）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-4-3-不等值判断（-gt-、-lt-、-gt-、-lt-、-、-lt-gt-）"><span class="toc-number">1.7.4.3.</span> <span class="toc-text">7.4.3 不等值判断（&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;、!&#x3D;、&lt;&gt;）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-4-4-区间判断（between-and）"><span class="toc-number">1.7.4.4.</span> <span class="toc-text">7.4.4 区间判断（between and）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-4-5-null-值判断（is-null、-is-not-null）"><span class="toc-number">1.7.4.5.</span> <span class="toc-text">7.4.5 null 值判断（is null、 is not null）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-4-6-枚举查询（in-（值1，值2-值3））"><span class="toc-number">1.7.4.6.</span> <span class="toc-text">7.4.6 枚举查询（in （值1，值2 值3））</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-4-7-模糊查询"><span class="toc-number">1.7.4.7.</span> <span class="toc-text">7.4.7 模糊查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-4-8-分支结构查询"><span class="toc-number">1.7.4.8.</span> <span class="toc-text">7.4.8 分支结构查询</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-5-时间查询"><span class="toc-number">1.7.5.</span> <span class="toc-text">7.5 时间查询</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#7-5-1-获取当前系统时间"><span class="toc-number">1.7.5.1.</span> <span class="toc-text">7.5.1 获取当前系统时间</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-6-字符串查询"><span class="toc-number">1.7.6.</span> <span class="toc-text">7.6 字符串查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-7-聚合函数"><span class="toc-number">1.7.7.</span> <span class="toc-text">7.7 聚合函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-8-分组查询"><span class="toc-number">1.7.8.</span> <span class="toc-text">7.8 分组查询</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#7-8-1-查询各部门的总人数"><span class="toc-number">1.7.8.1.</span> <span class="toc-text">7.8.1 查询各部门的总人数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-8-2-查找各部门、各岗位的人数"><span class="toc-number">1.7.8.2.</span> <span class="toc-text">7.8.2 查找各部门、各岗位的人数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-8-4-常见问题"><span class="toc-number">1.7.8.3.</span> <span class="toc-text">7.8.4 常见问题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-9-分组过滤查询"><span class="toc-number">1.7.9.</span> <span class="toc-text">7.9 分组过滤查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-10-限定查询"><span class="toc-number">1.7.10.</span> <span class="toc-text">7.10 限定查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-11-查询结果"><span class="toc-number">1.7.11.</span> <span class="toc-text">7.11 查询结果</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#7-11-1-SQL-语句编写顺序"><span class="toc-number">1.7.11.1.</span> <span class="toc-text">7.11.1 SQL 语句编写顺序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-11-2-语句执行顺序"><span class="toc-number">1.7.11.2.</span> <span class="toc-text">7.11.2 语句执行顺序</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-12-子查询（作为条件判断）"><span class="toc-number">1.7.12.</span> <span class="toc-text">7.12 子查询（作为条件判断）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-13-子查询-（作为枚举查询条件）"><span class="toc-number">1.7.13.</span> <span class="toc-text">7.13 子查询 （作为枚举查询条件）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-14-子查询（作为一张表）"><span class="toc-number">1.7.14.</span> <span class="toc-text">7.14 子查询（作为一张表）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-15-合并查询"><span class="toc-number">1.7.15.</span> <span class="toc-text">7.15 合并查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-16-表连接查询"><span class="toc-number">1.7.16.</span> <span class="toc-text">7.16 表连接查询</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#7-16-1-内连接查询-（inner-join-on）"><span class="toc-number">1.7.16.1.</span> <span class="toc-text">7.16.1 内连接查询 （inner join on）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-16-2-三标连接查询"><span class="toc-number">1.7.16.2.</span> <span class="toc-text">7.16.2 三标连接查询</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-16-3-左外连接-（left-join-on）"><span class="toc-number">1.7.16.3.</span> <span class="toc-text">7.16.3 左外连接 （left join on）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-16-4-右外连接-RIGHT-JOIN-ON"><span class="toc-number">1.7.16.4.</span> <span class="toc-text">7.16.4 右外连接 (RIGHT JOIN ON)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八、DML操作【重点】"><span class="toc-number">1.8.</span> <span class="toc-text">八、DML操作【重点】</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1新增（insert）"><span class="toc-number">1.8.1.</span> <span class="toc-text">8.1新增（insert）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-1添加一条信息"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">8.1.1添加一条信息</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2修改-UPDATE"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">8.2修改 (UPDATE)</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-删除（DELETE）"><span class="toc-number">1.8.2.</span> <span class="toc-text">8.4 删除（DELETE）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-3-1-删除一条信息"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">8.3.1 删除一条信息</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4清空整表数据-TRUNCATE"><span class="toc-number">1.8.3.</span> <span class="toc-text">8.4清空整表数据(TRUNCATE)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-4-1清空整张表"><span class="toc-number">1.8.3.1.</span> <span class="toc-text">8.4.1清空整张表</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九、数据库操作"><span class="toc-number">1.9.</span> <span class="toc-text">九、数据库操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#9-1数据类型"><span class="toc-number">1.9.1.</span> <span class="toc-text">9.1数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#9-1-2-日期类型"><span class="toc-number">1.9.1.1.</span> <span class="toc-text">9.1.2 日期类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-1-3-字符串类型"><span class="toc-number">1.9.1.2.</span> <span class="toc-text">9.1.3 字符串类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-2-数据表的创建（create）"><span class="toc-number">1.9.2.</span> <span class="toc-text">9.2 数据表的创建（create）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-3-数据表的修改-（alter）"><span class="toc-number">1.9.3.</span> <span class="toc-text">9.3 数据表的修改 （alter）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#9-3-1向现有表中添加列"><span class="toc-number">1.9.3.1.</span> <span class="toc-text">9.3.1向现有表中添加列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-3-2修改表中的列"><span class="toc-number">1.9.3.2.</span> <span class="toc-text">9.3.2修改表中的列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-3-3删除表中的列"><span class="toc-number">1.9.3.3.</span> <span class="toc-text">9.3.3删除表中的列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-3-4修改列名"><span class="toc-number">1.9.3.4.</span> <span class="toc-text">9.3.4修改列名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-3-5修改表名"><span class="toc-number">1.9.3.5.</span> <span class="toc-text">9.3.5修改表名</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-4数据表的删除-DROP"><span class="toc-number">1.9.4.</span> <span class="toc-text">9.4数据表的删除(DROP)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#9-4-1删除学生表"><span class="toc-number">1.9.4.1.</span> <span class="toc-text">9.4.1删除学生表</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十、约束"><span class="toc-number">1.10.</span> <span class="toc-text">十、约束</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#10-1实体完整性约束"><span class="toc-number">1.10.1.</span> <span class="toc-text">10.1实体完整性约束</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#10-1-1主键约束"><span class="toc-number">1.10.1.1.</span> <span class="toc-text">10.1.1主键约束</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-1-2唯一约束"><span class="toc-number">1.10.1.2.</span> <span class="toc-text">10.1.2唯一约束</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-1-3自动增长列"><span class="toc-number">1.10.1.3.</span> <span class="toc-text">10.1.3自动增长列</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-2域完整性约束"><span class="toc-number">1.10.2.</span> <span class="toc-text">10.2域完整性约束</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#10-2-1非空约束"><span class="toc-number">1.10.2.1.</span> <span class="toc-text">10.2.1非空约束</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-2-2默认值约束"><span class="toc-number">1.10.2.2.</span> <span class="toc-text">10.2.2默认值约束</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-2-3-引用完整性约束"><span class="toc-number">1.10.2.3.</span> <span class="toc-text">10.2.3 引用完整性约束</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-3约束创建整合"><span class="toc-number">1.10.3.</span> <span class="toc-text">10.3约束创建整合</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十一、-事务-重点"><span class="toc-number">1.11.</span> <span class="toc-text">十一、 事务[重点]</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#11-1模拟转账"><span class="toc-number">1.11.1.</span> <span class="toc-text">11.1模拟转账</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#11-1-2模拟转账错误"><span class="toc-number">1.11.1.1.</span> <span class="toc-text">11.1.2模拟转账错误</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-2事务的概念"><span class="toc-number">1.11.2.</span> <span class="toc-text">11.2事务的概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-3事务的边界"><span class="toc-number">1.11.3.</span> <span class="toc-text">11.3事务的边界</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-4事务的原理"><span class="toc-number">1.11.4.</span> <span class="toc-text">11.4事务的原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-5事务的特性"><span class="toc-number">1.11.5.</span> <span class="toc-text">11.5事务的特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-6-事务应用"><span class="toc-number">1.11.6.</span> <span class="toc-text">11.6 事务应用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#11-6-1事务完成转账"><span class="toc-number">1.11.6.1.</span> <span class="toc-text">11.6.1事务完成转账</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十二、权限管理"><span class="toc-number">1.12.</span> <span class="toc-text">十二、权限管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#12-1创建用户"><span class="toc-number">1.12.1.</span> <span class="toc-text">12.1创建用户</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#12-1-1-创建一个用户"><span class="toc-number">1.12.1.1.</span> <span class="toc-text">12.1.1 创建一个用户</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-2-授权"><span class="toc-number">1.12.2.</span> <span class="toc-text">12.2 授权</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#12-2-1-用户授权"><span class="toc-number">1.12.2.1.</span> <span class="toc-text">12.2.1 用户授权</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#12-3-1-撤销用户权限"><span class="toc-number">1.12.2.2.</span> <span class="toc-text">12.3.1 撤销用户权限</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-4-删除用户"><span class="toc-number">1.12.3.</span> <span class="toc-text">12.4 删除用户</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十三、视图"><span class="toc-number">1.13.</span> <span class="toc-text">十三、视图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#13-1-概念"><span class="toc-number">1.13.1.</span> <span class="toc-text">13.1 概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-2视图特点"><span class="toc-number">1.13.2.</span> <span class="toc-text">13.2视图特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-3视图的创建"><span class="toc-number">1.13.3.</span> <span class="toc-text">13.3视图的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#13-3-1-创建-视图"><span class="toc-number">1.13.3.1.</span> <span class="toc-text">13.3.1 创建 视图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#13-3-2使用视图"><span class="toc-number">1.13.3.2.</span> <span class="toc-text">13.3.2使用视图</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-4视图的修改"><span class="toc-number">1.13.4.</span> <span class="toc-text">13.4视图的修改</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#13-4-1修改视图"><span class="toc-number">1.13.4.1.</span> <span class="toc-text">13.4.1修改视图</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-5-视图的删除"><span class="toc-number">1.13.5.</span> <span class="toc-text">13.5 视图的删除</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#13-5-1-删除视图"><span class="toc-number">1.13.5.1.</span> <span class="toc-text">13.5.1 删除视图</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-6-视图的注意事项"><span class="toc-number">1.13.6.</span> <span class="toc-text">13.6 视图的注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十四、SQL-语言分类"><span class="toc-number">1.14.</span> <span class="toc-text">十四、SQL 语言分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#14-1-SQL语言分类"><span class="toc-number">1.14.1.</span> <span class="toc-text">14.1 SQL语言分类</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -664,7 +1418,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -673,14 +1439,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/15/day21%E5%B8%B8%E7%94%A8%E7%B1%BB/2eclipse%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90equals.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/15/day21%E5%B8%B8%E7%94%A8%E7%B1%BB/6%E5%8C%85%E8%A3%85%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84.png">
 <meta property="article:published_time" content="2020-04-14T16:31:15.000Z">
-<meta property="article:modified_time" content="2020-04-15T06:57:44.207Z">
+<meta property="article:modified_time" content="2020-05-11T04:17:28.697Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -75,7 +75,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -261,7 +261,13 @@
 <p>就是8个基本数据类型，所对应的类类型。byte，short，int，long，float，double，char，boolean<br>和基本类型，对应的类，就叫包装类。<br>包装类的对象，包的是基本类型的数值</p>
 <p>包装类在<strong>java.lang包</strong>下，lang包下可以不用导入直接使用</p>
 </blockquote>
-<h5 id="1-2-1-8种基本数据类型"><a href="#1-2-1-8种基本数据类型" class="headerlink" title="1.2.1 8种基本数据类型"></a>1.2.1 8种基本数据类型</h5><p>在java中，有两大数据类型：基本类型，引用类型</p>
+<h5 id="1-2-1-8种基本数据类型"><a href="#1-2-1-8种基本数据类型" class="headerlink" title="1.2.1 8种基本数据类型"></a>1.2.1 8种基本数据类型</h5><blockquote>
+<p>Integer 对象   默认为null  是无法进行（int）强转操作的<br>会产生空指针异常，也就是说integer底层设置了一个检查项，就是关于这个的，不允许这样的操作。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Integer i1 = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i =  (<span class="keyword">int</span>)i1;</span><br></pre></td></tr></table></figure>
+
+<p><strong>会报错！！！</strong></p>
+<p>在java中，有两大数据类型：基本类型，引用类型</p>
 <p>基本类型：</p>
 <ul>
 <li>整数型：byte，int，short，long</li>
@@ -771,7 +777,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -780,14 +798,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

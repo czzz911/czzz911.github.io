@@ -15,11 +15,13 @@
 <meta property="og:site_name" content="czzz">
 <meta property="og:description" content="寻几处好景破星光——">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/fangwenquanxian.png">
 <meta property="article:published_time" content="2020-04-01T13:50:01.000Z">
-<meta property="article:modified_time" content="2020-04-15T06:59:06.621Z">
+<meta property="article:modified_time" content="2020-05-27T12:46:15.090Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/fangwenquanxian.png">
   
     <link rel="alternative" href="/atom.xml" title="czzz" type="application/atom+xml">
   
@@ -69,7 +71,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -280,8 +282,11 @@
 <p>​    eat()，sleep()</p>
 <h5 id="1-3-7-继承的注意点"><a href="#1-3-7-继承的注意点" class="headerlink" title="1.3.7 继承的注意点"></a>1.3.7 继承的注意点</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、两个类存在了继承关系。</span><br><span class="line">	子类可以使用父类的属性和方法</span><br><span class="line">	但是父类不能使用子类的属性和方法。</span><br><span class="line"><span class="number">2</span>、Java语言的继承是局限性：单继承。</span><br><span class="line">	一个子类，只能有一个父类。</span><br><span class="line">	Java语言，不允许多继承，但是可以多层继承。</span><br><span class="line">	一个父类，爷爷类，太爷爷，祖爷爷。。祖宗。。</span><br><span class="line">	一个父类是可以有多个子类的。</span><br><span class="line"><span class="number">3</span>、怎么在继承的父类的基础上进行修改呢：想把父类的方法添加点新东西的话</span><br><span class="line">	在子类重写的方法中，调用父类方法 <span class="keyword">super</span>.test(),</span><br><span class="line">	在添加新的内容</span><br></pre></td></tr></table></figure>
 
-
-
+<p><img src="/2020/04/01/day14%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/fangwenquanxian.png" alt="fangwenquanxian"></p>
+<blockquote>
+<p>子类的修饰符范围    不能比父类的修饰符范围要小<br>父类  protect<br>子类只能是   protect    或者   public</p>
+<p>父类 private  那么子类不能重写</p>
+</blockquote>
 <h4 id="1-4-子类对象的创建过程"><a href="#1-4-子类对象的创建过程" class="headerlink" title="1.4 子类对象的创建过程"></a>1.4 子类对象的创建过程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">调用子类的构造方法中，先调用父类的构造方法。默认父类的无参构造方法。</span><br><span class="line">记住：</span><br><span class="line">	1、子类的构造方法中，第一行一定是调用了父类的构造方法。</span><br><span class="line">	2、如果没有显示的调用父类的构造方法，编译器会自动的添加：super()。父类的无参构造。</span><br><span class="line">	3、子类的构造方法中，既可以调用父类的无参构造方法，也可以调用父类的有参构造方法。</span><br><span class="line">	4、父类的无参构造：super(),父类的有参构造：super(参数)。</span><br></pre></td></tr></table></figure>
 
 
@@ -709,7 +714,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -718,14 +735,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

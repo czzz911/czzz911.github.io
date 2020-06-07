@@ -15,13 +15,14 @@
 <meta property="og:site_name" content="czzz">
 <meta property="og:description" content="我还年轻，我还年轻——">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/03/26/day09%E6%95%B0%E7%BB%84/%E4%BC%A0%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BC%A0%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png">
 <meta property="og:image" content="http://yoursite.com/2020/03/26/day09%E6%95%B0%E7%BB%84/7%E6%95%B0%E7%BB%84%E7%9A%84%E5%86%85%E5%AD%98%E5%9B%BE.png">
 <meta property="article:published_time" content="2020-03-26T14:34:01.000Z">
-<meta property="article:modified_time" content="2020-04-15T07:01:15.561Z">
+<meta property="article:modified_time" content="2020-05-28T01:11:29.419Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/26/day09%E6%95%B0%E7%BB%84/7%E6%95%B0%E7%BB%84%E7%9A%84%E5%86%85%E5%AD%98%E5%9B%BE.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/26/day09%E6%95%B0%E7%BB%84/%E4%BC%A0%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BC%A0%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png">
   
     <link rel="alternative" href="/atom.xml" title="czzz" type="application/atom+xml">
   
@@ -71,7 +72,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -222,7 +223,12 @@
 </blockquote>
 <p>注意： 所有能以递归解决的问题，循环都能解决。当解决复杂问题时，递归的实现方式更为简单。</p>
 <p>汉诺塔问题、查看文件夹中的所有子文件中的所有文件</p>
-<h4 id="1-2、数组"><a href="#1-2、数组" class="headerlink" title="1.2、数组"></a>1.2、数组</h4><p>主函数就是一个字符串数组</p>
+<h4 id="1-2、数组"><a href="#1-2、数组" class="headerlink" title="1.2、数组"></a>1.2、数组</h4><p><strong>数组对象是引用类型数据，存储于堆内存中</strong><br><strong>栈内存，会随着方法运行结束而消失，但堆内存中存储的数据  回收的话，是GC来进行垃圾回收的</strong></p>
+<blockquote>
+<p>所以用方法对 对象进行操作时，会对 对象进行修改，  数组类似</p>
+<p>方法传参时，传递的是对象的地址，所以根据地址进行修改的话，对象会发生改变。</p>
+</blockquote>
+<p><img src="/2020/03/26/day09%E6%95%B0%E7%BB%84/%E4%BC%A0%E5%AF%B9%E8%B1%A1%E5%92%8C%E4%BC%A0%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png" alt="传对象和传基本数据类型"></p>
 <h5 id="1-2-1-为什么使用数组"><a href="#1-2-1-为什么使用数组" class="headerlink" title="1.2.1 为什么使用数组"></a>1.2.1 为什么使用数组</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">如果说程序中，需要存储大量的相同类型的一组数据，如果直接使用变量来进行存储，每个变量只能存储一个值，就需要大量的变量。</span><br><span class="line">1、代码过于臃肿</span><br><span class="line">2、程序的可读性差</span><br><span class="line">3、数据维护较差</span><br></pre></td></tr></table></figure>
 
 <h5 id="1-2-2-数组的概念"><a href="#1-2-2-数组的概念" class="headerlink" title="1.2.2 数组的概念"></a>1.2.2 数组的概念</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">数组的概念：</span><br><span class="line">就是一组相同数据类型的数据。内存上是开辟的连续的内存空间。</span><br></pre></td></tr></table></figure>
@@ -398,7 +404,7 @@
  
 <nav id="article-nav">
   
-    <a href="/2020/03/27/day10%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E6%95%B0%E7%BB%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/27/day10%E6%95%B0%E7%BB%84/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -668,7 +674,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -677,14 +695,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

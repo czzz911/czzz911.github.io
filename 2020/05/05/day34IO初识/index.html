@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/05/05/day34IO%E5%88%9D%E8%AF%86/1%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86%E6%96%87%E4%BB%B6%E5%A4%B9.png">
 <meta property="og:image" content="http://yoursite.com/2020/05/05/day34IO%E5%88%9D%E8%AF%86/IO%E7%9A%84%E6%A6%82%E5%BF%B5.png">
 <meta property="article:published_time" content="2020-05-05T04:12:16.000Z">
-<meta property="article:modified_time" content="2020-05-05T04:25:25.810Z">
+<meta property="article:modified_time" content="2020-05-28T10:44:02.711Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -73,7 +73,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -211,7 +211,24 @@
 <p>目的：提高线程对象的复用性。</p>
 </blockquote>
 <p>使用：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建一个固定数量的线程池：</span></span><br><span class="line">ExecutorService es = Executors.newFixedThreadPool(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//第2种：创建一个线程池对象：里面有对应的线程对象</span></span><br><span class="line">ExecutorService es = Executors.newCachedThreadPool();</span><br><span class="line"></span><br><span class="line">示例代码：</span><br><span class="line"><span class="comment">//step1：创建一个线程池对象：里面存放一些线程</span></span><br><span class="line">		<span class="comment">//第1种：这种线程池中的线程的数量是固定的：由参数来指定</span></span><br><span class="line">		<span class="comment">//t1,t2,t3</span></span><br><span class="line"><span class="comment">//		ExecutorService es = Executors.newFixedThreadPool(3);</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//第2种：创建一个线程池对象：里面有对应的线程对象</span></span><br><span class="line">		ExecutorService es = Executors.newCachedThreadPool();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//step2：创建任务,Runnable接口的实现</span></span><br><span class="line">		Task t1 = <span class="keyword">new</span> Task();</span><br><span class="line">		Task t2 = <span class="keyword">new</span> Task();</span><br><span class="line">		Task t3 = <span class="keyword">new</span> Task();</span><br><span class="line">		Task t4 = <span class="keyword">new</span> Task();</span><br><span class="line">		Task t5 = <span class="keyword">new</span> Task();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//step3：提交任务：将任务提交给线程池，分配线程对象执行任务对应的run()</span></span><br><span class="line">		es.submit(t1);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line">		es.submit(t2);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line">		es.submit(t3);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line">		es.submit(t4);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line">		es.submit(t5);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line"></span><br><span class="line">延时性操作：</span><br><span class="line">		ScheduledExecutorService ses = Executors.newScheduledThreadPool(<span class="number">1</span>);</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * 提交了一个要执行的任务：延迟10秒钟执行</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		ses.schedule(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">				System.out.println(<span class="string">"假装关机。。。"</span>);</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;, <span class="number">10</span>, TimeUnit.SECONDS);</span><br></pre></td></tr></table></figure>
+<p><strong>Executors：是一个工厂类。</strong></p>
+<p>​    <strong>工厂类：创建的过程是私有的，想要创建实例对象，需要调用里面的静态方法去创建</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建一个固定数量的线程池：</span></span><br><span class="line">ExecutorService es = Executors.newFixedThreadPool(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//第2种：创建一个线程池对象：里面有对应的线程对象</span></span><br><span class="line">ExecutorService es = Executors.newCachedThreadPool();</span><br><span class="line"></span><br><span class="line">示例代码：</span><br><span class="line"><span class="comment">//step1：创建一个线程池对象：里面存放一些线程</span></span><br><span class="line">		<span class="comment">//第1种：这种线程池中的线程的数量是固定的：由参数来指定</span></span><br><span class="line">		<span class="comment">//t1,t2,t3</span></span><br><span class="line">		ExecutorService es = Executors.newFixedThreadPool(<span class="number">3</span>);</span><br><span class="line">		**线程多的时候，选择固定的线程池**</span><br><span class="line">		<span class="comment">//第2种：创建一个线程池对象：里面有对应的线程对象</span></span><br><span class="line">		ExecutorService es = Executors.newCachedThreadPool();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//step2：创建任务,Runnable接口的实现</span></span><br><span class="line">		Task t1 = <span class="keyword">new</span> Task();</span><br><span class="line">		Task t2 = <span class="keyword">new</span> Task();</span><br><span class="line">		Task t3 = <span class="keyword">new</span> Task();</span><br><span class="line">		Task t4 = <span class="keyword">new</span> Task();</span><br><span class="line">		Task t5 = <span class="keyword">new</span> Task();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//step3：提交任务：将任务提交给线程池，分配线程对象执行任务对应的run()</span></span><br><span class="line">		es.submit(t1);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line">		es.submit(t2);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line">		es.submit(t3);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line">		es.submit(t4);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line">		es.submit(t5);<span class="comment">//将t1这个任务提交给es线程池</span></span><br><span class="line"></span><br><span class="line">延时性操作：</span><br><span class="line">		ScheduledExecutorService ses = Executors.newScheduledThreadPool(<span class="number">1</span>);</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * 提交了一个要执行的任务：延迟10秒钟执行</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		ses.schedule(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="meta">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">				System.out.println(<span class="string">"假装关机。。。"</span>);</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;, <span class="number">10</span>, TimeUnit.SECONDS);</span><br></pre></td></tr></table></figure>
+
+<p><strong>Callable接口：</strong></p>
+<p>Callable接口，相比于Runnable接口</p>
+<blockquote>
+<p>Callable接口下的可以抛出异常<br>call方法 相比于run方法     可以有返回值</p>
+</blockquote>
+<p><strong>Lock接口：</strong></p>
+<blockquote>
+<p>常用方法：</p>
+<p>​    void lock()  // 获取锁，如锁被占用，则等待。</p>
+<p>​    boolean tryLock() // 尝试获取锁，（成功返回true，失败返回false，不阻塞）</p>
+<p>​    void unlock() // 释放锁</p>
+</blockquote>
+<p>实现类：ReentrantLock：与synchronized</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建重入锁对象</span></span><br><span class="line">Lock locker = <span class="keyword">new</span> ReetrantLock();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开启锁</span></span><br><span class="line">locker.lock();</span><br><span class="line">...</span><br><span class="line"><span class="comment">// 释放锁</span></span><br><span class="line"><span class="keyword">finally</span>&#123;   <span class="comment">// 考虑到出现异常的现象，释放锁必须放在finally代码块中，避免无法释放的情况。</span></span><br><span class="line">	locker.unlock();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -683,7 +700,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,14 +721,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>

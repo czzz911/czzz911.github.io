@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/03/19/day04%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87.png">
 <meta property="article:published_time" content="2020-03-19T14:41:06.000Z">
-<meta property="article:modified_time" content="2020-04-19T08:55:44.958Z">
+<meta property="article:modified_time" content="2020-05-25T09:32:20.877Z">
 <meta property="article:author" content="suger">
 <meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
@@ -71,7 +71,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 48
+			总文章数 49
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -225,10 +225,12 @@
 <p>!=，比较两个数值，是否不等，如果不等，就是true，否则就是false。</p>
 </li>
 <li><p>逻辑运算符：操作数是boolean类型，计算结果也是boolean类型。</p>
-<p>&amp;&amp;：”与操作”，表示并且的意思。</p>
+<p>&amp;：两边的运算都进行之后，在进行判断。两边为真及为真。</p>
+<p>|：两边的运算都进行之后，在进行判断。两边为假即为假。</p>
+<p>&amp;&amp;：”与操作”，表示并且的意思。短路与。</p>
 <p>​    运算规则：在参加计算的操作数中，如果都为true，结果就为true。有一个为false，结果就为false。</p>
 <p>​    总结：一假则假，全真才真。</p>
-<p>||：”或操作”，表示或者的意思。</p>
+<p>||：”或操作”，表示或者的意思。短路或。</p>
 <p>​    运算规则：在参加计算的操作数中，如果都为false，结果才为false，有一个为true，结果就为true。</p>
 <p>​    总结：一真则真，全假才假。</p>
 <p><strong>注意：</strong> &amp;&amp; 比 ||优先级高</p>
@@ -247,7 +249,9 @@
 <h4 id="1-2、表达式"><a href="#1-2、表达式" class="headerlink" title="1.2、表达式"></a>1.2、表达式</h4><p>表达式：操作数和运算符组成一个式子。</p>
 <p>表达式的值和类型：将表达式进行计算得到的结果就是表达式的值。</p>
 <h4 id="1-3、自动类型提升"><a href="#1-3、自动类型提升" class="headerlink" title="1.3、自动类型提升"></a>1.3、自动类型提升</h4><p><img src="/2020/03/19/day04%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E6%8F%90%E5%8D%87.png" alt="自动类型提升"></p>
-<h4 id="1-4、控制台输入"><a href="#1-4、控制台输入" class="headerlink" title="1.4、控制台输入"></a>1.4、控制台输入</h4><p>读取控制台上输入的数据。</p>
+<h4 id="1-4、控制台输入"><a href="#1-4、控制台输入" class="headerlink" title="1.4、控制台输入"></a>1.4、控制台输入</h4><p>输入数据——&gt; 处理数据 ——&gt; 返回数据</p>
+<p><strong>空格默认打断输入。</strong></p>
+<p>读取控制台上输入的数据。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//step1：导入Scanenr这个扫描器</span></span><br><span class="line">imprt java.util.Scanner;</span><br><span class="line"><span class="comment">//step2：创建Scanner扫描器</span></span><br><span class="line">Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"><span class="comment">//step3：使用sc调用对应的方法，来读取键盘的输入</span></span><br><span class="line"><span class="keyword">int</span> num1 = sc.nextInt();<span class="comment">//读取一个int类型的数据</span></span><br><span class="line"><span class="keyword">double</span> num2 = sc.nextDouble();<span class="comment">//读取一个double类型的数据</span></span><br><span class="line">String str = sc.next();<span class="comment">//读取一个String类型的数据</span></span><br><span class="line"><span class="keyword">char</span> c = sc.next().charAt(<span class="number">0</span>);<span class="comment">//读取一个char类型的字符串</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>实参给形参传参时 也可以进行数据类型提升</strong></p>
@@ -665,7 +669,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">目标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -674,14 +690,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">BTC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">圣经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
             
             <div class="clearfix"></div>
